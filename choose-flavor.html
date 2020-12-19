@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/bundle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Biblioteque</title>
+</head>
+<body>
+    <div id="cursor"><span class="icon-help"></span><span class="icon-pointer"></span></div>
+    <div id="cursor--small"></div>
+
+    <div id="overlay"></div>
+
+    <div class="modal modal--product-details">
+        <h4 class="h4 modal__title">Черный инжир</h4>
+        <p class="modal__text"><b>Верхние ноты:</b>  листья инжира, ревень, петитгрейн.</p>
+        <p class="modal__text"><b>Ноты сердца:</b> инжир, молоко.</p>
+        <p class="modal__text"><b>База:</b> кедр, бобы тонка, коричневый сахар.</p>
+        <p class="modal__text"><b>Ольфактурная группа:</b> фруктовые.</p>
+        <button class="btn-close btn-reset modal-close">
+            <span class="line--md"></span>
+            <span class="line--md"></span>
+        </button>
+        
+    </div>
+   
+    <header class="steps-header">
+        <div class="flex-container jc-between">
+            <ul class="steps-list flex">
+                <li class="item active">
+                    <span class="step-icon">1</span>
+                    <p class="step-title">Запахи</p>
+                </li>
+
+                <li class="item">
+                    <span class="step-icon">2</span>
+                    <!-- <p class="step-title">Запахи</p> -->
+                </li>
+
+                <li class="item">
+                    <span class="step-icon">3</span>
+                    <!-- <p class="step-title">Запахи</p> -->
+                </li>
+
+                <li class="item">
+                    <span class="step-icon">4</span>
+                    <!-- <p class="step-title">Запахи</p> -->
+                </li>
+            </ul>
+
+            <button class="btn-reset btn-icon icon-close"></button>
+        </div>
+    </header>
+
+    <div class="step">
+        <div class="container--step flex flex-row-reverse">
+            <div class="order-preview">
+                <div class="order-preview__img">
+                    <img src="src/images/flavors/flavor-big.jpg" alt="">
+                </div>
+
+                <div class="order-preview__summary">
+                    <p class="summary__title h4">Ваш заказ</p>
+
+                    <ul class="order-list">
+                        <li class="item">
+                            <span class="btn-round btn-round--sm">1</span>
+                            <p class="item-title"><span class="label">Запах:</span>Черный инжир</p>
+
+                            <p class="item-price ml-auto">0 грн</p>
+                        </li>
+                    </ul>
+
+                    <div class="order__totals">
+                        <span class="totals__title">Итого:</span>
+                        <span class="totals__cost">0 грн</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="choose">
+                <div class="choose__base">
+                    <h3 class=" h4 base__title">Выберите композицию</h3>
+    
+                    
+                    <div class="tabs">
+                        <button data-filter=".fruits" class="btn-link btn-primary btn-filter active" type="button">Фруктовые</button>
+                        <button data-filter=".citrus" class="btn-link btn-primary btn-filter" type="button">Цитрусовые</button>
+                        <button data-filter=".wood" class="btn-link btn-primary btn-filter" type="button">Древесные</button>
+                        <button data-filter=".east" class="btn-link btn-primary btn-filter" type="button">Восточные</button>
+                        <button data-filter=".aldehyde" class="btn-link btn-primary btn-filter" type="button">Альдегидные</button>
+                        <button data-filter=".gourmet" class="btn-link btn-primary btn-filter" type="button">Гурманские</button>
+                    </div>
+    
+                    <p class="base-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, velit ad exercitationem dolorum, numquam asperiores ex, quia suscipit optio ipsa expedita dolorem consectetur quae consequatur quo ipsam! Voluptate laborum obcaecati suscipit dicta enim fugit dolor doloribus quasi possimus consequuntur quas nisi, esse aliquam omnis quis, veritatis quo praesentium explicabo voluptas.</p>
+                    <span class="read-more">Подробнее</span>
+                </div>
+
+                <p class="found-title">Найдено:<span class="found-count">5</span> композиций</p>
+
+                <div class="choose__details">
+                    <div class="card fruits active">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-1.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        
+                        <p class="card__title h5">Манго & Персик</p>
+                    </div>
+
+                    <div class="grid-sizer"></div>
+
+                    <div class="card fruits" data-image="src/images/flavors/fruit-preview.jpg">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-2.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Черный инжир</p>
+                    </div>
+
+                    <div class="card fruits">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-3.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card fruits">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+
+                    <div class="card citrus">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-5.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Тайский лайм & Манго</p>
+                    </div>
+
+                    <div class="card citrus" data-image="http://hnb.com.ua/artimages/apelsin%2021.jpg">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-3.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card fruits">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+
+                    <div class="card citrus">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-5.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Тайский лайм & Манго</p>
+                    </div>
+
+                    <div class="card wood">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-3.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card wood">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+
+                    <div class="card wood">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-5.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Тайский лайм & Манго</p>
+                    </div>
+
+                    <div class="card east">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-3.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card east">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+                    
+                    <div class="card east">
+                        <div class="card__img">
+                            <img src="src/images/flavors/fruits/fruit-5.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Тайский лайм & Манго</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-buttons">
+            <button class="btn-reset btn-link btn-prev hide">Назад</button>
+            <button class="btn-reset btn-link btn-restart hide">Подобрать ещё</button>
+            <button class="btn-link btn-ouline-primary btn-next" type="button">Продолжить</button>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+.btn-group {
+    display: flex;
+    
+    .btn-icon {
+        margin-left: 32px;
+    }
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 600;
+    background-color: $colorBrownLighten;
+    border-radius: 50%;
+}
+
+.btn-round--sm {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+}
+
+.btn-round--md {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg {
+    padding: 21px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-xl {
+   padding: 20px 100px;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #000;
+    border: none;
+}
+
+
+.btn-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-burger {
+    background-color: transparent;
+    border: none;
+
+    .line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    .line + .line {
+        margin-top: 4px;
+    }
+}
+
+
+
+.btn-link {
+    padding: 20px 40px;
+    display: inline-block;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.btn-primary {
+    padding: 13px;
+    width: 160px;
+    font-size: 14px;
+    background-color: $colorBrownLighten;
+    border: none;
+    transition: all ease-in-out .25s;
+
+    &.active {
+        color: $colorWhite;
+        background-color: $colorBrownDarken;
+    }
+}
+
+.btn-ouline-primary {
+    font-size: 16px;
+    // color: #000;
+    background: transparent;
+    border: 2px solid #000;
+}
+
+
+.btn-quantity {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .minus,
+    .line--dark,
+    .line-vertical--dark {
+        display: block;
+        width: 12px;
+        height: 2px;
+        border-radius: 8px;
+        background-color: $colorSecondary;
+    }
+
+    .line-vertical--dark {
+        transform: rotate(90deg);
+        position: absolute;
+    }
+}
+
+.btn-delete {
+    color: $colorSecondary;
+    text-decoration: underline;
+}
+
+.btn-submit {
+    margin-top: 32px;
+}
+
+.btn-accordion {
+    position: relative;
+    width: 28px;
+    height: 14px;
+
+    .line {
+        position: absolute;
+        display: inline-block;
+        width: 14px;
+        height: 1.5px;
+        background-color: $colorSecondary;
+        border-radius: 12px;
+        transition: all .3s;
+
+        & + .line {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.btn-close:hover {
+    .line--md {
+        transform: rotate(230deg);
+    }
+
+    .line--md + .line--md {
+        transform: rotate(135deg);
+    }
+}
+
+
+.line--md {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    display: inline-block;
+    width: 16px;
+    height: 1.5px;
+    background-color: $colorSecondary;
+    border-radius: 12px;
+    transition: all .3s;
+    transform: rotate(-45deg);
+
+    & + .line--md {
+        transform: rotate(45deg);
+    }
+}
+
+
+/* 
+active button for steps
+*/
+
+.btn-active {
+    color: #fff !important;
+    cursor: pointer !important;
+}
+.btn-active.btn-next::before {
+    width: 100%;
+}
+
+
+.btn-close {
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    width: 19px;
+    height: 19px;
+}

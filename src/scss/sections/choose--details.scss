@@ -1,0 +1,108 @@
+/* CARDS LIST  */
+
+.found-title {
+    margin-top: 40px;
+    color: $colorSecondary;
+
+    .found-count {
+        margin-left: 8px;
+    }
+}
+
+.choose__details {
+    display: flex;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    width: 715px;
+    height: 526px !important;
+    overflow: hidden;
+    overflow-y: visible;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 160px;
+        width: 100%;
+        margin-bottom: 32px;
+        transition: all ease-in-out .3s;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            .card__img img {
+                transform: scale(1.05);
+                transition: all ease-in-out .5s;
+            }
+        }
+
+        .card__img {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .card__title {
+            margin-top: 12px;
+            line-height: 150%;   
+        }
+
+        &.active {
+            .card__img img {
+                filter: brightness(0.8);
+                transform: none;
+            }
+
+            .card__title {
+                color: $colorBrownDarken;
+            }
+
+            .chosen {
+                z-index: 2;
+                opacity: 1;
+            }
+        }
+    }
+
+    .icon-detail {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: 10;
+        
+
+        svg {
+            width: 20px;
+            height: 20px;
+            transition: all ease-in-out .3s;
+        }
+
+        &:hover {
+            cursor: url('~images/icons/info.svg')4 12, pointer;
+
+
+            svg path {
+                stroke: $colorBrownDarken;
+            }
+        }
+    }
+
+    .chosen {
+        position: absolute;
+        left: calc(50% - 36px);
+        top: 50%;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 0;
+        color: #fff;
+        z-index: -1;
+        transition: all ease-in-out .3s;
+        opacity: 0;
+    }
+}

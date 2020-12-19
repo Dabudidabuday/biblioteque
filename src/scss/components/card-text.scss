@@ -1,0 +1,26 @@
+.card--text {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14.5px;
+    flex-basis: 44%;
+    border: 1px solid $colorGrey;
+
+    .label {
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .card-description {
+        line-height: 150%;
+    }
+}
+
+.card__header {
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $colorGrey;
+}

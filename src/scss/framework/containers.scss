@@ -1,0 +1,42 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.container--narrow {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    margin-left: 0;
+    @extend .container;
+
+    @media screen and (min-width: 1441px) {
+        margin: 0 auto;
+        padding-left: 0;
+    }
+}
+
+.container--step {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1200px;
+
+    // @media screen and (min-width: 1441px) {
+    //     padding-left: 0;
+    // }
+}
+
+@media (min-width: 1920px) {
+    .container--step {
+        margin: 0 auto;
+        width: 1200px;
+        padding-left: 0;
+    }
+}

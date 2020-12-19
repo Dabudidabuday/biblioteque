@@ -1,0 +1,23 @@
+.header {
+    position: absolute;
+    top: 0;
+    margin-top: 16px;
+    padding: 16px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+
+    .header__phone {
+        display: flex;
+        margin-left: 78px;
+    }
+}
+
+.logo-desktop {
+    position: absolute;
+    left: calc(50% - 102px);
+}
