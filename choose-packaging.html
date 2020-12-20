@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>Biblioteque</title>
 </head>
-<body class="step--size">
+<body class="step--package">
 
     <div id="cursor"><span class="icon-help"></span><span class="icon-pointer"></span></div>
     <div id="cursor--small"></div>
@@ -33,12 +33,12 @@
 
                 <li class="item active">
                     <span class="step-icon">3</span>
-                    <p class="step-title">Объем</p>
+                    <!-- <p class="step-title">Объем</p> -->
                 </li>
 
-                <li class="item">
+                <li class="item active">
                     <span class="step-icon">4</span>
-                    <!-- <p class="step-title">Запахи</p> -->
+                    <p class="step-title">Оформление</p>
                 </li>
             </ul>
 
@@ -50,7 +50,7 @@
         <div class="container--step flex flex-row-reverse">
             <div class="order-preview">
                 <div class="order-preview__img">
-                    <img src="src/images/backgrounds/size-background.jpg" alt="">
+                    <img src="src/images/packaging/package-big.jpg" alt="">
                 </div>
 
                 <div class="order-preview__summary">
@@ -77,6 +77,13 @@
 
                             <p class="item-price ml-auto">0 грн</p>
                         </li>
+
+                        <li class="item">
+                            <span class="btn-round btn-round--sm">4</span>
+                            <p class="item-title"><span class="label">Оформление:</span></p>
+
+                            <p class="item-price ml-auto">0 грн</p>
+                        </li>
                     </ul>
 
                     <div class="order__totals">
@@ -88,9 +95,9 @@
 
 
             <div class="choose">
-                <h3 class="h4">Выберите объем</h3>
+                <h3 class="h4">Выберите оформление</h3>
 
-                <p class="found-title">Найдено:<span class="found-count">5</span> объемов</p>
+                <!-- <p class="found-title">Найдено:<span class="found-count">5</span> объемов</p> -->
 
                 <div class="cards-list">
                     <div class="card--text" data-image="src/images/backgrounds/size-background.jpg">
@@ -154,9 +161,9 @@
 
         <footer class="footer">
             <div class="footer-buttons">
-                <a class="btn-reset btn-link btn-prev" href="choose-form.html">Назад</a>
-                <button class="btn-reset btn-link btn-restart hide">Подобрать ещё</button>
-                <a class="btn-link btn-ouline-primary btn-next" href="choose-packaging.html">Продолжить</a>
+                <a class="btn-reset btn-link btn-prev" href="choose-flavor.html">Подобрать ещё</a>
+                <!-- <button class="btn-reset btn-link btn-prev">Подобрать ещё</button> -->
+                <a class="btn-link btn-ouline-primary btn-next" href="checkout.html">Купить</a>
             </div>
         </footer>
     </div>

@@ -162,17 +162,6 @@
     }
 }
 
-.btn-close:hover {
-    .line--md {
-        transform: rotate(230deg);
-    }
-
-    .line--md + .line--md {
-        transform: rotate(135deg);
-    }
-}
-
-
 .line--md {
     position: absolute;
     top: 50%;
@@ -195,13 +184,6 @@
 active button for steps
 */
 
-.btn-active {
-    color: #fff !important;
-    cursor: pointer !important;
-}
-.btn-active.btn-next::before {
-    width: 100%;
-}
 
 
 .btn-close {
@@ -210,4 +192,14 @@ active button for steps
     position: relative;
     width: 19px;
     height: 19px;
+}
+
+.btn-close:hover {
+    .line--md {
+        transform: rotate(230deg);
+    }
+
+    .line--md + .line--md {
+        transform: rotate(135deg);
+    }
 }

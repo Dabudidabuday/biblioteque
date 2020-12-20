@@ -1,3 +1,74 @@
+
+.footer-buttons {
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+    width: 100%;
+
+    .btn-prev {
+        position: relative;
+        width: 186px;
+        height: 64px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000;
+        transition: all .2s;
+        text-align: center;
+        white-space: nowrap;
+
+        &:hover {
+            color: #fff;
+        }
+
+        &:hover::before {
+            width: 100%;
+            transition: width .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+    }
+
+    .btn-next {
+        margin-top: 20px;
+        margin-bottom: 32px;
+        position: relative;
+        color: #000;
+        display: block;
+        margin-left: auto;
+        cursor: not-allowed;
+        z-index: 2;
+
+        &.active {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        &.active::before {
+            width: 100%;
+            transition: width .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+        
+        
+        .active.btn-next::before {
+            width: 100%;
+        }
+    }
+}
+
+.btn-next::before,
+.btn-prev::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: -1;
+    background-color: #181818;
+}
+
 @media screen and(min-width: 1441px) {
     .footer {
         max-width: 1200px;

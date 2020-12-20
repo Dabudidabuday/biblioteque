@@ -1,0 +1,73 @@
+.base__color-palette {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: none;
+    height: 0;
+
+    .palette__title {
+        margin-bottom: 3px;
+    }
+
+    .color-list {
+        display: flex;
+        gap: 20px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    // &.active {
+    //     display: block;
+    //     height: auto;
+    // }
+}
+
+.btn-color {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out .4s;
+
+    &.active::before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 7px);
+        height: calc(100% + 7px);
+        border: 1px solid $colorBrownDarken;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* hardcode colors for palette*/
+
+.color--red {
+    background-color: red;
+}
+
+.color--blue {
+    background-color: #1665D8;
+}
+
+.color--green {
+    background-color: #28CD6A;
+}
+
+.color--green {
+    background-color: #28CD6A;
+}
+
+.color--yellow {
+    background-color: #FEC740;
+}
+
+.color--brown {
+    background-color: $colorBrownDarken;
+}
+
+.color--milk {
+    background-color: #F3ECE5;
+}

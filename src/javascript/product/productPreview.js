@@ -5,10 +5,12 @@
 const previewImage = document.querySelector('.order-preview__img img');
 
 if(previewImage) {
-    function setImage() {
-        const cardsList = document.querySelector('.choose__details');
-        const productCards = Array.from(cardsList.querySelectorAll('.card'));
-        productCards.forEach(item => {
+    const cardsList = document.querySelector('.choose__details');
+    const productCards = Array.from(cardsList.querySelectorAll('.card'));
+    const textCards = Array.from(document.querySelectorAll('.cards-list .card--text'))
+    
+    function setImage(list) {
+        list.forEach(item => {
             let image = item.dataset.image;
     
             item.addEventListener('click', function() {
@@ -17,7 +19,8 @@ if(previewImage) {
         })
     }
     
-    setImage();
+    setImage(productCards);
+    setImage(textCards);
     
     const previewAnimation = function() {
         const tl = gsap.timeline();

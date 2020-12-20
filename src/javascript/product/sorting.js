@@ -60,7 +60,9 @@ if(chooseBase) {
         iso.arrange({ filter: filterValue });
     });
 
-    /* choose base description */
+
+
+    /* Show-more - Show-less ===  choose base description */
     const baseDescription = document.querySelector('.base-description');
     const btnReadMore = document.querySelector('.read-more');
 
@@ -72,14 +74,5 @@ if(chooseBase) {
         } else {
             btnReadMore.textContent="Подробнее";
         }
-    })
-
-
-
-    /* STEP 2 - design base dtn active color palette of forms */
-    const btnDesign = document.querySelector('.btn-base__design');
-
-    btnDesign.addEventListener('click', function() {
-
     })
 }

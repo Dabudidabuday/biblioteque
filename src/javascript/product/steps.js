@@ -2,10 +2,10 @@
 
 const btnNextStep = document.querySelector('.btn-next');
 
-if(btnNextStep) {
+const cardsList = document.querySelector('.choose__details');
+if(cardsList) {
     const checkChosenSteps = function() {
         const chooseBase = document.querySelector('.choose__base');
-        const cardsList = document.querySelector('.choose__details');
         const productCards = Array.from(cardsList.querySelectorAll('.card'));
         const filterButtons = Array.from(chooseBase.querySelectorAll('.btn-filter'));
     
@@ -13,7 +13,7 @@ if(btnNextStep) {
             if(item.classList.contains('active')) {
                 productCards.forEach(item => {
                     if(item.classList.contains('active')) {
-                        btnNextStep.classList.add('btn-active')
+                        btnNextStep.classList.add('active')
                     }
                 })
             }
@@ -25,4 +25,25 @@ if(btnNextStep) {
     choose.addEventListener('click', function() {
         checkChosenSteps()
     })
+}
+
+const cardsText = document.querySelector('.cards-list');
+
+if(cardsText) {
+    const cards = Array.from(cardsText.querySelectorAll('.card--text'));
+
+    checkTextStep = function() {
+        cards.forEach(item => {
+            item.addEventListener('click', function() {
+                if(item.classList.contains('active')) {
+                    btnNextStep.classList.add('active');
+                } else {
+                    btnNextStep.classList.remove('active');
+                }
+            })
+        })
+    }
+
+    checkTextStep();
+    
 }

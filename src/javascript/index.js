@@ -5,6 +5,8 @@ import '../scss/index.scss';
 import './components/accordion.js';
 import './components/sidebar-navigation.js';
 import './components/overlays.js';
+import './components/colorPalette.js';
+import './components/textCards.js';
 
 /* Shop Components */
 import './product/productsCards.js';
@@ -17,21 +19,21 @@ import './sections/features.js';
 
 
 /* Class Based App */
-import Cursor from './components/cursor.js';
+// import Cursor from './components/cursor.js';
 
-class App {
-    constructor() {
-        this.cursor = new Cursor();
-    }
+// class App {
+//     constructor() {
+//         this.cursor = new Cursor();
+//     }
 
-    run() {
-        this.cursor.run()
-    }
-}
+//     run() {
+//         this.cursor.run()
+//     }
+// }
 
 
-window.onload = () => {
-    const app = new App();
+// window.onload = () => {
+//     const app = new App();
 
-    app.run();
-}
+//     app.run();
+// }

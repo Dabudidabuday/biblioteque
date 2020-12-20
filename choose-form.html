@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>Biblioteque</title>
 </head>
-<body>
+<body class="step--form">
     <div id="cursor"><span class="icon-help"></span><span class="icon-pointer"></span></div>
     <div id="cursor--small"></div>
 
@@ -33,13 +33,13 @@
         <div class="flex-container jc-between">
             <ul class="steps-list flex">
                 <li class="item active">
-                    <span class="step-icon">1</span>
-                    <p class="step-title">Запахи</p>
+                    <a href="choose-flavor.html"><span class="step-icon">1</span></a>
+                    <!-- <p class="step-title">Запахи</p> -->
                 </li>
 
-                <li class="item">
+                <li class="item active">
                     <span class="step-icon">2</span>
-                    <!-- <p class="step-title">Запахи</p> -->
+                    <p class="step-title">Форма</p>
                 </li>
 
                 <li class="item">
@@ -74,6 +74,13 @@
 
                             <p class="item-price ml-auto">0 грн</p>
                         </li>
+
+                        <li class="item">
+                            <span class="btn-round btn-round--sm">2</span>
+                            <p class="item-title"><span class="label">Форма:</span>Красный, Флакон 2</p>
+
+                            <p class="item-price ml-auto">0 грн</p>
+                        </li>
                     </ul>
 
                     <div class="order__totals">
@@ -97,14 +104,24 @@
                     <span class="read-more">Подробнее</span>
 
                     <div class="base__color-palette">
-                        
+                        <h5 class="palette__title h4">Цвет</h5>
+
+                        <div class="color-list">
+                                <button data-filter=".red" class="btn-color color--red" type="button"></button>
+                                <button data-filter=".blue" class="btn-color color--blue" type="button"><span class="color"></span></button>
+                                <button data-filter=".green" class="btn-color color--green" type="button"><span class="color"></span></button>
+                                <button data-filter=".yellow" class="btn-color color--yellow" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--brown" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--milk" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--white" type="button"><span class="color"></span></button>
+                        </div>
                     </div>
                 </div>
 
-                <p class="found-title">Найдено:<span class="found-count">5</span> композиций</p>
+                <p class="found-title">Найдено:<span class="found-count">5</span> форм</p>
 
                 <div class="choose__details">
-                    <div class="card base active" data-image="src/images/forms/forms-1.jpg">
+                    <div class="card base blue" data-image="src/images/forms/forms-1.jpg">
                         <div class="card__img">
                             <img src="src/images/forms/forms-1.jpg" alt="">
                             <span class="icon-detail">
@@ -120,7 +137,7 @@
 
                     <div class="grid-sizer"></div>
 
-                    <div class="card base" data-image="src/images/forms/forms-2.jpg">
+                    <div class="card base red" data-image="src/images/forms/forms-2.jpg">
                         <div class="card__img">
                             <img src="src/images/forms/forms-2.jpg" alt="">
                             <span class="icon-detail">
@@ -133,7 +150,7 @@
                         <p class="card__title h5">Черный инжир</p>
                     </div>
 
-                    <div class="card design">
+                    <div class="card design yellow">
                         <div class="card__img">
                             <img src="src/images/forms/forms-3.jpg" alt="">
                             <span class="icon-detail">
@@ -159,7 +176,7 @@
                         <p class="card__title h5">Грейпфрут</p>
                     </div>
 
-                    <div class="card design">
+                    <div class="card design red">
                         <div class="card__img">
                             <img src="src/images/forms/forms-5.jpg" alt="">
                             <span class="icon-detail">
@@ -205,9 +222,9 @@
 
     <footer class="footer">
         <div class="footer-buttons">
-            <button class="btn-reset btn-link btn-prev hide">Назад</button>
+            <a class="btn-reset btn-link btn-prev" href="choose-flavor.html">Назад</a>
             <button class="btn-reset btn-link btn-restart hide">Подобрать ещё</button>
-            <button class="btn-link btn-ouline-primary btn-next" type="button">Продолжить</button>
+            <a class="btn-link btn-ouline-primary btn-next" href="choose-size.html">Продолжить</a>
         </div>
     </footer>
     

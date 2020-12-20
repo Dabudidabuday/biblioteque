@@ -1,9 +1,18 @@
+.cards-list {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
 .card--text {
     display: flex;
     flex-direction: column;
     padding: 16px 14.5px;
-    flex-basis: 44%;
+    flex-basis: 48.5%;
     border: 1px solid $colorGrey;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
 
     .label {
         color: #000;
@@ -12,7 +21,17 @@
     }
 
     .card-description {
+        font-size: 14px;
         line-height: 150%;
+    }
+
+    &.active {
+        border: 1px solid #8D6355;
+        transition: all ease-in-out .4s;
+
+        .header__title {
+            color: $colorBrownDarken;
+        }
     }
 }
 
@@ -23,4 +42,15 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $colorGrey;
+
+    .header__subtitle {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.step--package {
+    .cards-list {
+        margin-top: 20px;
+    }
 }
