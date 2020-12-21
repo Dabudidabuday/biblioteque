@@ -31,9 +31,10 @@ if(cardsList) {
         });
     })
     
-
-    modalClose.addEventListener('click', function() {
-        modalDetails.classList.remove('active');
-        overlay.classList.remove('active');
-    })
+    if(modalClose) {
+        modalClose.addEventListener('click', function() {
+            modalDetails.classList.remove('active');
+            overlay.classList.remove('active');
+        })
+    }
 }

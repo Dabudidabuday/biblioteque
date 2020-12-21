@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/bundle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Biblioteque</title>
+</head>
+<body class="step--cart">
+    <div id="cursor"></div>
+    <div id="cursor--small"></div>
+
+    <div id="overlay"></div>
+   
+    <header class="cart-header">
+        <div class="flex-container jc-between ai-center h-100">
+            
+            <a href="index.html" class="cart__logo">
+                <img src="src/images/logo/votre.svg" alt="">
+            </a>
+
+            <button class="btn-reset">Контактные данные</button>
+        </div>
+    </header>
+
+   
+    <main class="main-cart">
+        
+        <div class="container--step flex flex-row-reverse">
+            <div class="order-preview">
+                <h5 class="order__title">Итог заказа</h5>
+
+                <p class="order__amount flex jc-between"><span class="amount__products">2 товара на сумму</span> <span class="amout__price">1440 грн</span></p>
+                <p class="order__delivery flex jc-between"><span class="amount__products">Доставка</span> <span class="amout__price">1440 грн</span></p>
+            </div>
+
+            <div class="choose">
+                <div class="choose__base">
+                    <h3 class=" h4 base__title">Корзина</h3>
+    
+                    
+                    <div class="tabs">
+                        <button data-filter=".base" class="btn-link btn-primary btn-filter active" type="button">Базовые</button>
+                        <button data-filter=".design" class="btn-link btn-primary btn-filter btn-base__design" type="button">Дизайнерские</button>
+                    </div>
+    
+                    <p class="base-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, velit ad exercitationem dolorum, numquam asperiores ex, quia suscipit optio ipsa expedita dolorem consectetur quae consequatur quo ipsam! Voluptate laborum obcaecati suscipit dicta enim fugit dolor doloribus quasi possimus consequuntur quas nisi, esse aliquam omnis quis, veritatis quo praesentium explicabo voluptas.</p>
+                    <span class="read-more">Подробнее</span>
+
+                    <div class="base__color-palette">
+                        <h5 class="palette__title h4">Цвет</h5>
+
+                        <div class="color-list">
+                                <button data-filter=".red" class="btn-color color--red" type="button"></button>
+                                <button data-filter=".blue" class="btn-color color--blue" type="button"><span class="color"></span></button>
+                                <button data-filter=".green" class="btn-color color--green" type="button"><span class="color"></span></button>
+                                <button data-filter=".yellow" class="btn-color color--yellow" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--brown" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--milk" type="button"><span class="color"></span></button>
+                                <button class="btn-color color--white" type="button"><span class="color"></span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="found-title">Найдено:<span class="found-count">5</span> форм</p>
+
+                <div class="choose__details">
+                    <div class="card base blue" data-image="src/images/forms/forms-1.jpg">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-1.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        
+                        <p class="card__title h5">Манго & Персик</p>
+                    </div>
+
+                    <div class="grid-sizer"></div>
+
+                    <div class="card base red" data-image="src/images/forms/forms-2.jpg">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-2.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Черный инжир</p>
+                    </div>
+
+                    <div class="card design yellow" data-image="src/images/backgrounds/form-bg.jpg">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-3.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card design">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+
+                    <div class="card design red">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-5.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Тайский лайм & Манго</p>
+                    </div>
+
+                    <div class="card design" data-image="src/images/forms/forms-6.jpg">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-1.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Бергамот апельсин</p>
+                    </div>
+
+                    <div class="card design">
+                        <div class="card__img">
+                            <img src="src/images/forms/forms-4.jpg" alt="">
+                            <span class="icon-detail">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 10.6667V8M7.99992 5.33333H8.00659M14.6666 8C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8C1.33325 4.3181 4.31802 1.33333 7.99992 1.33333C11.6818 1.33333 14.6666 4.3181 14.6666 8Z" stroke="#3B4857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="chosen">Выбрано</span>
+                        </div>
+                        <p class="card__title h5">Грейпфрут</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

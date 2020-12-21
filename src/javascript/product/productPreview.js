@@ -10,7 +10,6 @@ class ProductPreview {
 
     _previewAnimation() {
         const tl = gsap.timeline();
-
         // tl.fromTo(previewImage, { duration: 0.7, opacity: 0, scale: 0.8}, { opacity: 1, scale: 1});
         tl.fromTo(this.previewImage, { duration: 1, opacity: 0, scale: 1.2}, { opacity: 1, scale: 1});
     }
@@ -21,7 +20,7 @@ class ProductPreview {
         const config = {
             attributes: true,
             attributeFilter: ["src"],
-            };
+        };
         
         const animateImage = function (mutationsList, observer) {
             for (let mutation of mutationsList) {
@@ -99,4 +98,3 @@ const animateImage = function (mutationsList, observer) {
 
 const observer = new MutationObserver(animateImage);
 observer.observe(previewImage, config);
-
