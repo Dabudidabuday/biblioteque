@@ -8,13 +8,13 @@
     left: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: all .2s ease-in-out;
+    // transition: .15s;
     z-index: 1000;
     mix-blend-mode: difference;
 }
 
 #cursor--small {
-    position: fixed;
+    position: absolute;
     width: 8px;
     height: 8px;
     background-color: $colorBrownLighten;
@@ -23,20 +23,67 @@
     left: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: .15s;
+    // transition: .3s;
     z-index: 1000;
     mix-blend-mode: difference;
 }
 
-.step:hover ~ #cursor {
-    transform: translate(-50%, -50%) scale(1.5);
-    background-color: $colorBrownDarken;
+#cursor.expand {
     opacity: .5;
+    width: 4px;
+    height: 4px;
+    top: 13px;
+    left: 13px;
+    transition: .3s;
+    // animation: cursorAnimSmall .5s;
+}
+
+#cursor--small.expand {
+    opacity: .5;
+    width: 4px;
+    height: 4px;
+    top: 2px;
+    left: 2px;
+    transition: .3s;
+    // animation: cursorAnimSmall;
+}
+
+*:hover ~  #cursor {
+    // background-color: red;
+    opacity: 0;
     transition: .2s;
 }
 
-.step:hover ~ #cursor--small {
-    opacity: 0;
+*:hover ~ #cursor--small {
+    transform: translate(-50%, -50%);
+    // opacity: 1;
+    transition: .3s;
+    width: 20px;
+    height: 20px;
+    background-color: $colorBrownDarken;
+    // transition-delay: .4s;
+}
+
+@keyframes cursorAnimSmall {
+    0% {
+        width: 3px;
+        height: 3px;
+        transform: translate(0, 0) scale(0.2);
+    }
+
+    25% {
+        width: 7px;
+        height: 7px;
+        // transform: translate(-50%, -50%);
+        transform: translate(0, 0) scale(0.5);
+    }
+
+    100% {
+        width: 25px;
+        height: 25px;
+        // transform: translate(-50%, -50%);
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 
@@ -49,11 +96,12 @@
     height: 100%;
     background-color: rgb(0, 0, 0);
     opacity: 0;
-    // transition: ease-in-out 0.4s;
+    transition: 0.4s;
     z-index: -4;
 
     &.active {
-        z-index: 1;
+        z-index: 3;
+        filter: blur(10);
         opacity: 0.3;
     }
 }

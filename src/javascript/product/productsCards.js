@@ -5,7 +5,7 @@ const cardsList = document.querySelector('.choose__details');
 
 if(cardsList) {
     const productCards = Array.from(cardsList.querySelectorAll('.card'));
-    
+    const overlay = document.querySelector('#overlay');
     productCards.forEach(item => {
         item.addEventListener('click', function(e) {
             productCards.forEach(item => {
@@ -17,14 +17,20 @@ if(cardsList) {
     })
 
     /* show & hide card details */
-    const btnDetails = document.querySelector('.icon-detail');
+    const btnDetails = Array.from(document.querySelectorAll('.icon-detail'));
     const modalDetails = document.querySelector('.modal--product-details');
     const modalClose = document.querySelector('.modal-close')
-    btnDetails.addEventListener('click', function(e) {
-        e.stopPropagation();
-        overlay.classList.add('active')
-        modalDetails.classList.add('active');
-    });
+
+    console.log('details btn', btnDetails);
+
+    btnDetails.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            overlay.classList.add('active')
+            modalDetails.classList.add('active');
+        });
+    })
+    
 
     modalClose.addEventListener('click', function() {
         modalDetails.classList.remove('active');

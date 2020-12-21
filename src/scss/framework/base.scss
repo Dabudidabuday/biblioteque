@@ -1,5 +1,9 @@
+* {
+    cursor: none !important;
+}
+
 body, html {
-    // cursor: none;
+    cursor: none;
     height: 100%;
 }
 
@@ -9,5 +13,5 @@ body {
 }
 
 button {
-	cursor: pointer;
+    // cursor: pointer;
 }

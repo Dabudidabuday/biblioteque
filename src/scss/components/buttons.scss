@@ -78,16 +78,12 @@
     }
 }
 
-
-
 .btn-link {
     padding: 20px 40px;
     display: inline-block;
     font-weight: 600;
-    cursor: pointer;
+    // cursor: pointer;
 }
-
-
 
 .btn-primary {
     padding: 13px;
@@ -142,6 +138,34 @@
     margin-top: 32px;
 }
 
+.btn-fill {
+    position: relative;
+    z-index: 1;
+
+    &:hover::before {
+        width: 100%;
+        transition: width .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+        // z-index: 0;
+    }
+}
+
+.btn-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 101%;
+    transition: width 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: -1;
+    background-color: #000000;
+
+    .active.btn-fill::before {
+        width: 100%;
+    }
+}
+
+
 .btn-accordion {
     position: relative;
     width: 28px;
@@ -167,11 +191,11 @@
     top: 50%;
     left: 18%;
     display: inline-block;
-    width: 16px;
+    width: 18px;
     height: 1.5px;
     background-color: $colorSecondary;
     border-radius: 12px;
-    transition: all .3s;
+    transition: all .6s;
     transform: rotate(-45deg);
 
     & + .line--md {
@@ -179,12 +203,9 @@
     }
 }
 
-
 /* 
 active button for steps
 */
-
-
 
 .btn-close {
     margin-right: auto;

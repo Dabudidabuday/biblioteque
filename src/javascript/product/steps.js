@@ -2,6 +2,7 @@
 
 const btnNextStep = document.querySelector('.btn-next');
 
+
 const cardsList = document.querySelector('.choose__details');
 if(cardsList) {
     const checkChosenSteps = function() {

@@ -37,7 +37,7 @@ if(chooseBase) {
             gutter: 20
         },
         stagger: 70,
-        transitionDuration: '0.5s',
+        transitionDuration: '0.7s',
         /* default
         hiddenStyle: {
             opacity: 0,

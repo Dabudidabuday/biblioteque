@@ -10,8 +10,8 @@
     overflow: hidden;
     visibility: hidden;
     z-index: -1;
-    transition: all ease-in-out .3s;
-    transition-delay: .4s;
+    transition: all ease-in-out .2s;
+    // transition-delay: .4s;
 
 
     .modal__title {
@@ -33,9 +33,11 @@
 
     &.active {
         visibility: visible;
+        padding: 40px 30px 30px;
         opacity: 1;
         height: 220px;
-        z-index: 3;
+        z-index: 10;
         transition: all ease-in-out .8s;
+        transition-delay: .2s;
     }
 }

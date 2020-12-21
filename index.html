@@ -11,12 +11,7 @@
     <title>Biblioteque</title>
 </head>
 <body>
-    <div id="cursor">
-        <span class="icon-help"></span>
-        <span class="icon-pointer"></span>
-    </div>
-
-    <div id="cursor--small"></div>
+    
 
     <div id="overlay"></div>
     
@@ -256,6 +251,7 @@
    </header>
 
    <main class="home-page">
+       
        <!-- FIX mx-auto in flex-container -->
        <div class="flex-container flex-column ai-center mx-auto">
             <h1 class="h1 home__title">Home-аромат – украшение твоего дома</h1>
@@ -278,9 +274,18 @@
                 Подбери свой аромат для дома
             </a>
 
-            <button class="btn-reset text-link" type="button" id="btn-features">Особенности ароматов</button>
+            <button class="btn-reset text-link btn-fill" type="button" id="btn-features">Особенности ароматов</button>
+
+            <div id="cursor">
+                <span class="icon-help"></span>
+                <span class="icon-pointer"></span>
+            </div>
+        
+            <div id="cursor--small"></div>
        </div>
    </main>
+
+    
     
     <script src="dist/bundle.js"></script>
 </body>

@@ -34,16 +34,27 @@ if(palette) {
 
     function showPalette() {
         const paletteTimeLine = gsap.timeline();
-        paletteTimeLine.to(palette, { display: 'block', height: '100%', duration: 0.6 })
-        paletteTimeLine.from(colors, { y: 50, opacity: 0, duration: 0.2, stagger: 0.1 })
-        // paletteTimeLine.from(paletteTitle, { opacity: 0, duration: 0.3 })
-        // paletteTimeLine.from(colors, { y: 50, duration: 0.4, stagger: 0.1, opacity: 0 })
+
+        paletteTimeLine.set(palette, {
+            height: 0,
+            autoAlpha: 0,
+            display: "none"
+        })
+        paletteTimeLine.to(palette, 1, {
+            delay: 0.6,
+            height: 'auto',
+            autoAlpha: 1,
+            display: "block",
+            ease: Cubic.easeInOut,
+            overwrite: "none"
+          })
+        // paletteTimeLine.from(colors, {y: 50 })
     }
 
     function hidePalette() {
         const paletteTimeLine = gsap.timeline();
-        paletteTimeLine.to(paletteList, { x: -450, opacity: 0, duration: 0.2 })
-        paletteTimeLine.to(palette, { display: 'none' })
+        // paletteTimeLine.to(paletteList, { x: -250, opacity: 0, duration: 0.2 })
+        // paletteTimeLine.to(palette, { display: 'none' })
     }
 
     /* Show palette */

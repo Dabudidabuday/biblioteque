@@ -72,18 +72,7 @@ module.exports = {
         alias: {
           'images': path.resolve(__dirname, 'src/images')
         },
-        // fallback: {
-        //     "fs": false,
-        //     "tls": false,
-        //     "net": false,
-        //     "path": false,
-        //     "zlib": false,
-        //     "http": false,
-        //     "https": false,
-        //     "stream": false,
-        //     "crypto": false,
-        //     "crypto-browserify": false,
-        //   }
+
     },
 
     mode: devMode ? 'development' : 'production'

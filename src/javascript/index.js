@@ -17,23 +17,26 @@ import './product/productPreview.js';
 /* UI Sections */
 import './sections/features.js';
 
-
 /* Class Based App */
-// import Cursor from './components/cursor.js';
+import Cursor from './components/cursor.js';
+import Overlay from './components/overlays.js';
+import ProductPreview from './product/productPreview.js';
 
-// class App {
-//     constructor() {
-//         this.cursor = new Cursor();
-//     }
+class App {
+    constructor() {
+        this.cursor = new Cursor();
+        this.overlay = new Overlay('#overlay', ['.modal--product-details', '.navigation-menu'], 'active');
+        // this.productPreview = new ProductPreview('.choose__details', )
+    }
 
-//     run() {
-//         this.cursor.run()
-//     }
-// }
+    run() {
+        this.cursor.run();
+        this.overlay.run()
+    }
+}
 
+window.onload = () => {
+    const app = new App();
 
-// window.onload = () => {
-//     const app = new App();
-
-//     app.run();
-// }
+    app.run();
+}

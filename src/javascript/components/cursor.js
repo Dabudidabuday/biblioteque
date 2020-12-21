@@ -1,33 +1,30 @@
-// const customCursorMove = function(e) {
-//     const cursor = document.querySelector('#cursor');
-//     const cursorSmall = document.querySelector('#cursor--small');   
-//     const { clientX: x, clientY: y } = e;
-//     cursor.style.left = x + 'px';
-//     cursor.style.top = y + 'px';
-//     cursorSmall.style.left = x + 'px';
-//     cursorSmall.style.top = y + 'px';
-// }
+class Cursor {
+    _customCursorMove (e) {
+        const cursor = document.querySelector('#cursor');
+        const cursorSmall = document.querySelector('#cursor--small');   
+        const { clientX: x, clientY: y } = e;
+        cursor.style.transform = `translate(${x - 15}px, ${y - 15}px)`;
+        cursorSmall.style.transform = `translate(${x - 4}px, ${y - 4}px)`;
 
-// const initCustomCursorMove = function() {
-    
-// }
+        /* click condition */
+        
+    }
 
-// initCustomCursorMove();
+    run() {
+        window.addEventListener('mousemove', this._customCursorMove);
 
-// class Cursor {
-//     _customCursorMove (e) {
-//         const cursor = document.querySelector('#cursor');
-//         const cursorSmall = document.querySelector('#cursor--small');   
-//         const { clientX: x, clientY: y } = e;
-//         cursor.style.left = x + 'px';
-//         cursor.style.top = y + 'px';
-//         cursorSmall.style.left = x + 'px';
-//         cursorSmall.style.top = y + 'px';
-//     }
+        window.addEventListener('click', function() {
+            const cursor = document.querySelector('#cursor');
+            const cursorSmall = document.querySelector('#cursor--small'); 
 
-//     run() {
-//         window.addEventListener('mousemove', this._customCursorMove);
-//     }
-// }
+            cursor.classList.add('expand');
+            cursorSmall.classList.add('expand');
+            setTimeout(() => {
+                cursorSmall.classList.remove('expand');
+                cursor.classList.remove('expand');
+            }, 300)
+        })
+    }
+}
 
-// export default Cursor
+export default Cursor
