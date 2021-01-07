@@ -1,0 +1,38 @@
+.destination,
+.customer,
+.payment {
+    margin-bottom: 20px;
+}
+
+.destination__title,
+.customer__title, 
+.payment__title,
+.delivery-method {
+    margin-bottom: 6px;
+    line-height: 19px;
+}
+
+.thanks {
+    overflow: visible !important;
+    .btn-final {
+        margin-bottom: 12px !important;
+    }
+
+    .recommended {
+        margin-top: 60px;
+
+        @media screen and(max-width: 768px){
+           .recommended__product-list {
+            max-height: unset;
+            overflow: visible;
+            overflow-y: auto;
+           } 
+        }
+    }
+
+    .main-cart,
+    .cart__title {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}

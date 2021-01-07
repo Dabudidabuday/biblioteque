@@ -1,0 +1,65 @@
+.final__order {
+    padding-top: 40px;
+    border-top: 1px solid $colorBrownLighten;
+
+    .card__preview {
+        padding: 5px 13px;
+        width: 90px;
+        height: 90px;
+
+        @media screen and(max-width: 768px) {
+            padding: 0;
+        }
+    }
+
+    .order__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .order__title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .card__subtitle {
+        margin-bottom: 32px;
+    }
+
+    .card__details {
+        align-items: flex-end;
+    }
+
+    .card--perfume {
+        
+        .card__preview img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .card__subtitle {
+            margin-bottom: 28px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        .price__quantity {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}
+
+.privacy-policy {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 150%;  
+}
+
+.grid-item {
+    width: 48.5%;
+
+    @media screen and(max-width: 768px) {
+        width: 100%;
+    }
+}

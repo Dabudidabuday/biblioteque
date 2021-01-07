@@ -10,27 +10,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>Biblioteque</title>
 </head>
-<body class="step--flavor">
+<body class="step--flavor"  data-barba="wrapper">
+
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
+    <div data-barba="container" data-barba-namespace="flavor-section">
+
     <div id="cursor"><span class="icon-help"></span><span class="icon-pointer"></span></div>
     <div id="cursor--small"></div>
 
     <div id="overlay"></div>
 
+
     <div class="modal modal--product-details">
-        <h4 class="h4 modal__title">Черный инжир</h4>
-        <p class="modal__text"><b>Верхние ноты:</b>  листья инжира, ревень, петитгрейн.</p>
-        <p class="modal__text"><b>Ноты сердца:</b> инжир, молоко.</p>
-        <p class="modal__text"><b>База:</b> кедр, бобы тонка, коричневый сахар.</p>
-        <p class="modal__text"><b>Ольфактурная группа:</b> фруктовые.</p>
-        <button class="btn-close btn-reset modal-close">
-            <span class="line--md"></span>
-            <span class="line--md"></span>
-        </button>
-        
+        <button class="btn-close btn-reset" id="btn-modal-close"><span class="line--md"></span><span class="line--md"></span></button>
+        <h4 class="h4 modal__title">Фруктовые</h4>
+        <p class="modal__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis proin est, in id. Lacus mauris ante quam non egestas. Ut libero sed at egestas enim diam risus arcu risus.
+        </p>
     </div>
    
     <header class="steps-header">
-        <div class="flex-container jc-between">
+        <div class="flex-container jc-between animate-this">
             <ul class="steps-list flex">
                 <li class="item active">
                     <a href="choose-flavor.html"><span class="step-icon">1</span></a>
@@ -61,9 +64,10 @@
 
     <div class="step">
         <div class="container--step flex flex-row-reverse">
-            <div class="order-preview">
+            <div class="order-preview animate-this">
                 <div class="order-preview__img">
-                    <img src="src/images/flavors/flavor-big.jpg" alt="">
+                    <img src="src/images/flavors/flavor-big.jpg" class="product-image" alt="">
+                    <span class="zoom"><img src="src/images/icons/zoom.svg" alt=""></span>
                 </div>
 
                 <div class="order-preview__summary">
@@ -86,8 +90,8 @@
             </div>
 
             <div class="choose">
-                <div class="choose__base">
-                    <h3 class=" h4 base__title">Выберите композицию</h3>
+                <div class="choose__base animate-this">
+                    <h3 class=" h4 base__title animate-this">Выберите композицию</h3>
     
                     
                     <div class="tabs">
@@ -103,10 +107,10 @@
                     <span class="read-more">Подробнее</span>
                 </div>
 
-                <p class="found-title">Найдено:<span class="found-count">5</span> композиций</p>
+                <p class="found-title animate-this">Найдено:<span class="found-count">5</span> композиций</p>
 
-                <div class="choose__details">
-                    <div class="card fruits active">
+                <div class="choose__details animate-this">
+                    <div class="card fruits active" data-image="https://daza.com.ua/sites/default/files/styles/product_big_img/public/nirvana-super-shisha-candy-love-new-1.jpg?itok=BDnSfr57">
                         <div class="card__img">
                             <img src="src/images/flavors/fruits/fruit-1.jpg" alt="">
                             <span class="icon-detail">
@@ -119,7 +123,7 @@
                         
                         <p class="card__title h5">Манго & Персик</p>
                     </div>
-
+                    <div class="gutter-sizer"></div>
                     <div class="grid-sizer"></div>
 
                     <div class="card fruits" data-image="src/images/flavors/fruit-preview.jpg">
@@ -298,15 +302,23 @@
 
     <footer class="footer">
         <div class="footer-buttons">
-            <button class="btn-reset btn-link btn-prev hide">Назад</button>
+            <button class="btn-reset btn-link btn-prev animate-this">Назад</button>
             <button class="btn-reset btn-link btn-restart hide">Подобрать ещё</button>
-            <a class="btn-link btn-ouline-primary btn-next btn-fill" href="choose-form.html" disabled>Продолжить</a>
+            <a class="btn-link btn-ouline-primary btn-next btn-fill animate-this" href="choose-form.html" disabled>Продолжить</a>
+        </div>
+
+        <div class="product-preview__controls hide">
+            <button class="btn-reset btn-link btn-prev" id="btnZoomOff">Назад</button>
         </div>
     </footer>
-    
+
+
+
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
     <script src="dist/bundle.js"></script>
+</div>
 </body>
 </html>

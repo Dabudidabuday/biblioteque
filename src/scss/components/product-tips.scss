@@ -1,0 +1,15 @@
+.hot::before {
+    position: absolute;
+    content: 'hot';
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: #DB2629;
+}
+

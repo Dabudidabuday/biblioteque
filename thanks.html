@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <title>Biblioteque</title>
 </head>
-<body class="step--cart">
+<body class="thanks">
     <div id="cursor"></div>
     <div id="cursor--small"></div>
     <div id="overlay"></div>
@@ -89,44 +89,25 @@
             <a href="choose-flavor.html" class="btn-reset btn-link w-100 btn-fill btn-update">Обновить корзину</a>
         </div>
     </div>
-
-    <div class="product__show-more">
-        <div class="show-more__header">
-            <button class="btn-close btn-reset" id="btn__show-more__close"><span class="line--md"></span><span class="line--md"></span></button>
-        </div>
-
-        <ul class="link-list">
-            <li class="item">
-                <a href="#" class="item-link red">Удалить</a>
-            </li>
-
-            <li class="item">
-                <a href="#" class="item-link">Добавить в список желаний</a>
-            </li>
-
-            <li class="item">
-                <a href="#" class="item-link">Изменить</a>
-            </li>
-        </ul>
-    </div>
    
-    <header class="cart-header">
+    <header class="checkout-header">
         <div class="flex-container jc-between ai-center h-100">
             
             <a href="index.html" class="cart__logo">
                 <img src="src/images/logo/votre.svg" alt="">
             </a>
 
-            <button class="btn-reset">Контактные данные</button>
+            <button class="btn-reset" id="btnModalContacts">Контактные данные</button>
         </div>
     </header>
 
-    <div class="container--step jc-end cart-header--mobile">
-        <button class="btn-close btn-reset show-mobile"><span class="line--md"></span><span class="line--md"></span></button>
-        <h3 class="h3 cart__title">Корзина</h3>
+    <div class="container--step jc-end">
+        <h3 class="h3 cart__title">Спасибо за заказ № 2145</h3>
     </div>
-
+    
+   
     <main class="main-cart">
+
         <div class="cart__empty">
             <div class="empty__img">
                 <img src="src/images/icons/cart-big.svg" alt="">
@@ -136,18 +117,37 @@
             <a href="index.html" class="btn-dark btn-xl">Cмотреть колекцию</a>
         </div>
         
-        <div class="container--step flex flex-row-reverse cart__mobile-layout">
+       
+
+        <div class="container--step flex flex-row-reverse">
             <div class="cart__final">
-                <h5 class="final-title">Итог заказа</h5>
+                <div class="destination">
+                    <h5 class="destination__title text-secondary">Доставка в Харьков</h5>
+                    <p class="delivery-method">Самовывоз из наших магазинов</p>
+                    <p class="destination__spot">Свадебный салон “Sherri Hill” г. Харьков, ул. Сумская 53</p>
+                </div>
+                
+
+                <div class="customer">
+                    <p class="customer__title text-secondary">Получатель</p>
+                    <p class="customer__name">Доля Виктория</p>
+                </div>
+
+                <div class="payment">
+                    <p class="payment__title text-secondary">Оплата</p>
+                    <p class="payment__method">Наличная</p>
+                </div>
 
                 <p class="final__amount flex jc-between"><span class="amount__products">2 товара на сумму</span> <span class="amout__price">1440 грн</span></p>
                 <p class="final__delivery flex jc-between"><span>Доставка</span><span class="delivery__cost">По тарифам перевозчика</span></p>
             
                 <p class="final__cost flex jc-between"><span class="cost__title">К оплате</span><span class="cost">1440 грн</span></p>
             
-                <a href="checkout.html" class="btn-final btn-dark btn-xl w-100" id="btnFinal">Оформить заказ</a>
-                <button class="btn-reset btn-xl w-100 btn-fill">Подобрать еще</button>
+                <a class="btn-final btn-dark btn-xl w-100" href="index.html" id="btnFinal">Продолжить покупки</a>
+                <small class="text-secondary">Мы с вами свяжемся или отправим SMS</small>
             </div>
+
+            
 
             <div class="cart__order">
                 <div class="order__product-list">
@@ -181,10 +181,6 @@
                                     <p class="price__quantity">190 грн</p>
                                 </div>
                             </div>
-
-                            <button type="button" class="btn-reset card__more">
-                                <img src="src/images/icons/more.svg" alt="">                                   
-                            </button>
                         </div>
                     </div>
 
@@ -202,14 +198,6 @@
                                 <p class="h6 price__title">Сумма</p>
                                 <p class="price__quantity">1250 грн</p>
                             </div>
-
-                            <button type="button" class="btn-reset card__more">
-                                <img src="src/images/icons/more.svg" alt="">                                   
-                            </button>
-
-                            <button type="button" class="btn-reset card__more">
-                                <img src="src/images/icons/more.svg" alt="">                                   
-                            </button>
                         </div>
                     </div>
 
@@ -243,47 +231,6 @@
                                     <p class="price__quantity">190 грн</p>
                                 </div>
                             </div>
-
-                            <button type="button" class="btn-reset card__more">
-                                <img src="src/images/icons/more.svg" alt="">                                   
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="card--order">
-                        <div class="card__preview">
-                            <img src="src/images/products/product.jpg" alt="">
-                        </div>
-
-                        <div class="card__description">
-                            <h4 class="h4 card__title">Morning’s not soon</h4>
-                            <p class="card__subtitle">Eau de parfume</p>
-
-                            <div class="card__details">
-                                <div class="capacity">
-                                    <p class="h6 details__title">Объем</p>
-                                    <p class="capacity__quantity">100 мл</p>
-                                </div>
-
-                                <div class="quantity">
-                                    <p class="h6 details__title">Количество</p>
-
-                                    <div class="quantity-group">
-                                        <button class="btn-square btn-minus"><span class="minus"></span></button>
-                                        <input type="text" class="btn-square quantity-input" value="1" disabled>
-                                        <button class="btn-square btn-plus"><span class="line--dark"></span><span class="line-vertical--dark"></span></button>
-                                    </div>
-                                </div>
-
-                                <div class="price">
-                                    <p class="h6 details__title">Сумма</p>
-                                    <p class="price__quantity">190 грн</p>
-                                </div>
-                            </div>
-
-                            <button type="button" class="btn-reset card__more">
-                                <img src="src/images/icons/more.svg" alt="">                                   
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -308,21 +255,12 @@
                         <p class="price__quantity">1200 грн</p>
                     </div>
 
-                    <div class="custom-select custom-select--card">
-                        <div class="select-arrow">
-                            <div class="line--dark"></div>
-                            <div class="line--dark"></div>
-                        </div>
-
-                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                        <div class="custom-select__options">
-                            <ul class="option__items">
-                                <li class="item">16 мл</li>
-                                <li class="item">50 мл</li>
-                                <li class="item">100 мл</li>
-                                <li class="item">250 мл</li>
-                            </ul>
-                        </div>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="16">16 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                        </select>
                     </div>
 
                     <button class="btn-dark w-100 card__btn-buy">Купить</button>
@@ -345,21 +283,12 @@
                         <p class="price__quantity">1200 грн</p>
                     </div>
 
-                    <div class="custom-select custom-select--card">
-                        <div class="select-arrow">
-                            <div class="line--dark"></div>
-                            <div class="line--dark"></div>
-                        </div>
-
-                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                        <div class="custom-select__options">
-                            <ul class="option__items">
-                                <li class="item">16 мл</li>
-                                <li class="item">50 мл</li>
-                                <li class="item">100 мл</li>
-                                <li class="item">250 мл</li>
-                            </ul>
-                        </div>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="16">16 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                        </select>
                     </div>
 
                     <button class="btn-dark w-100 card__btn-buy">Купить</button>
@@ -382,21 +311,12 @@
                         <p class="price__quantity">1200 грн</p>
                     </div>
 
-                    <div class="custom-select custom-select--card">
-                        <div class="select-arrow">
-                            <div class="line--dark"></div>
-                            <div class="line--dark"></div>
-                        </div>
-
-                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                        <div class="custom-select__options">
-                            <ul class="option__items">
-                                <li class="item">16 мл</li>
-                                <li class="item">50 мл</li>
-                                <li class="item">100 мл</li>
-                                <li class="item">250 мл</li>
-                            </ul>
-                        </div>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="16">16 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                        </select>
                     </div>
 
                     <button class="btn-dark w-100 card__btn-buy">Купить</button>
@@ -419,21 +339,12 @@
                         <p class="price__quantity">1200 грн</p>
                     </div>
 
-                    <div class="custom-select custom-select--card">
-                        <div class="select-arrow">
-                            <div class="line--dark"></div>
-                            <div class="line--dark"></div>
-                        </div>
-
-                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                        <div class="custom-select__options">
-                            <ul class="option__items">
-                                <li class="item">16 мл</li>
-                                <li class="item">50 мл</li>
-                                <li class="item">100 мл</li>
-                                <li class="item">250 мл</li>
-                            </ul>
-                        </div>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="16">16 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                        </select>
                     </div>
 
                     <button class="btn-dark w-100 card__btn-buy">Купить</button>
@@ -456,21 +367,12 @@
                         <p class="price__quantity">1200 грн</p>
                     </div>
 
-                    <div class="custom-select custom-select--card">
-                        <div class="select-arrow">
-                            <div class="line--dark"></div>
-                            <div class="line--dark"></div>
-                        </div>
-
-                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                        <div class="custom-select__options">
-                            <ul class="option__items">
-                                <li class="item">16 мл</li>
-                                <li class="item">50 мл</li>
-                                <li class="item">100 мл</li>
-                                <li class="item">250 мл</li>
-                            </ul>
-                        </div>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="16">16 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                        </select>
                     </div>
 
                     <button class="btn-dark w-100 card__btn-buy">Купить</button>

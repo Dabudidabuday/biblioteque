@@ -1,0 +1,129 @@
+
+.custom-select {
+    position: relative;
+    max-width: 340px;
+    margin-bottom: 20px;
+
+    .form-input {
+        margin-left: 16px;
+        width: 90%;
+    }
+
+    .select-arrow {
+        position: absolute;
+        top: 24px;
+        right: 6px;
+        transition: transform ease-in-out .3s;
+
+        .line--dark {
+            transform: rotate(-45deg) translateX(1px);
+            transform-origin: 75% center;
+            border-radius: 5px;
+            transition: all ease-in-out .3s;
+
+            & + .line--dark {
+                transform: rotate(45deg) translateX(-7px);
+                transform-origin: 0 center;
+                transition: all ease-in-out .38s;
+            }
+        }
+
+        &.active {
+            transition: all ease-in-out .4s;
+            .line--dark {
+                transform: rotate(45deg) translateX(4px);
+                transition: all ease-in-out .25s;
+    
+                & + .line--dark {
+                    transform: rotate(-45deg) translateX(-4px);
+                    transition: all ease-in-out .22s;
+                }
+            }
+        }
+    }
+}
+
+.custom-celect__input {
+    display: block;
+    padding: 8px 0;
+    max-width: 340px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 19px;    
+    color: #5F6E80;  
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #D5DFEB;
+    outline: none;
+    // overflow: hidden;
+    cursor: pointer;
+}
+
+.custom-select__options {
+    position: absolute;
+    top: 44px;
+    padding: 12px 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+    max-height: 0;
+    overflow: hidden;
+    overflow-y: visible;
+    opacity: 0;
+    transition: all ease-in-out .4s;
+
+    &.active {
+        max-height: 235px;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.input-search {
+    padding-left: 32px;
+}
+
+.input-search {
+    margin-left: 16px;
+    margin-bottom: 11px;
+    width: 90%;
+    background-image: url('~images/icons/search.svg');
+    background-position: 5px 9px;
+    background-repeat: no-repeat;
+}
+
+.option__items {
+    // position: absolute;
+    background-color: #fff;
+
+    .item {
+        position: relative;
+        padding: 12px 16px;
+        width: 100%;
+        height: 43px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        transition: all ease-in-out .4s;
+
+        &:hover {
+            background-color: $colorBrownLighten;
+        }
+
+        &.active {
+            background-color: $colorBrownLighten;
+
+            &::after {
+                content: 'Г';
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: $colorBrownDarken;
+                font-size: 26px;
+                font-weight: 300;
+                transform: rotate(-130deg);
+            }
+        }
+    }
+}

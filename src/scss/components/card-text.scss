@@ -3,6 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px 20px;
+
+    @media screen and(max-width: 768px) {
+        gap: 12px;
+        max-height: 315px;
+        
+        overflow: hidden;
+        overflow-y: scroll;
+    }
 }
 
 .card--text {
@@ -32,6 +40,10 @@
         .header__title {
             color: $colorBrownDarken;
         }
+    }
+
+    @media screen and(max-width: 768px) {
+        flex-basis: 100%;
     }
 }
 

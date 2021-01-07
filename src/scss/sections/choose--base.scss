@@ -15,6 +15,14 @@
             font-weight: bold;
         }
     }
+
+    @media screen and(max-width: 768px) {
+        margin-top: 0;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: visible;
+    }
 }
 
 .tabs {
@@ -22,34 +30,48 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    @media screen and(max-width: 768px) {
+        margin-top: 8px;
+        flex-wrap: nowrap;
+        overflow: visible;
+        overflow-x: scroll;
+        gap: 10px;
+    }
 }
 
 .base-description {
+    display: -moz-box;
+    display: -webkit-box;
     margin-top: 20px;
     max-width: 700px;
     width: 100%;
-    // height: 19px;
+    max-height: 19px;
     font-size: 14px;
     line-height: 19px;
     color: #231D18;
-
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -moz-box;
     -moz-box-orient: vertical;
-    display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     line-clamp: 1;
     box-orient: vertical;
+    transition: all ease-out 1s;
 
-    transition: all ease-in-out .4s;
+    @media screen and(min-width: 768px) {
+        &.active {
+            -webkit-line-clamp: unset;
+            text-overflow: unset;
+            max-height: 180px;
+            transition: all ease-in-out 1s;
+        }
+    }
 
-    &.active {
-        -webkit-line-clamp: unset;
-        text-overflow: unset;
-        height: auto;
-        transition: all ease-in-out .4s;
+    
+
+    @media screen and(max-width: 768px){
+        margin-top: 12px;
     }
 }
 

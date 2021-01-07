@@ -10,12 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>Biblioteque</title>
 </head>
-<body>
+<body data-barba="wrapper" class="home">
     
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
 
+    <div data-barba="container" data-barba-namespace="home-section">
     <div id="overlay"></div>
     
-    <div class="features">
+    <div class="features animate-this">
         <div class="container--narrow">
             <h2 class="h2">
                 Особенности ароматов для дома Bibliotheque de Parfum
@@ -95,7 +99,7 @@
         </div>
 
         <div class="menu__content">
-            <ul class="accordion">
+            <ul class="accordion animate-this">
                 <li class="item">
                     <div class="outer-accordion-item flex jc-between ai-center">
                         <a href="" class="item-link">Ароматы</a>
@@ -121,7 +125,27 @@
                 </li>
 
                 <li class="item">
-                    <a href="" class="item-link">Афродизиаки</a>
+                    <div class="outer-accordion-item flex jc-between ai-center">
+                        <a href="" class="item-link">Афродизиаки</a>
+                        <button class="btn btn-reset btn-accordion">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </button>
+                    </div>
+
+                    <ul class="inner-accordion-items">
+                        <li class="item">
+                            <a class="item-link" href="">Женские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Мужские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Унисекс</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="item">
@@ -161,11 +185,13 @@
                     </li>
                 </ul>
             </div>
+
+            <button class="btn-dark btn-lg w-100 show-mobile nav-btn">Смотреть коллекцию</button>
         </div>
     </div>
 
 
-   <header class="header">
+   <header class="header animate-this">
        <div class="flex-container ai-center jc-between mx-auto">
 
             <div class="header__left">
@@ -174,6 +200,10 @@
                     <span class="line"></span>
                 </button>
            
+                <button class="btn-arrow btn-reset" type="button" id="btn-features-close">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
     
                 <a 
                     href="tel:+38 (066) 992 14 44" 
@@ -250,13 +280,13 @@
         </div>
    </header>
 
-   <main class="home-page">
+   <main class="home-page" style="background-image: url('src/images/backgrounds/home-background.jpg');">
        
        <!-- FIX mx-auto in flex-container -->
        <div class="flex-container flex-column ai-center mx-auto">
-            <h1 class="h1 home__title">Home-аромат – украшение твоего дома</h1>
+            <h1 class="h1 home__title animate-this">Home-аромат – украшение твоего дома</h1>
 
-            <ul class="home__bullets-list flex">
+            <ul class="home__bullets-list flex animate-this">
                 <li class="item">
                     <p>50+ Kомпозиций</p>
                 </li>
@@ -270,11 +300,11 @@
                 </li>
             </ul>
 
-            <a class="btn-link btn-dark home__btn" href="choose-flavor.html">
+            <a class="btn-link btn-dark home__btn animate-this" href="choose-flavor.html">
                 Подбери свой аромат для дома
             </a>
 
-            <button class="btn-reset text-link btn-fill" type="button" id="btn-features">Особенности ароматов</button>
+            <button class="btn-reset text-link btn-fill animate-this" type="button" id="btn-features">Особенности ароматов</button>
 
             <div id="cursor">
                 <span class="icon-help"></span>
@@ -285,8 +315,11 @@
        </div>
    </main>
 
-    
-    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@barba/core"></script>
     <script src="dist/bundle.js"></script>
+</div>
 </body>
 </html>

@@ -8,226 +8,481 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <title>Biblioteque</title>
+<title>Biblioteque</title>
 </head>
-<body>
+<body class="checkout">
+    <div id="cursor"></div>
+    <div id="cursor--small"></div>
+    <div id="overlay"></div>
+
+    <div class="modal--contacts">
+        <div class="modal__header flex jc-between">
+            <p class="modal__title">Контактные данные</p>
+            <button class="btn-close btn-reset" id="btn-modal-close"><span class="line--md"></span><span class="line--md"></span></button>
+        </div>
+
+        <a href="email:info@votre.com.ua" class="text-dark modal-link">info@votre.com.ua</a>
+        <a class="text-dark modal-link" href="tel:+38 (066) 992 14 44">+38 (066) 992 14 44</a>
+
+        <p class="work-hours__title">График работы</p>
+        <p class="hours text-dark">Ежедневно с 9:00 до 20:00﻿</p>
+
+        <p class="call-back">Обратный звонок</p>
+    </div>
    
-    <header class="steps-header">
-        <div class="flex-container jc-between">
-            <ul class="steps-list flex">
-                <li class="item active">
-                    <a href="choose-flavor.html"><span class="step-icon">1</span></a>
-                    
-                    <!-- <p class="step-title">Запахи</p> -->
-                </li>
+    <header class="checkout-header">
+        <div class="flex-container jc-between ai-center h-100">
+            
+            <a href="index.html" class="cart__logo">
+                <img src="src/images/logo/votre.svg" alt="">
+            </a>
 
-                <li class="item active">
-                    <span class="step-icon">2</span>
-                    <!-- <p class="step-title">Запахи</p> -->
-                </li>
-
-                <li class="item active">
-                    <span class="step-icon">3</span>
-                    <!-- <p class="step-title">Запахи</p> -->
-                </li>
-
-                <li class="item active">
-                    <span class="step-icon">4</span>
-                    <!-- <p class="step-title">Запахи</p> -->
-                </li>
-                <li class="item active">
-                    <span class="step-icon">5</span>
-                    <p class="step-title">Оформление</p>
-                </li>
-            </ul>
-
-            <button class="btn-reset btn-icon icon-close"></button>
+            <button class="btn-reset" id="btnModalContacts">Контактные данные</button>
         </div>
     </header>
 
-    <main class="checkout">
-        <div class="flex-container flex-row-revers jc-between">
-            <div class="order">
-                <h3 class="h4 order-title">Ваш заказ</h3>
-                
-                <div class="order-list">
-                    <div class="card--order">
-                        <div class="card__img">
-                            <img src="src/images/order/order-bg.jpg" alt="">
-                        </div>
+    <div class="container--step jc-end">
+        <h3 class="h3 cart__title">Оформление заказа</h3>
+    </div>
 
-                        <div class="card__description">
-                            <div class="items-list">
-                                <div class="item">
-                                    <span class="btn-round btn-round--sm">1</span>
-                                    <p class="item-title"><span class="label">Запах:</span>Черный инжир</p>
-                                    <p class="item-price">0 грн</p>
-                                </div>
-                                <div class="item">
-                                    <span class="btn-round btn-round--sm">2</span>
-                                    <p class="item-title"><span class="label">Форма:</span>Красный, Флакон 2</p>
-                                    <p class="item-price">300 грн</p>
-                                </div>
-    
-                                <div class="item">
-                                    <span class="btn-round btn-round--sm">3</span>
-                                    <p class="item-title"><span class="label">Объем:</span>250 мл</p>
-                                    <p class="item-price">1150 грн</p>
-                                </div>
-                                
-                                <div class="item">
-                                    <span class="btn-round btn-round--sm">4</span>
-                                    <p class="item-title"><span class="label">Оформление:</span>Подарочная</p>
-                                    <p class="item-price">100 грн</p>
-                                </div>
-                            </div>
-    
-                            <div class="summary">
-                                <span class="summary-title">Итого:</span>
-                                <span class="summary-cost">1550 грн</span>
-                            </div>
+    <div class="final__order show-mobile">
 
-                            <div class="quantity-wrapper">
-                                <div class="btn-group">
-                                    <button class="btn-reset btn-quantity"><span class="minus"></span></button>
-                                    <input type="text" class="quantity-input" name="quantity">
-                                    <button class="btn-reset btn-quantity"><span class="line--dark"></span><span class="line-vertical--dark"></span></button>
-                                    
-                                    <button type="button" class="btn-reset btn-delete ml-auto">Удалить</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="order__header">
+            <div class="order__title">Заказ</div>
+
+            <a href="cart.html" class="text-secondary hide">Редактировать</a>
+            <p class="order__cost">на сумму: <b>1440 грн</b></p>
+        </div>
+
+        <div class="order__product-list">
+            <div class="card--order">
+                <div class="card__preview">
+                    <img src="src/images/products/product.jpg" alt="">
                 </div>
 
-                <div class="order__summary">
-                    <div class="summary__delivery">
-                        <span class="delivery__title">Доставка:</span>
-                        <span class="delivery__cost">0 грн</span>
+                <div class="card__description">
+                    <h4 class="h4 card__title">Morning’s not soon</h4>
+                    <p class="card__subtitle">Eau de parfume</p>
+
+                    <div class="card__details">
+                        <p class="capacity">100 мл</p>
+                        <p class="quantity">1 шт</p>
+                        <p class="price__quantity">190 грн</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card--order">
+                <div class="card__preview">
+                    <img src="src/images/products/product.jpg" alt="">
+                </div>
+
+                <div class="card__description">
+                    <h4 class="h4 card__title">Morning’s not soon</h4>
+                    <p class="card__subtitle">Eau de parfume</p>
+
+                    <div class="card__details">
+                        <p class="capacity">100 мл</p>
+                        <p class="quantity">1 шт</p>
+                        <p class="price__quantity">190 грн</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card--order card--perfume">
+                <div class="card__preview">
+                    <img src="src/images/products/product-2.jpg" alt="">
+                </div>
+
+                <div class="card__description">
+                        
+                    <h4 class="h4 card__title">Ваш созданный аромат</h4>
+                    <span class="read-more card__subtitle">Подробнее</span>
+
+                    <div class="price">
+                        <p class="price__quantity">1250 грн</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="cart.html" class="text-secondary">Редактировать</a>
+    </div>
+    
+   
+    <main class="main-cart">
+        
+        <div class="container--step flex flex-row-reverse checkout__mobile-layout">
+            <div class="cart__final">
+                <h5 class="final-title">Итог заказа</h5>
+
+                <p class="final__amount flex jc-between"><span class="amount__products">2 товара на сумму</span> <span class="amout__price">1440 грн</span></p>
+                <p class="final__delivery flex jc-between"><span>Доставка</span><span class="delivery__cost">По тарифам перевозчика</span></p>
+            
+                <p class="final__cost flex jc-between"><span class="cost__title">К оплате</span><span class="cost">1440 грн</span></p>
+            
+                <a class="btn-final btn-dark btn-xl w-100" href="thanks.html" id="btnFinal">Заказ подтверждаю</a>
+
+                <p class="privacy-policy">Подтверждаю заказ, я принимаю условия <a href="#" class="text-primary">пользовательского соглашения</a></p>
+            
+                <div class="final__order show-desktop">
+
+                    <div class="order__header">
+                        <div class="order__title">Заказ</div>
+
+                        <a href="cart.html" class="text-secondary">Редактировать</a>
                     </div>
 
-                    <div class="summary__total">
-                        <span class="total__title">Сумма к оплате:</span>
-                        <span class="total__cost">0 грн</span>
+                    <div class="order__product-list">
+                        <div class="card--order">
+                            <div class="card__preview">
+                                <img src="src/images/products/product.jpg" alt="">
+                            </div>
+
+                            <div class="card__description">
+                                <h4 class="h4 card__title">Morning’s not soon</h4>
+                                <p class="card__subtitle">Eau de parfume</p>
+
+                                <div class="card__details">
+                                    <p class="capacity">100 мл</p>
+                                    <p class="quantity">1 шт</p>
+                                    <p class="price__quantity">190 грн</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card--order">
+                            <div class="card__preview">
+                                <img src="src/images/products/product.jpg" alt="">
+                            </div>
+
+                            <div class="card__description">
+                                <h4 class="h4 card__title">Morning’s not soon</h4>
+                                <p class="card__subtitle">Eau de parfume</p>
+
+                                <div class="card__details">
+                                    <p class="capacity">100 мл</p>
+                                    <p class="quantity">1 шт</p>
+                                    <p class="price__quantity">190 грн</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card--order card--perfume">
+                            <div class="card__preview">
+                                <img src="src/images/products/product-2.jpg" alt="">
+                            </div>
+    
+                            <div class="card__description">
+                                    
+                                <h4 class="h4 card__title">Ваш созданный аромат</h4>
+                                <span class="read-more card__subtitle">Подробнее</span>
+    
+                                <div class="price">
+                                    <p class="price__quantity">1250 грн</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <button type="submit" class="btn-ouline-primary btn-lg btn-submit" form="form-order">Оформить заказ</button>
-
-                    <small class="summary__note"><sup>*</sup>Стоимость отправки заказа по тарифам перевозчика.</small>
                 </div>
             </div>
 
             <div class="form">
                 <form action="" id="form-order">
                     <fieldset class="form-contacts">
-                        <legend class="h4 legend">Введите контактные данные</legend>
-
-                        <div class="input-wrapper">
-                            <label for="input-phone" class="label"></label>
-                            <input type="text" name="phone" class="form-input" id="input-phone" placeholder="Телефон">
+                        <div class="form-group__title">
+                            <span class="step-icon step-icon--dark text-white">1</span>
+                            <legend class="legend">Контактные данные</legend>
                         </div>
-
+                        
                         <div class="input-group">
                             <div class="input-wrapper">
-                                <label for="input-name" class="label">Имя</label>
-                                <input type="text" name="name" class="form-input" id="input-name">
+                                <input type="text" name="surname" class="form-input" id="input-surname">
+                                <label for="input-surname" class="label">Фамилия <sup class="red-star">*</sup></label>
                             </div>
 
                             <div class="input-wrapper">
-                                <label for="input-surname" class="label">Фамилия</label>
-                                <input type="text" name="surname" class="form-input" id="input-surname">
+                                <input type="text" name="name" class="form-input" id="input-name">
+                                <label for="input-name" class="label">Имя <sup class="red-star">*</sup></label>
                             </div>
-                        </div>
 
-                        <div class="input-wrapper">
-                            <label for="input-email" class="label">E-mail</label>
-                            <input type="text" name="email" class="form-input" id="input-email">
-                        </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="phone" class="form-input" id="input-phone">
+                                <label for="input-phone" class="label">Телефон <sup class="red-star">*</sup></label>
+                            </div>
 
-                        <div class="input-wrapper">
-                            <select type="text" name="email" class="form-input form-select" id="input-email">
-                                <option value="uk">Украина</option>
-                                <option value="ru">Россия</option>
-                            </select>
+                            <div class="input-wrapper">
+                                <input type="text" name="email" class="form-input" id="input-email">
+                                <label for="input-email" class="label">E-mail <sup class="red-star">*</sup></label>
+                            </div>
+
+                            
+                            <div class="custom-select custom-select--checkout">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" placeholder="Страна">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input input-search" placeholder="Поиск">
+                                    <ul class="option__items">
+                                        <li class="item">Украина</li>
+                                        <li class="item">Россия</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
+                        
                     </fieldset>
 
-                    <fieldset class="fieldset form-delivery">
-                        <legend class="h4 legend">Способ доставки</legend>
-                        
-                        <div class="card--checkout">
+                    <fieldset class="form-delivery">
+                        <div class="form-group__title">
+                            <span class="step-icon step-icon--dark text-white">2</span>
+                            <legend class="legend">Доставка</legend>
+                        </div>
+
+                        <div class="city-list">
+                            <button class="btn-link--underline" type="button">Киев</button>
+                            <button class="btn-link--underline" type="button">Одесса</button>
+                            <button class="btn-link--underline" type="button">Харьков</button>
+                            <button class="btn-link--underline" type="button">Днепр</button>
+                            <button class="btn-link--underline" type="button">Львов</button>
+                        </div>
+                    
+                    
+                        <div class="form-filter-buttons">
                             <div class="checkbox-wrapper">
                                 <input 
                                     type="radio" 
-                                    class="form-checkbox" 
+                                    class="form-radio" 
                                     name="shipping-radios" 
                                     id="pickup" 
                                     value="pickup"
+                                    data-filter=".pickup"
+                                    checked
                                     >
                                 <span class="custom-checkbox"></span>
-                                <label for="pickup" class="custom-label">Самовывоз</label>
+                                <label for="pickup" class="custom-label" >Самовывоз</label>
                             </div>
 
                             <div class="checkbox-wrapper">
                                 <input 
                                     type="radio" 
-                                    class="form-checkbox" 
+                                    class="form-radio" 
                                     name="shipping-radios" 
                                     id="shipping"
                                     value="shipping"
+                                    data-filter=".shipping"
                                     >
                                 <span class="custom-checkbox"></span>
                                 <label for="shipping" class="custom-label">Доставка службой Новая почта</label>
                             </div>
+
+                            <div class="checkbox-wrapper">
+                                <input 
+                                    type="radio" 
+                                    class="form-radio" 
+                                    name="shipping-radios" 
+                                    id="another-address"
+                                    value="another-address"
+                                    data-filter=".another-address"
+                                    >
+                                <span class="custom-checkbox"></span>
+                                <label for="another-address" class="custom-label">Доставка по другому адресу</label>
+                            </div> 
+                        </div>       
+
+                        <div class="form-grid">
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="surname" class="form-input" id="input-surname">
+                                <label for="input-surname" class="label">Фамилия</label>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="name" class="form-input" id="input-name-">
+                                <label for="input-name" class="label">Имя</label>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="phone" class="form-input" id="input-phone">
+                                <label for="input-phone" class="label">Телефон</label>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="email" class="form-input" id="input-email">
+                                <label for="input-email" class="label">E-mail</label>
+                            </div>
+
+                            <div class="custom-select custom-select--checkout grid-item another-address">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" placeholder="Страна">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input input-search" placeholder="Поиск">
+                                    <ul class="option__items">
+                                        <li class="item">Украина</li>
+                                        <li class="item">Россия</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="custom-select custom-select--checkout grid-item another-address shipping">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" placeholder="Область">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input input-search" placeholder="Поиск">
+                                    <ul class="option__items">
+                                        <li class="item">Киевская</li>
+                                        <li class="item">Львоская</li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <div class="custom-select custom-select--checkout grid-item pickup another-address shipping">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" id="input-city" placeholder="Город">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input input-search" placeholder="Поиск">
+                                    <ul class="option__items">
+                                        <li class="item">Киев</li>
+                                        <li class="item">Шир</li>
+                                        <li class="item">Готэм</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="postcode" class="form-input" id="input-postcode">
+                                <label for="input-postcode" class="label">Индекс</label>
+                            </div>
+
+                            <div class="custom-select custom-select--checkout grid-item another-address">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" placeholder="Улица">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input" placeholder="Введите название улицы">
+                                    <ul class="option__items">
+                                        <li class="item">ул. Акад. Павлова, 44-б</li>
+                                        <li class="item">ул. Ярослава Мудрого, 10</li>
+                                        <li class="item">ул. Героев труда, 9</li>
+                                        <li class="item">ул. Клочковская, 134-б</li>
+                                        <li class="item">ул. Культуры 12</li>
+                                        <li class="item">ул. Клочковская, 134-б</li>
+                                        <li class="item">ул. Фонтанская дорога, 4а</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="house" class="form-input" id="input-house">
+                                <label for="input-house" class="label">Дом</label>
+                            </div>
+
+                            <div class="input-wrapper grid-item another-address">
+                                <input type="text" name="flat" class="form-input" id="input-flat">
+                                <label for="input-flat" class="label">Квартира</label>
+                            </div>
+       
+                            <div class="custom-select custom-select--checkout grid-item pickup shipping">
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+
+                                <input type="text" class="custom-celect__input" placeholder="Выберите подходящее отделение">
+                                <div class="custom-select__options">
+                                    <input type="text" class="form-input" placeholder="Введите адрес или номер отделения">
+                                    <ul class="option__items">
+                                        <li class="item">ул. Акад. Павлова, 44-б</li>
+                                        <li class="item">ул. Ярослава Мудрого, 10</li>
+                                        <li class="item">ул. Героев труда, 9</li>
+                                        <li class="item">ул. Клочковская, 134-б</li>
+                                        <li class="item">ул. Культуры 12</li>
+                                        <li class="item">ул. Клочковская, 134-б</li>
+                                        <li class="item">ул. Фонтанская дорога, 4а</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            
                         </div>
                     </fieldset>
 
                     <fieldset class="fieldset form-delivery">
-                        <legend class="h4 legend">Способ оплаты</legend>
-                        
-                        <div class="card--checkout">
-                            <div class="checkbox-wrapper">
-                                <input 
-                                    type="radio" 
-                                    class="form-checkbox" 
-                                    name="payment-radios" 
-                                    id="payment-operator"
-                                    value="payment-operator"
-                                    >
-                                <span class="custom-checkbox"></span>
-                                <label for="payment-operator" class="custom-label">Оплата на карту. Жду звонка оператора</label>
-                            </div>
-
-                            <div class="checkbox-wrapper">
-                                <input 
-                                    type="radio" 
-                                    class="form-checkbox" 
-                                    name="payment-radios" 
-                                    id="payment-credit"
-                                    value="payment-card"
-                                    >
-                                <span class="custom-checkbox"></span>
-                                <label for="payment-credit" class="custom-label">Оплата картой</label>
-                            </div>
+                        <div class="form-group__title">
+                            <span class="step-icon step-icon--dark text-white">2</span>
+                            <legend class="legend">Способ оплаты</legend>
                         </div>
+
+                        <div class="checkbox-wrapper">
+                            <input 
+                                type="radio" 
+                                class="form-radio" 
+                                name="payment-radios" 
+                                id="payment-operator"
+                                value="payment-operator"
+                                >
+                            <span class="custom-checkbox"></span>
+                            <label for="payment-operator" class="custom-label">Оплата на карту. Жду звонка оператора</label>
+                        </div>
+
+                        <div class="checkbox-wrapper">
+                            <input 
+                                type="radio" 
+                                class="form-radio" 
+                                name="payment-radios" 
+                                id="payment-credit"
+                                value="payment-card"
+                                >
+                            <span class="custom-checkbox"></span>
+                            <label for="payment-credit" class="custom-label">Оплата картой</label>
+                        </div>
+
                     </fieldset>
 
                     <fieldset class="fieldset form-additional">
                         <textarea class="form-textarea" name="additional" placeholder="Комментарий к заказу"></textarea>
                     </fieldset>
+
+                    <fieldset class="fieldset form-register">
+                        <div class="checkbox-wrapper">
+                            <input 
+                                type="checkbox" 
+                                class="form-radio" 
+                                id="checkbox-register"
+                                value="register-me"
+                                >
+                            <span class="custom-checkbox"></span>
+                            <label for="checkbox-register" class="custom-label">Зарегистрировать вас?</label>
+                        </div>
+                    </fieldset>
+
+                    
                 </form>
             </div>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-buttons">
-            <a class="btn-reset btn-link btn-prev" href="choose-flavor.html">Подобрать ещё</a>
-            <!-- <button class="btn-reset btn-link btn-prev">Подобрать ещё</button> -->
-            <!-- <a class="btn-link btn-ouline-primary btn-next" href="checkout.html">Купить</a> -->
-        </div>
-    </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
     <script src="dist/bundle.js"></script>
 </body>
 </html>

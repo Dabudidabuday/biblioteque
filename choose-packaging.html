@@ -50,7 +50,8 @@
         <div class="container--step flex flex-row-reverse">
             <div class="order-preview">
                 <div class="order-preview__img">
-                    <img src="src/images/packaging/package-big.jpg" alt="">
+                    <img src="src/images/packaging/package-big.jpg" class="product-image" alt="">
+                    <span class="zoom"><img src="src/images/icons/zoom.svg" alt=""></span>
                 </div>
 
                 <div class="order-preview__summary">
@@ -163,12 +164,18 @@
             <div class="footer-buttons">
                 <a class="btn-reset btn-link btn-prev btn-fill" href="choose-flavor.html">Подобрать ещё</a>
                 <!-- <button class="btn-reset btn-link btn-prev">Подобрать ещё</button> -->
-                <a class="btn-link btn-ouline-primary btn-next btn-fill" href="checkout.html">Купить</a>
+                <a class="btn-link btn-ouline-primary btn-next btn-fill" href="cart.html">Купить</a>
+            </div>
+
+            <div class="product-preview__controls hide">
+                <button class="btn-reset btn-link btn-prev" id="btnZoomOff">Назад</button>
             </div>
         </footer>
     </div>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
     <script src="dist/bundle.js"></script>
 </body>
 </html>

@@ -21,6 +21,7 @@
 
                 .line {
                     background-color: $colorBrownDarken;
+
                     & + .line {
                         transform: none;
                     }
@@ -30,15 +31,16 @@
 
         .inner-accordion-items {
             opacity: 0;
-            position: absolute;
-            left: -999px;
+            max-height: 0;
+            transition: all ease-out .5s;
+            transition-delay: opacity .5s;
         }
         
         .inner-accordion-items.active {
-            position: unset;
+            max-height: 250px;
             opacity: 1;
-            transition: all .3s;
-            transition-delay: .2s;
+            transition: all ease-in .5s;
+            transition-delay: .7s;
         }
 
         .item-link {

@@ -1,8 +1,20 @@
 .btn-group {
     display: flex;
+    overflow: visible;
     
     .btn-icon {
         margin-left: 32px;
+    }
+
+    @media screen and(max-width: 768px) {
+
+        .btn-icon {
+            margin-left: 20px;
+        }
+
+        .btn-icon:first-of-type {
+            margin-left: 0;
+        }
     }
 }
 
@@ -19,6 +31,11 @@
     font-weight: 600;
     background-color: $colorBrownLighten;
     border-radius: 50%;
+
+    @media screen and(max-width: 768px) {
+        background-color: $colorBrownDarken;
+        color: #fff;
+    }
 }
 
 .btn-round--sm {
@@ -43,6 +60,11 @@
    padding: 20px 100px;
    font-size: 16px;
    font-weight: bold;
+
+   @media screen and(max-width: 768px) {
+        padding: 13px 70px;
+        line-height: 150%;
+   }
 }
 
 .btn-dark {
@@ -63,7 +85,7 @@
 
 .btn-burger {
     background-color: transparent;
-    border: none;
+    border: none;   
 
     .line {
         display: block;
@@ -71,10 +93,25 @@
         height: 2px;
         background-color: #fff;
         border-radius: 8px;
+        transition: all ease-in-out .4s;
     }
 
     .line + .line {
         margin-top: 4px;
+    }
+
+    &.active {
+        .line {
+            width: 16px;
+            transform: rotate(-45deg);
+            transform-origin: left;
+            transition: all ease-in-out .4s;
+        }
+    
+        .line + .line {
+            margin-top: -3px;
+            transform: rotate(45deg);
+        }
     }
 }
 
@@ -82,6 +119,7 @@
     padding: 20px 40px;
     display: inline-block;
     font-weight: 600;
+    text-align: center;
     // cursor: pointer;
 }
 
@@ -89,6 +127,7 @@
     padding: 13px;
     width: 160px;
     font-size: 14px;
+    line-height: 19px;
     background-color: $colorBrownLighten;
     border: none;
     transition: all ease-in-out .25s;
@@ -96,6 +135,11 @@
     &.active {
         color: $colorWhite;
         background-color: $colorBrownDarken;
+    }
+    
+    @media screen and(max-width: 768px) {
+        padding: 6px 16px;
+        width: unset;
     }
 }
 
@@ -107,27 +151,22 @@
 }
 
 
-.btn-quantity {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .minus,
-    .line--dark,
-    .line-vertical--dark {
-        display: block;
-        width: 12px;
-        height: 2px;
-        border-radius: 8px;
-        background-color: $colorSecondary;
-    }
-
-    .line-vertical--dark {
-        transform: rotate(90deg);
-        position: absolute;
-    }
+.minus,
+.line--dark,
+.line-vertical--dark {
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: $colorSecondary;
 }
+
+.line-vertical--dark {
+    transform: rotate(90deg);
+    position: absolute;
+}
+
 
 .btn-delete {
     color: $colorSecondary;
@@ -146,6 +185,10 @@
         width: 100%;
         transition: width .4s cubic-bezier(0.39, 0.575, 0.565, 1);
         // z-index: 0;
+    }
+
+    &:hover {
+        color: #fff;
     }
 }
 
@@ -223,4 +266,48 @@ active button for steps
     .line--md + .line--md {
         transform: rotate(135deg);
     }
+}
+
+.quantity-group {
+    margin-top: 8px;
+    display: flex;
+    border: 1px solid $colorBrownLighten;
+
+    .btn-square {
+        position: relative;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 32px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        background: transparent;
+        border: none;
+    }
+}
+
+.btn-link--underline {
+    padding: 0;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: normal;
+    text-decoration-line: underline;
+    background-color: transparent;
+    border: none;
+    transition: ease-in-out .3s;
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
+
+    &.active {
+        color: $colorBrownDarken;
+    }
+}
+
+#btnZoomOff {
+    padding: 11.5px 45px;
+    font-size: 14px;
 }

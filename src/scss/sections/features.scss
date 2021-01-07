@@ -7,14 +7,27 @@
     padding-top: 194px;
     text-align: center;
     background-color: #fff;
+    // z-index: -3;
+    transition: all ease-in-out 2s;
 
     &.active {
-        transition: all .8s ease-in-out;
-        z-index: 2;
+        top: 0;
+        transition: all ease-in-out 1s;
+        z-index: 5;
     }
 
     .features__btn {
         margin-bottom: 30px;
+    }
+
+    @media screen and(max-width: 768px) {
+        padding-top: 70px;
+        top: -400%;
+
+        .features__btn {
+            margin-top: 10px;
+            display: block;
+        }
     }
 }
 
@@ -46,6 +59,24 @@
 
         .item__description {
             margin-top: 10px;
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        margin-top: 12px;   
+        margin-bottom: 12px;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .item__description {
+            font-size: 12px;
+            line-height: 135%;
+            max-width: 80%;
         }
     }
 }

@@ -1,10 +1,19 @@
 .order-preview {
     min-width: 400px;
 
+    @media screen and (max-width: 768px) {
+        min-width: unset;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .order-preview__img {
+        position: relative;
         max-width: 400px;
+        min-width: 100%;
         width: 100%;
         height: 780px;
+
 
         img {
             position: absolute;
@@ -16,12 +25,80 @@
             background-size: contain;
             overflow: hidden;
         }
+
+        .zoom {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            height: unset;
+            overflow: visible;
+
+            .product-image {
+                position: unset;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 160px;
+                transition: all ease-in-out .5s;
+
+                &.zoomed {
+                    position: fixed;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 1;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: all ease-in-out .5s;
+                }
+            }
+
+            .zoom {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                top: 20px;
+                left: 20px;
+                width: 32px;
+                height: 32px;
+                background-color: #fff;
+                border-radius: 50%;
+                
+                img {
+                    width: 12px;
+                    height: 12px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
     }
 
     .order-preview__summary {
-        margin-top: 20px;
         max-width: 400px;
         width: 100%;
+
+        @media screen and(max-width: 768px) {
+            margin: 0 auto;
+            
+
+            .summary__title {
+                display: none;
+            }
+
+            .order__totals {
+                display: none;
+            }
+
+            .order-list {
+                margin-right: 16px;
+                margin-left: 16px;
+                border-bottom: 1px solid $colorBrownLighten;
+            }
+        }
     }
     
     .summary__title {
@@ -51,3 +128,10 @@
     }
 }
 
+.card--details {
+    display: block;
+    padding: 20px;
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+}

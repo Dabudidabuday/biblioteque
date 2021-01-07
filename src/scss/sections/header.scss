@@ -4,7 +4,33 @@
     margin-top: 16px;
     padding: 16px 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+        padding: 8px 16px 0;
+        // border-bottom: 1px solid $colorBrownLighten;
+
+        .flex-container {
+            justify-content: unset;
+        }
+    }
+
+    &.header-in-features {
+        #btn-navigation-open {
+            display: none;
+        }
+
+        #btn-features-close {
+            display: block;
+        }
+
+        @media screen and(max-width: 768px) {
+            transition: .3s;
+            transition-delay: .7;
+            border-bottom: 1px solid $colorBrownLighten;
+        }
+    }
 }
 
 .header__left {
@@ -14,10 +40,46 @@
     .header__phone {
         display: flex;
         margin-left: 78px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    #btn-features-close {
+        display: none;
+        position: relative;
+        width: 32px;
+        height: 32px;
+
+        .line {
+            position: absolute;
+            left: 50%;
+            display: block;
+            transform: rotate(-45deg);
+            transform-origin: left;
+            width: 10px;
+            height: 2px;
+
+            & + .line {
+                transform: rotate(45deg);
+            }
+        }
+
     }
 }
 
 .logo-desktop {
     position: absolute;
     left: calc(50% - 102px);
+
+    @media screen and (max-width: 768px) {
+        margin-left: 16px;
+        position: unset;
+        margin-right: 14px;
+
+        svg {
+            max-width: 145px;
+        }
+    }
 }

@@ -10,18 +10,44 @@
     }
 
     @media screen and (min-width: 1441px) {
+        padding-left: 20px;
+    }
+
+    // @media screen and (max-width: 768px) {
+    //     position: fixed;
+    //     top: 0;
+    //     margin-top: 0;
+    //     padding-top: 12px;
+    //     padding-right: 16px;
+    //     padding-left: 16px;
+
+    //     .btn-reset {
+    //         display: none;
+    //     }
+    // }
+
+    @media screen and (max-width: 768px) {
+        position: unset;
+        // margin-top: 0;
+        // margin-bottom: 12px;
+        margin: 0 auto 12px;
+        padding-top: 12px;
         padding-left: 0;
+        // padding-right: 16px;
+        // padding-left: 16px;
+
+        .btn-reset {
+            display: none;
+        }
     }
 }
 
 .steps-list {
     max-width: 700px;
-    width: 100%;
-
-    
+    width: 100%; 
 
     .item:not(:first-child) {
-        margin-left: 26px;
+        padding-left: 26px;
     }
 
     .item {
@@ -36,25 +62,7 @@
         }
     }
 
-    .step-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #000;
-        font-weight: 600;
-        width: 32px;
-        height: 32px;
-        background-color: $colorBrownLighten;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: ease-in-out .3s;
-
-        // &:hover {
-        //     color: #fff;
-        //     background-color: $colorBrownDarken;
-        //     box-shadow: inset 2px 2px 6px 7px rgb(0 0 0 / 5%)
-        // }
-    }
+    
 
     .step-title {
         margin-left: 12px;
@@ -63,6 +71,45 @@
         line-height: 27px;
         font-weight: normal;
         color: #000;
+
+        @media screen and(max-width: 768px) {
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        box-shadow: inset 0 -4px 0px -1px #f6ede2;
+
+        .item {
+            padding-bottom: 9px;
+        }
+
+        .item:first-of-type {
+            padding-left: 20px;
+        }
+
+        .item:not(:first-child) {
+            padding-left: 20px;
+        }
+
+        .item:last-child {
+            padding-right: 20px;
+        }
+    
+        .item.active {
+            border-bottom: 3px solid $colorBrownDarken;
+        }
+
+        .item:nth-child(3).active {
+            margin-right: 0;
+            padding-right: 58px;
+        }
+
+        .item:last-child.active {
+            margin-right: 0;
+            width: 100%;
+        }
     }
 }
 
@@ -70,6 +117,30 @@
     .item:first-child {
         margin-right: auto;
     }
+}
+
+.step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 600;
+    width: 32px;
+    height: 32px;
+    background-color: $colorBrownLighten;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+
+    @media screen and(max-width: 768px) {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+}
+
+.step-icon--dark {
+    background-color: $colorBrownDarken;
 }
 
 
@@ -102,10 +173,17 @@
     .steps-list {
         .item:nth-child(3) {
             margin-right: 0;
+            padding-right: 0;
         }
 
         .item:nth-child(4) {
             margin-right: auto;
         }
+
+        // .item:nth-child(4).active 
+
+        // .item:last-child.active  ~ .item.active {
+        //     padding-right: 0;
+        // }
     }
 }
