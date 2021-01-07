@@ -38,8 +38,11 @@ class ProductPreview {
         })
     }
 
+
+
     run() {
         const previewImage = document.querySelector(this.htmlElement);
+        const previewImageContainer = document.querySelector('.order-preview__img');
         if(!previewImage) return;
 
         const productCards = Array.from(document.querySelectorAll('.card'));
@@ -54,17 +57,23 @@ class ProductPreview {
         const footerButtons = document.querySelector('.footer-buttons');
         const btnZoomOffContainer = document.querySelector('.product-preview__controls');
         const btnZoomOff = document.querySelector('#btnZoomOff');
+        const chooseBase = document.querySelector('.choose');
 
         btnZoom.addEventListener('click', () => {
+
             previewImage.classList.add('zoomed');
             footerButtons.classList.add('hide');
             btnZoomOffContainer.classList.remove('hide');
+            previewImageContainer.classList.add('active');
+            chooseBase.style.opacity="0";
         })
 
         btnZoomOff.addEventListener('click', function() {
             previewImage.classList.remove('zoomed');
             footerButtons.classList.remove('hide');
             btnZoomOffContainer.classList.add('hide');
+            previewImageContainer.classList.remove('active');
+            chooseBase.style.opacity="1";
         })
 
         const previewAnimation = function() {

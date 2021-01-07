@@ -44,19 +44,21 @@ class HomeUI {
         const navMenu = document.querySelector('.navigation-menu');
         const btnNavOpen = document.querySelector('#btn-navigation-open');
         const btnNavClose = document.querySelector('#btn-navigation-close');
+        const mobile = window.matchMedia("(max-width: 768px)");
 
         btnNavOpen.addEventListener('click', () => {
             btnNavOpen.classList.toggle('active');
             navMenu.classList.toggle('active');
             this.overlay.classList.toggle('active');
             
-            if(navMenu.classList.contains('active')) {
+            if(navMenu.classList.contains('active') && mobile.matches) {
                 setTimeout(() => {
+
                     this._revertHeaderColors();
                 }, 500)
             }
 
-            if(!navMenu.classList.contains('active')) {
+            if(!navMenu.classList.contains('active') && mobile.matches) {
                 setTimeout(() => {
                     this._returnHeaderColors();
                 }, 400)

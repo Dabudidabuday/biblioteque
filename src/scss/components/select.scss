@@ -5,9 +5,21 @@
 
     .select-arrow {
         top: 18px;
+
+        .line--dark:nth-child(2) {
+            transform: rotate(45deg) translateX(-6px);
+        }
     }
 
     .option__items .item {
         height: 36px;
+    }
+
+}
+
+.custom-select,
+.custom-select--card {
+    @media screen and(max-width: 768px) {
+        display: none;
     }
 }

@@ -100,19 +100,23 @@
         margin-top: 4px;
     }
 
-    &.active {
-        .line {
-            width: 16px;
-            transform: rotate(-45deg);
-            transform-origin: left;
-            transition: all ease-in-out .4s;
-        }
-    
-        .line + .line {
-            margin-top: -3px;
-            transform: rotate(45deg);
+    @media screen and(max-width: 768px) {
+        &.active {
+            .line {
+                width: 16px;
+                transform: rotate(-45deg);
+                transform-origin: left;
+                transition: all ease-in-out .4s;
+            }
+        
+            .line + .line {
+                margin-top: -3px;
+                transform: rotate(45deg);
+            }
         }
     }
+
+   
 }
 
 .btn-link {
