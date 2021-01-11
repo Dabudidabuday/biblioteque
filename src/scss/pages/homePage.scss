@@ -9,9 +9,13 @@
     background-position: center center;
 
     @media screen and(max-width: 768px){
-        padding-top: 190px;
+        padding-top: 150px;
         padding-right: 16px;
         padding-left: 16px;
+    }
+
+    @media screen and(max-height: 790px) {
+        padding-top: 130px;
     }
 }
 

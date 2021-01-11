@@ -14,6 +14,10 @@
             margin-bottom: 12px;
         }
     }
+
+    @media screen and(max-height: 780px) {
+        max-height: 230px;
+    }
 }
 
 .card--text {

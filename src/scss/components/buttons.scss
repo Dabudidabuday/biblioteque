@@ -9,7 +9,12 @@
     @media screen and(max-width: 768px) {
 
         .btn-icon {
-            margin-left: 20px;
+            margin-left: 12px;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
         }
 
         .btn-icon:first-of-type {

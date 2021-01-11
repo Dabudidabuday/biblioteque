@@ -25,10 +25,14 @@
 
     @media screen and(max-width: 768px) {
         width: 100%;
-        min-height: 276px;
-        max-height: 320px;
+        min-height: 216px;
+        max-height: 298px;
         overflow: hidden;
         overflow-y: visible;
+    }
+
+    @media screen and(max-height: 800px) {
+        max-height: 224px;
     }
 
     .card {
