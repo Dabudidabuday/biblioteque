@@ -23,7 +23,7 @@ class FormFilter {
                 gutter: 20
             },
             stagger: 20,
-            transitionDuration: '1.2s',
+            transitionDuration: '.6s',
             /* default
             hiddenStyle: {
                 opacity: 0,
@@ -39,18 +39,33 @@ class FormFilter {
         
         const formFilterButtons = document.querySelector('.form-delivery');
         
-        if(formFilterButtons) {
-            formFilterButtons.addEventListener( 'click', function( event ) {
-                if ( !matchesSelector( event.target, '.form-radio' ) ) {
-                    return;
-                }
-            
-                var filterValue = event.target.getAttribute('data-filter');
-            
+        formFilterButtons.addEventListener( 'click', function( event ) {
+            if ( !matchesSelector( event.target, '.form-radio' ) ) {
+                return;
+            }
+        
+            var filterValue = event.target.getAttribute('data-filter');
+        
+            iso.arrange({ filter: filterValue });
+        });
+
+        const addressDeliveryCheckbox = document.querySelector('#address-delivery');
+
+        addressDeliveryCheckbox.addEventListener('input', (event) => {
+            var filterValue = event.target.getAttribute('data-filter');
+            const addressDeliveryInputs = document.querySelectorAll(filterValue)
+            if(!event.target.checked) {
+                iso.hideItemElements(addressDeliveryInputs);
+                
+                
+                iso.getFilteredItemElements()
                 iso.arrange({ filter: filterValue });
-            });
+            }
+
+            iso.arrange({ filter: filterValue });
+
             
-        }
+        })
         
     }
 }

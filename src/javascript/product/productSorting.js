@@ -62,13 +62,6 @@ class ProductSorting {
         });
     
         const products = Array.from(document.querySelectorAll('.choose__details .card'));
-        
-        // products.forEach(item => {
-        //     item.addEventListener('click', () => {
-        //         iso.layout()
-        //     })
-        // })
-
         this.productsDetails.insertProductDetails(products, iso);
     }
 
@@ -77,7 +70,7 @@ class ProductSorting {
         
 
         this._filterTabsUI();
-        this._productSortAnimation()
+        this._productSortAnimation();
     }
 }
 
