@@ -18,7 +18,7 @@
 
     @media screen and(max-width: 768px) {
         margin-top: 0;
-        padding-top: 16px;
+        // padding-top: 16px;
         padding-left: 16px;
         padding-right: 16px;
         overflow: visible;
@@ -36,7 +36,10 @@
         flex-wrap: nowrap;
         overflow: visible;
         overflow-x: scroll;
-        gap: 10px;
+        
+        .btn-filter:not(:last-of-type) {
+            margin-right: 10px;
+        }
     }
 }
 

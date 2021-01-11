@@ -3,7 +3,7 @@ import ProductDetails from './productDetails';
 class ProductSorting {
     constructor(rootElement) {
         this.rootElement = document.querySelector(rootElement);
-        // this.productsDetails = new ProductDetails('.choose__details')
+        this.productsDetails = new ProductDetails('.choose__details')
     }
 
     _filterTabsUI() {
@@ -41,6 +41,12 @@ class ProductSorting {
                 columnHeight: '.grid-sizer',
                 gutter: '.gutter-sizer'
             },
+            hiddenStyle: {
+                opacity: 0
+            },
+              visibleStyle: {
+                opacity: 1
+            },
             stagger: 70,
             transitionDuration: '0.7s',
         });
@@ -63,7 +69,7 @@ class ProductSorting {
         //     })
         // })
 
-        ProductDetails.insertProductDetails(products, iso);
+        this.productsDetails.insertProductDetails(products, iso);
     }
 
     run() {

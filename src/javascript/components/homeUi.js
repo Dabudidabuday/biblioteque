@@ -65,7 +65,7 @@ class HomeUI {
             }
         })
 
-        btnNavClose.addEventListener('click', function() {
+        btnNavClose.addEventListener('click', () => {
             navMenu.classList.remove('active');
             this.overlay.classList.remove('active');
         })        

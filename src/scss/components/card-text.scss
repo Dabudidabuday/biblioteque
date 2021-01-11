@@ -5,11 +5,14 @@
     gap: 10px 20px;
 
     @media screen and(max-width: 768px) {
-        gap: 12px;
-        max-height: 315px;
-        
+        margin-top: 8px;
+        max-height: 350px;
         overflow: hidden;
         overflow-y: scroll;
+
+        .card--text:not(:last-of-type){
+            margin-bottom: 12px;
+        }
     }
 }
 

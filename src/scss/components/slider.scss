@@ -1,0 +1,17 @@
+.slider {
+
+    .flickity-prev-next-button {
+        visibility: hidden;
+        background-color: transparent;
+    }
+
+    
+
+    &:hover {
+        .flickity-prev-next-button {
+            visibility: visible;
+            opacity: 1;
+            transition: ease-in .3s;
+        }
+    }
+}

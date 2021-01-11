@@ -10,40 +10,70 @@ class ProductDetails {
         //     }
         // }
         this.currentproductDetails = '';
+        this.currentProductShapeDetails = '';
+        this.stepFlavor = document.querySelector('.step--flavor');
+        this.stepForm = document.querySelector('.step--form');
     }
 
-    _insertAfter(referenceNode, newNode) {
+    _insertLast(referenceNode, newNode) {
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
 
     _createProductDetails() {
+        // const stepForm = document.querySelector('.step--form');
+        // const stepFlavor = document.querySelector('.step--flavor');
+
         const cardDetails = document.createElement('div');
         cardDetails.classList.add('card--details');
 
-        var data = `
+        var productFlavorData = `
             <h4 class="h4 modal__title">Черный инжир</h4>
             <p class="modal__text"><b>Верхние ноты:</b> листья инжира, ревень, петитгрейн.</p>
             <p class="modal__text"><b>Ноты сердца:</b>инжир, молоко.</p>
             <p class="modal__text"><b>База:</b> кедр, бобы тонка, коричневый сахар.</p>
             <p class="modal__text"><b>Ольфактурная группа:</b> фруктовые.</p>
-            <button class="btn-close btn-reset modal-close">
-                <span class="line--md"></span>
-                <span class="line--md"></span>
-            </button>
         `;
 
-        cardDetails.innerHTML = data;
-        this.currentproductDetails = cardDetails;
+        var productShapeData = `
+            <h4 class="h4 modal__title">Флакон 2</h4>
+            <p class="modal__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque veniam hic, harum pariatur distinctio rem minus fugit iusto odit doloribus?</p>
+        `;
+
+        if(this.stepFlavor) {
+            cardDetails.innerHTML = productFlavorData;       
+            this.currentproductDetails = cardDetails;
+        }
+
+        if(this.stepForm) {
+            cardDetails.innerHTML = productShapeData; 
+            this.currentProductShapeDetails = cardDetails;
+        } 
+        
     }
 
-    static insertProductDetails(cards, grid) {
+    insertProductDetails(cards, grid) {
         cards.forEach(card => {
             card.addEventListener('click', (e) => {
-                this._createProductDetails()
-                console.log(this._createProductDetails);
+                this._createProductDetails();
+
+                cards.forEach(item => {
+                    const details = item.querySelector('.card--details');
+
+                    if(details) {
+                        item.removeChild(details);
+                    }
+                });
+                
                 const closestParent = e.target.closest('.card');
 
-                this._insertAfter(closestParent, this.currentproductDetails);
+                if(this.stepFlavor) {
+                    closestParent.appendChild(this.currentproductDetails);
+                }
+
+                if(this.stepForm) {
+                    closestParent.appendChild(this.currentProductShapeDetails);
+                }
+                
                 grid.layout();
             })
         })

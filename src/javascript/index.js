@@ -1,6 +1,7 @@
 import '../scss/index.scss';
 
 import "regenerator-runtime/runtime.js";
+
 /* App Components */
 import './components/colorPalette.js';
 import './components/forms.js';
@@ -21,6 +22,7 @@ import ProductDetails from './product/productDetails';
 import Accordion from './components/accordion.js';
 import ProductSorting from './product/productSorting';
 import CartUI from './sections/cartUI';
+import Slider from './components/Slider';
 
 class App {
     constructor() {
@@ -44,6 +46,7 @@ class App {
         this.colorPalette = new ColorPalette('.base__color-palette');
         this.formFilter = new FormFilter('.form-grid');
         this.cartUI = new CartUI('.product__show-more');
+        this.slider = new Slider('.slider')
     }
 
     run() {
@@ -57,6 +60,7 @@ class App {
         this.productSorting.run();
         this.formFilter.run();
         this.cartUI.run();
+        this.slider.run();
     }
 }
 
@@ -303,30 +307,35 @@ function pageTransition() {
 
 function contentAnimation() {
     var tl = gsap.timeline();
-    tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.2, delay: 0.1 });
+    tl.fromTo(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.2, delay: 0.1 });
 }
 
-(function () {
-    barba.init({
-        sync: true,
-        debug: true,
-        transitions: [
-            {
-                async leave(data) {
-                    const done = this.async();
-                    pageTransition();
-                    await delay(1000);
-                    done();
-                },
+const desktop = window.matchMedia("(min-width: 768px)");
 
-                async enter(data) {
-                    contentAnimation();
+if(desktop.matches) {
+    (function () {
+        barba.init({
+            sync: true,
+            debug: true,
+            transitions: [
+                {
+                    async leave(data) {
+                        const done = this.async();
+                        pageTransition();
+                        await delay(1000);
+                        done();
+                    },
+    
+                    async enter(data) {
+                        contentAnimation();
+                    },
+    
+                    async once(data) {
+                        contentAnimation();
+                    },
                 },
-
-                async once(data) {
-                    contentAnimation();
-                },
-            },
-        ],
-    });
-}());
+            ],
+        });
+    }());
+    
+}

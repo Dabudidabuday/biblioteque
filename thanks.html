@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/bundle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="src/javascript/libraries/flickity-slider/flickity.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@
     </header>
 
     <div class="container--step jc-end">
-        <h3 class="h3 cart__title">Спасибо за заказ № 2145</h3>
+        <h3 class="h3 cart__title">Спасибо за заказ № <span class="order-number">2145</span></h3>
     </div>
     
    
@@ -243,7 +244,7 @@
         <div class="container">
             <h3 class="h3 recommended__title">Рекомендуемые товары</h3>
 
-            <div class="recommended__product-list">
+            <div class="recommended__product-list slider">
                 <div class="card--recommended">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -435,6 +436,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="src/javascript/libraries/isotope/cell-by-column.js"></script>
+    <script src="src/javascript/libraries/flickity-slider/flickity.pkgd.min.js"></script>
     <script src="dist/bundle.js"></script>
 </body>
 </html>

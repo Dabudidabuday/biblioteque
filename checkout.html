@@ -216,7 +216,6 @@
                                 <label for="input-email" class="label">E-mail <sup class="red-star">*</sup></label>
                             </div>
 
-                            
                             <div class="custom-select custom-select--checkout">
                                 <div class="select-arrow">
                                     <div class="line--dark"></div>
@@ -232,7 +231,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                         
                     </fieldset>
@@ -369,7 +367,7 @@
                                 <label for="input-postcode" class="label">Индекс</label>
                             </div>
 
-                            <div class="custom-select custom-select--checkout grid-item another-address">
+                            <div class="custom-select custom-select--checkout grid-item another-address address-delivery">
                                 <div class="select-arrow">
                                     <div class="line--dark"></div>
                                     <div class="line--dark"></div>
@@ -390,12 +388,12 @@
                                 </div>
                             </div>
 
-                            <div class="input-wrapper grid-item another-address">
+                            <div class="input-wrapper grid-item another-address address-delivery">
                                 <input type="text" name="house" class="form-input" id="input-house">
                                 <label for="input-house" class="label">Дом</label>
                             </div>
 
-                            <div class="input-wrapper grid-item another-address">
+                            <div class="input-wrapper grid-item another-address address-delivery">
                                 <input type="text" name="flat" class="form-input" id="input-flat">
                                 <label for="input-flat" class="label">Квартира</label>
                             </div>
@@ -421,7 +419,18 @@
                                 </div>
                             </div>
 
-                            
+                            <div class="checkbox-wrapper grid-item shipping">
+                                <input 
+                                    type="radio" 
+                                    class="form-radio" 
+                                    name="shipping-address" 
+                                    id="address-delivery" 
+                                    value="address-delivery"
+                                    data-filter=".address-delivery"
+                                    >
+                                <span class="custom-checkbox"></span>
+                                <label for="pickup" class="custom-label" >Нужна адресная доставка</label>
+                            </div>
                         </div>
                     </fieldset>
 
@@ -452,7 +461,7 @@
                                 value="payment-card"
                                 >
                             <span class="custom-checkbox"></span>
-                            <label for="payment-credit" class="custom-label">Оплата картой</label>
+                            <label for="payment-credit" class="custom-label">Оплата картой <span class="icon-liqpay"></span></label>
                         </div>
 
                     </fieldset>

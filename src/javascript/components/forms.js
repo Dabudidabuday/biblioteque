@@ -5,6 +5,10 @@ class FormFilter {
         this.htmlElement = htmlElement;
     }
 
+    _addressDelivery() {
+
+    }
+
     run() {
         var elem = document.querySelector(this.htmlElement);
         if(!elem) return;
@@ -33,7 +37,7 @@ class FormFilter {
         });
         
         
-        const formFilterButtons = document.querySelector('.form-filter-buttons');
+        const formFilterButtons = document.querySelector('.form-delivery');
         
         if(formFilterButtons) {
             formFilterButtons.addEventListener( 'click', function( event ) {

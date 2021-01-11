@@ -1,3 +1,5 @@
+
+
 .final__order {
     padding-top: 40px;
     border-top: 1px solid $colorBrownLighten;
@@ -28,6 +30,10 @@
 
     .card__details {
         align-items: flex-end;
+    }
+
+    .capacity {
+        display: none;
     }
 
     .card--perfume {

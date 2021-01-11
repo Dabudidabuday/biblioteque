@@ -1,0 +1,14 @@
+.step--size {
+
+    @media screen and(max-width: 768px) {
+        .choose__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .found-title {
+                margin-top: 0;
+            }
+        }
+    }
+}

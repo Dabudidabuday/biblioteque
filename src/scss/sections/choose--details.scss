@@ -26,7 +26,7 @@
     @media screen and(max-width: 768px) {
         width: 100%;
         min-height: 276px;
-        max-height: 276px;
+        max-height: 320px;
         overflow: hidden;
         overflow-y: visible;
     }
@@ -37,7 +37,6 @@
         max-width: 160px;
         width: 100%;
         margin-bottom: 32px;
-        transition: all ease-in-out .3s;
         overflow: hidden;
         // cursor: pointer;
 
@@ -57,6 +56,7 @@
 
         .card__title {
             margin-top: 12px;
+            height: 48px;
             line-height: 150%;   
         }
 
@@ -74,15 +74,32 @@
                 z-index: 2;
                 opacity: 1;
             }
+
+            .card--details {
+                max-height: 200px;
+                opacity: 1;
+                transition: all ease-in .3s;
+            }
+        }
+
+        .card__head {
+            display: flex;
+            flex-direction: column;
         }
 
         @media screen and(max-width: 768px) {
             margin-bottom: 12px;
-            flex-direction: row;
             align-items: center;
             width: 100%;
             max-width: unset;
-            border: 1px solid $colorBrownLighten;
+            // border: 1px solid $colorBrownLighten;
+
+            .card__head {
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                border: 1px solid $colorBrownLighten;
+            }
 
             .card__img {
                 width: 65px;
@@ -95,10 +112,20 @@
                     height: 58px;
                 }
             }
+
+            .card__description {
+                margin-left: 12px;
+            }
             
             .card__title {
                 margin-top: 0;
-                margin-left: 12px;
+                height: unset;
+            }
+
+            .card__cost {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
             }
 
         }
@@ -151,5 +178,35 @@
         @media screen and(max-width: 768px){
             display: none;
         }
+    }
+}
+
+.card--details {
+    margin-top: 12px;
+    display: block;
+    padding: 16px;
+    min-height: 0;
+    width: 100%;
+    opacity: 0;
+    border: 1px solid $colorBrownDarken;
+    transition: opacity .3s;
+    pointer-events: none;
+    
+    .modal__title {
+        margin-bottom: 8px;
+        color: $colorBrownDarken;
+    }
+
+    .modal__text {
+        margin-bottom: 8px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #3B4857;
+    }
+}
+
+@media screen and(min-width: 992px) {
+    .card--details {
+        display: none;
     }
 }

@@ -8,7 +8,7 @@
     left: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: .15s;
+    // transition: .15s;
     z-index: 1000;
     mix-blend-mode: difference;
 }
@@ -34,8 +34,6 @@
         display: none;
     }
 }
-
-
 
 #cursor.expand {
     opacity: .5;
@@ -157,18 +155,29 @@
     right: -15px;
 
     @media screen and(max-width: 768px) {
-        display: none;
+        width: 4px;
+        overflow-x: hidden;
     }
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 7px 2px rgba(0, 0, 0, 0.065);
+
+    @media screen and(max-width: 768px) {
+        box-shadow: none;
+        overflow-x: hidden;
+    }
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: $colorBrownLighten;
+
+    @media screen and(max-width: 768px) {
+        background: $colorBrownDarken;
+        overflow-x: hidden;
+    }
 }
 
 

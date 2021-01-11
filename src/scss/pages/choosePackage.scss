@@ -1,0 +1,15 @@
+.step--package {
+
+    @media screen and(max-width: 768px) {
+        .header__subtitle {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 13px;
+            color: #273443;
+        }
+        
+        .btn-next {
+            width: unset !important;
+        }
+    }
+}

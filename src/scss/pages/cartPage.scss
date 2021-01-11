@@ -61,6 +61,7 @@
 
         .amount__products {
             font-size: 14px;
+            color: #000;
         }
 
         .amout__price {
@@ -212,12 +213,22 @@
             padding-right: 16px;
             padding-left: 16px;
 
+            .cart__order {
+                height: 239px;
+            }
+
             .order__product-list {
                 margin-top: 0;
-                max-height: 239px;
+                display: flex;
+                flex-direction: column;
+                // max-height: 239px;
                 height: 239px;
                 overflow: hidden;
                 overflow-y: scroll;
+            }
+
+            .card--order {
+                min-height: 124px;
             }
 
             .card__preview {
@@ -324,10 +335,11 @@
 }
 
 .recommended__product-list {
-    display: flex;
+    // display: flex;
     margin-top: 20px;
 
     @media screen and(max-width: 768px) {
+        display: flex;
         flex-direction: column;
         margin-top: 12px;
         max-height: 200px;

@@ -25,6 +25,14 @@
         line-height: 25px;
     }
 
+    .custom-label {
+        position: relative;
+
+        .icon-liqpay {
+            left: 154px;
+        }
+    }
+
     @media screen and(max-width: 768px) {
         overflow: visible !important;
 
@@ -84,6 +92,11 @@
         legend {
             font-size: 16px;
             line-height: 22px;
+        }
+
+        .custom-select,
+        .custom-celect__input {
+            max-width: unset;
         }
 
         .custom-label {
@@ -220,6 +233,7 @@
     width: 20px;
     height: 20px;
     border: 1px solid #5F6E80;
+    background-color: #fff;
 
     &::after {
         content: '';
@@ -234,6 +248,7 @@
     position: absolute;
     appearance: none;
     transition: all .3s;    
+    visibility: hidden;
 
     &:checked + .custom-checkbox::after {
         visibility: visible;

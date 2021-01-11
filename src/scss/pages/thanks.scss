@@ -6,9 +6,13 @@
 
 .destination__title,
 .customer__title, 
-.payment__title,
-.delivery-method {
+.payment__title {
     margin-bottom: 6px;
+    line-height: 19px;
+}
+
+.delivery-method {
+    margin-bottom: 8px;
     line-height: 19px;
 }
 
@@ -35,4 +39,29 @@
         padding-right: 16px;
         padding-left: 16px;
     }
+
+    .text-secondary {
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    @media screen and(max-width: 768px){
+        .details__title,
+        .quantity-group {
+            display: none;
+        }
+    
+        .capacity__quantity,
+        .price__quantity {
+            margin-top: 31px !important;
+        }
+    }
+
+    .destination__spot {
+        line-height: 130%;
+    }
+}
+
+.order-number {
+    font-family: "Open sans", sans-serif;
 }

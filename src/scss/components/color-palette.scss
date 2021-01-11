@@ -11,9 +11,12 @@
 
     .color-list {
         display: flex;
-        gap: 20px;
         padding-top: 4px;
         padding-bottom: 4px;
+
+        .btn-color:not(:last-of-type) {
+            margin-right: 20px;
+        }
     }
 
     &.active {

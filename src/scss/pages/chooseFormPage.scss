@@ -1,0 +1,23 @@
+.step--form {
+ 
+    @media screen and(max-width: 768px) {
+        .choose__details {
+            .card {
+
+                .card__img {
+                    width: 85px;
+                    height: 85px;
+
+                    img {
+                        height: inherit;
+                    }
+                }
+
+                .card__title {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
