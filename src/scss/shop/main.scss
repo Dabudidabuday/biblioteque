@@ -1,0 +1,53 @@
+@import './sections/founder.scss';
+@import './sections/invite.scss';
+
+@import './pages/HomePage.scss';
+
+.shop {
+
+    .header {
+        position: unset;
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        .container {
+            padding: 0;
+        }
+        
+
+        @media screen and(max-width: 768px){
+            .logo-desktop {
+                margin-left: 0;
+    
+                svg {
+                    max-width: 100px;
+                    max-height: 30px;
+                }
+            }
+        }
+    }
+
+    .line,
+    svg path {
+        stroke: #000;
+        color: $colorSecondary;
+        background-color: #000;
+    }
+
+    .header__phone {
+        color: $colorSecondary;
+    }
+
+    @media screen and(max-width: 768px) {
+        .container {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        .btn-outline-primary {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}

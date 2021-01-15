@@ -1,0 +1,43 @@
+.section-founder {
+    @media screen and(max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+}
+
+.founder__text {
+    margin-left: 100px;
+
+    @media screen and(max-width: 768px) {
+        margin-left: 0;
+    }
+}
+
+.founder__name {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.founder__subtitle {
+    margin-bottom: 32px;
+    max-width: 80%;
+
+    @media screen and(max-width: 768px) {
+        max-width: unset;
+    }
+}
+
+.founder__mission {
+    margin-bottom: 12px;
+
+    @media screen and(max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.founder__secondary {
+    line-height: 150%;
+}

@@ -3,6 +3,7 @@
 .h3,
 .h4,
 .h5 {
+    position: relative;
     font-family: 'Playfair Display', serif;
 }
 
@@ -49,4 +50,18 @@
     font-size: 12px;
     line-height: 16px;
     color: $colorSecondary;
+}
+
+.heading-increment::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    counter-increment: section;
+    content: counter(section);
+    font-family: "Playfair Display", serif;
+    font-size: 130px;
+    color: $colorBrownLighten;
+    transform: translate( 15%, -70%);
+    opacity: 0.5;
+    z-index: -1;
 }

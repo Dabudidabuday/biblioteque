@@ -27,7 +27,7 @@ class ProductDetails {
         cardDetails.classList.add('card--details');
 
         var productFlavorData = `
-            <h4 class="h4 modal__title">Черный инжир</h4>
+            <h4 class="h4 modal__title">${data.title}</h4>
             <p class="modal__text"><b>Верхние ноты:</b> листья инжира, ревень, петитгрейн.</p>
             <p class="modal__text"><b>Ноты сердца:</b>инжир, молоко.</p>
             <p class="modal__text"><b>База:</b> кедр, бобы тонка, коричневый сахар.</p>

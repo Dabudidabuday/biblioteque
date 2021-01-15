@@ -1,15 +1,16 @@
 * {
-    cursor: none !important;
+    // cursor: none !important;
 }
 
 body, html {
-    cursor: none;
+    // cursor: none;
     // height: 100%;
 }
 
 body {
     position: relative;
     font-family: 'Open Sans', sans-serif;
+    counter-reset: section;
 
 
     @media screen and(max-width: 768px) {

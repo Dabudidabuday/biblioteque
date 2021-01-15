@@ -156,9 +156,10 @@
     }
 }
 
-.btn-ouline-primary {
+.btn-ouline-primary,
+.btn-outline-primary {
     font-size: 16px;
-    // color: #000;
+    color: #000;
     background: transparent;
     border: 2px solid #000;
 }
@@ -323,4 +324,11 @@ active button for steps
 #btnZoomOff {
     padding: 11.5px 45px;
     font-size: 14px;
+}
+
+.link--underline {
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $colorSecondary;
 }
