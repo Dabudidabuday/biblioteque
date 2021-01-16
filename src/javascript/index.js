@@ -24,6 +24,12 @@ import ProductSorting from './product/productSorting';
 import CartUI from './sections/cartUI';
 import Slider from './components/Slider';
 
+/* SECTIONS */
+import SectionGifts from './sections/Gifts';
+
+/* PAGES */
+import HomePage from './pages/shop/homePage/HomePage';
+
 class App {
     constructor() {
         this.cursor = new Cursor();
@@ -46,7 +52,13 @@ class App {
         this.colorPalette = new ColorPalette('.base__color-palette');
         this.formFilter = new FormFilter('.form-grid');
         this.cartUI = new CartUI('.product__show-more');
-        this.slider = new Slider('.slider')
+        this.slider = new Slider('.slider');
+        
+        /* Sections instances*/
+        this.gifts = new SectionGifts('.section-gifts');
+
+        /* SHOP pages  */
+        this.home = new HomePage('.shop-home')
     }
 
     run() {
@@ -61,6 +73,11 @@ class App {
         this.formFilter.run();
         this.cartUI.run();
         this.slider.run();
+
+        this.gifts.run();
+
+        /* Shop pages */
+        this.home.run();
     }
 }
 
@@ -69,8 +86,6 @@ window.onload = () => {
 
     app.run();
 }
-
-
 
 const minus = Array.from(document.querySelectorAll('.btn-minus'));
 const plus = Array.from(document.querySelectorAll('.btn-plus'));
@@ -163,9 +178,6 @@ customSelect.forEach(item => {
         }  
     })
 })
-
-
-
 
 /* закидываем выбранный пункт чекбокса в инпут селекта и закрываем селект */
 const options = Array.from(document.querySelectorAll('.option__items .item'));

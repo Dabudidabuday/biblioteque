@@ -4,6 +4,21 @@ class Slider {
     this.rootElement = document.querySelector(rootElement);
     this.sliders = sliders;
   }
+
+  initSlider(root, additionalSettings) {
+    const container = root;
+    const defaultSettings = {
+      contain: true,
+      pageDots: false,
+      // freeScroll: false
+      cellAlign: 'left',
+      wrapAround: true
+    };
+
+    const sliderOptions = Object.assign(defaultSettings, additionalSettings)
+
+    const slider = new Flickity(container, sliderOptions);
+  }
   
   run() {
     if(!this.rootElement) return;

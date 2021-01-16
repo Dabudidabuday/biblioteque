@@ -13,3 +13,11 @@
         display: none !important;
     }
 }
+
+.show-desktop-block {
+    display: block;
+
+    @media screen and(max-width: 768px) {
+        display: none !important;
+    }
+}

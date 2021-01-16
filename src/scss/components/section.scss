@@ -41,7 +41,8 @@
 
 .section__title {
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    width: fit-content;
     font-family: "Playfair Display", serif;
     font-size: 28px;
     line-height: 150%;

@@ -1,0 +1,36 @@
+.card--simple {
+    position: relative;
+    padding: 12px 12px 20px;
+    text-align: left;
+    
+    .card__preview {
+        margin-bottom: 12px;
+    }
+    
+    .card__title {
+        margin-bottom: 4px;
+    }
+
+    .card__subtitle {
+        margin-bottom: 20px;
+    }
+
+    .price__quantity {
+        margin-bottom: 14px;
+    }
+
+    .btn-buy {
+        opacity: 0;
+        transition: ease-out .2s;
+    }
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+
+        .btn-buy {
+            opacity: 1;
+            transition: ease-in .3s;
+        }
+    }
+}

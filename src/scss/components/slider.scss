@@ -15,3 +15,29 @@
         }
     }
 }
+
+.flickity-page-dots {
+    .dot {
+        margin: 14px;
+        width: 7px;
+        height: 7px;
+        background: #000;
+        opacity: 1;
+        
+    }
+
+    .is-selected {
+        transition: ease-in .3s;
+    }
+
+    .is-selected::before {
+        position: absolute;
+        content: '';
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        transform: translate(-50%, -40%);;
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+}
