@@ -1,5 +1,4 @@
 import Hero from './components/Hero';
-
 class HomePage {
     constructor(rootElement) {
         this.root = rootElement;

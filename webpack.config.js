@@ -75,7 +75,14 @@ module.exports = {
           'images': path.resolve(__dirname, 'src/images'),
           'components': path.resolve(__dirname, 'src/javascript/components')
         },
-
+        // fallback: {
+        //     util: require.resolve("util/"),
+        //     path: require.resolve("path-browserify"),
+        //     url: require.resolve("url/"),
+        //     crypto: false,
+        //     https: false,
+        //     vm: false 
+        // }
     },
 
     mode: devMode ? 'development' : 'production'

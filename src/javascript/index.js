@@ -12,7 +12,7 @@ import './product/productPreview.js';
 
 
 /* Class Based App */
-import Cursor from './components/cursor.js';
+// import Cursor from './components/cursor.js';
 import Overlay from './components/overlays.js';
 import FormFilter from './components/forms.js';
 import ProductPreview from './product/productPreview.js';
@@ -29,10 +29,10 @@ import SectionGifts from './sections/Gifts';
 
 /* PAGES */
 import HomePage from './pages/shop/homePage/HomePage';
-
+import CatalogPage from './pages/shop/catalogPage/CatalogPage';
 class App {
     constructor() {
-        this.cursor = new Cursor();
+        // this.cursor = new Cursor();
         this.overlay = new Overlay(
             '#overlay', 
             [
@@ -58,12 +58,13 @@ class App {
         this.gifts = new SectionGifts('.section-gifts');
 
         /* SHOP pages  */
-        this.home = new HomePage('.shop-home')
+        this.home = new HomePage('.shop-home');
+        this.catalog = new CatalogPage('.shop-catalog');
     }
 
     run() {
         this.homeUi.run();
-        this.cursor.run();
+        // this.cursor.run();
         this.overlay.run();
         this.productPreview.run();
         this.colorPalette.run();
@@ -78,6 +79,8 @@ class App {
 
         /* Shop pages */
         this.home.run();
+        this.catalog.run(); 
+        // console.log(this.catalog);
     }
 }
 

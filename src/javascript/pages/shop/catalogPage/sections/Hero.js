@@ -1,9 +1,9 @@
 import Slider from 'components/Slider';
 
-class Hero { 
+class Hero {
     constructor(rootElement) {
         this.root = document.querySelector(rootElement);
-        this.sliderContainer = document.querySelector('.hero__slider');
+        this.sliderContainer = document.querySelector('.slider--fullscreen');
         this.slider = new Slider();
 
         this.sliderOptions = {
@@ -14,9 +14,8 @@ class Hero {
     }
 
     run() {
-        if(!this.root) return;
         this.slider.initSlider(this.sliderContainer, this.sliderOptions);
     }
 }
 
-export default Hero;
+export default Hero
