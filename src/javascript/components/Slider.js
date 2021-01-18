@@ -1,4 +1,3 @@
-
 class Slider {
   constructor(rootElement, sliders=[]) {
     this.rootElement = document.querySelector(rootElement);

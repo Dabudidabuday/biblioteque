@@ -30,6 +30,7 @@ import SectionGifts from './sections/Gifts';
 /* PAGES */
 import HomePage from './pages/shop/homePage/HomePage';
 import CatalogPage from './pages/shop/catalogPage/CatalogPage';
+import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
 class App {
     constructor() {
         // this.cursor = new Cursor();
@@ -60,6 +61,7 @@ class App {
         /* SHOP pages  */
         this.home = new HomePage('.shop-home');
         this.catalog = new CatalogPage('.shop-catalog');
+        this.singleProduct = new SingleProduct('.shop-single-product');
     }
 
     run() {
@@ -80,7 +82,7 @@ class App {
         /* Shop pages */
         this.home.run();
         this.catalog.run(); 
-        // console.log(this.catalog);
+        this.singleProduct.run();
     }
 }
 

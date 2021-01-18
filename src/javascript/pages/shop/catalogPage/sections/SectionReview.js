@@ -4,7 +4,7 @@ class SectionReview {
     constructor(rootElement) {
         this.root = document.querySelector(rootElement);
         this.slider = new Slider();
-        this.reviews = this.root.querySelector('.slider');
+        this.reviews = document.querySelector('.review__list.slider');
         this.sliderSettings = {
             contain: true,
             pageDots: false,
