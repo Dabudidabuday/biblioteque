@@ -13,6 +13,84 @@
     <title>Votre</title>
 </head>
 <body class="shop shop-catalog">
+
+    <div id="overlay"></div>
+    
+    <div class="mobile__catalog-bar category-controls">
+        <button class="btn-close btn-reset"><span class="line--md"></span><span class="line--md"></span></button>
+    
+        <div class="control-group">
+            <div class="control__head">
+                <p class="control__title">Бренд</p>
+                <span class="icon-arrow"></span>
+            </div>
+        
+            <div class="button-group active">
+                <button class="btn-primary btn-control">
+                    <img src="src/images/logo/votre.svg" alt="">
+                </button>
+
+                <button class="btn-primary btn-control">
+                    <img src="src/images/logo/header-logo.svg" alt="">
+                </button>
+
+                <button class="btn-primary btn-control">
+                    <img src="src/images/logo/votre.svg" alt="">
+                </button>
+
+                <button class="btn-primary btn-control">
+                    <img src="src/images/logo/votre.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="control__head">
+                <p class="control__title">Группа товара</p>
+                <span class="icon-arrow"></span>
+            </div>
+        
+            <div class="button-group active">
+                <button class="btn-primary btn-control">Парфюмерия</button>
+                <button class="btn-primary btn-control">Ароматы для дома</button>
+                <button class="btn-primary btn-control">Каминные свечи</button>
+                <button class="btn-primary btn-control">Уходовая косметика</button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="control__head">
+                <p class="control__title">Парфюмер</p>
+                <span class="icon-arrow"></span>
+            </div>
+        
+            <div class="button-group active">
+                <button class="btn-primary btn-control">Парфюмерия</button>
+                <button class="btn-primary btn-control">Ароматы для дома</button>
+                <button class="btn-primary btn-control">Каминные свечи</button>
+                <button class="btn-primary btn-control">Уходовая косметика</button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="control__head">
+                <p class="control__title">Коллекции</p>
+                <span class="icon-arrow"></span>
+            </div>
+        
+            <div class="button-group active">
+                <button class="btn-primary btn-control">Парфюмерия</button>
+                <button class="btn-primary btn-control">Ароматы для дома</button>
+                <button class="btn-primary btn-control">Каминные свечи</button>
+                <button class="btn-primary btn-control">Уходовая косметика</button>
+            </div>
+        </div>
+
+        <div class="catalog-bar__footer">
+            <button class="btn-reset btn-lg btnResetChoosed" type="button">Сбросить</button>
+            <button class="btn-reset btn-dark btn-lg btnApplyFilter" type="button">Показать</button>
+        </div>
+    </div>
     
     <header class="header animate-this">
         <div class="flex-container ai-center jc-between mx-auto">
@@ -86,13 +164,43 @@
          </div>
     </header>
 
+    <div class="catalog-bar show-mobile">
+        <div class="bar__buttons-list">
+            <div class="btn-wrapper">
+                <button class="btn-reset bar__btn" id="btn-category" type="button">Категории</button>
+                <span class="icon-arrow"></span>
+            </div>
+            <div class="btn-wrapper">
+                <button class="btn-reset bar__btn" type="button">Фильтр</button>
+                <span class="icon-filter"></span>
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="btn-reset bar__btn" id="btn-sorting" type="button">Сортировка</button>
+                <span class="icon-arrow"></span>
+            </div>
+
+            <div class="sorting__paremeters-list">
+                <ul class="parameters">
+                    <li class="item">По популярности</li>
+                    <li class="item">По рейтингу</li>
+                    <li class="item">По новинке</li>
+                    <li class="item">Цена (по возрастанию)</li>
+                    <li class="item">Цена (по убыванию цены)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <section class="catalog__hero">
         <div class="container">
-            <div class="breadcrumbs">
+            <div class="breadcrumbs show-desktop">
                 <p class="breadcrumbs__body">На главную / 
                     <span class="active">Каталог</span>
                 </p>
             </div>
+
+           
 
             <h2 class="h2 hero__title">Фавориты декабря</h2>
         </div>
@@ -127,7 +235,7 @@
             <div class="catalog__head">
                 <h3 class="h2 catalog__title">Бестселлеры и новинки наших брендов</h3>
 
-                <div class="custom-select">
+                <div class="custom-select show-desktop">
                     <div class="select-arrow">
                         <div class="line--dark"></div>
                         <div class="line--dark"></div>
@@ -150,7 +258,7 @@
             
 
             <div class="catalog__body">
-                <aside class="sidebar--filter">
+                <aside class="sidebar--filter show-desktop">
                     <p class="sidebar__title">Фильтр</p>
 
                     <div class="sidebar__filters">
@@ -257,7 +365,47 @@
                     </div>
 
                     <div class="products__grid">
-                        <div class="card--recommended">
+                        <div class="card--product">
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
+                                </div>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
+                                </div>
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -294,7 +442,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -331,7 +479,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -368,7 +516,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -405,7 +553,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -442,7 +590,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -479,7 +627,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -516,7 +664,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -553,7 +701,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>
@@ -590,44 +738,7 @@
                             </div>
                         </div>
 
-                        <div class="card--recommended">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
-                                </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
-                                </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
-                            </div>
-                        </div>
-
-                        <div class="card--recommended">
+                        <div class="card--product">
                             <div class="card__preview">
                                 <img src="src/images/flavors/flavor-big.jpg" alt="">
                             </div>

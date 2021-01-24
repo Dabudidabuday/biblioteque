@@ -1,7 +1,84 @@
+.header__search-input {
+    margin-left: auto;
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    cursor: pointer;
+
+    .input-wrapper {
+        margin-bottom: 0;
+        width: 100%;
+
+        input {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 43px;
+            font-size: 16px;
+            line-height: 19px;
+            border-radius: 0;
+        }
+
+        .icon-search {
+            background-position: 6px center;
+        }
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        visibility: hidden;
+
+        .item {
+            padding: 12px;
+            border-bottom: 1px solid $colorBrownLighten;
+        }
+
+        .item-link {
+            font-size: 14px;
+            line-height: 19px;
+            color: #000;
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        opacity: 0;
+        top: 20px;
+        right: 16px;
+        visibility: hidden;
+    }
+
+    &.active {
+        z-index: 1001;    
+        
+        .search-results {
+            z-index: 1001;
+            visibility: visible;
+        }
+
+        .btn-close {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    }
+}
+
+.home__hero {
+    .container {
+        @media screen and(max-width: 768px) {
+            overflow: hidden;
+        }
+    }
+}
+
 .hero__slider {
-    // .flickity-viewport {
-        // overflow: visible;
-    // }
+    .flickity-viewport {
+        overflow: visible;
+    }
 
     .slide {
         display: flex;
@@ -37,6 +114,8 @@
         }
 
         @media screen and(max-width: 768px) {
+            width: 100%;
+
             .slide__description {
                 min-width: unset;
             }
@@ -52,6 +131,10 @@
 
             .slide__bg {
                 height: 360px;
+                margin-left: calc(50% - 50vw);
+                margin-right: calc(50% - 50vw);
+                max-width: 1000%;
+                width: auto;
 
                 img {
                     width: 100%;
@@ -113,6 +196,8 @@
     }
 
     @media screen and(max-width: 768px) {
+        margin-bottom: 12px;
+
         .item {
             padding: 10px 9px;
             flex-basis: 50%;
@@ -145,6 +230,7 @@
 
 .icon-list-vertical--mobile {
     @media screen and(max-width: 768px) {
+        margin-bottom: 20px;
         justify-content: stretch;
 
         .item {
@@ -189,10 +275,42 @@
     }
 }
 
-
-
-.section-gifts {
+.section-gifts,
+.section-bestsellers {
     text-align: center;
+}
+
+.section-bestsellers {
+    .gift__tabs {
+        @media screen and(max-width: 768px) {
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            .btn-underline {
+                margin-right: 0;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+            }
+
+           
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        .gift-slider {
+            display: flex;
+        }
+
+        .card--recommended {
+            flex-direction: column;
+
+            .card__preview {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .gift__tabs {
@@ -207,15 +325,58 @@
         line-height: 22px;
         color: $colorPrimary;
     }
+
+    @media screen and(max-width: 768px) {
+        flex-wrap: wrap;
+
+        
+
+        .btn-filter:nth-child(1), 
+        .btn-filter:nth-child(2) {
+            margin-bottom: 20px;
+            border-bottom: 1px solid $colorBrownLighten;
+        }
+
+        .btn-filter {
+            flex-basis: 50%;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: left;
+            margin-right: 0 !important;
+        }
+    }
 }
 
 .gift-slider {
     margin-bottom: 40px;
     height: 324px;
     width: 100% !important;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
 
-    .card {
+    @media screen and(max-width: 768px) {
+         height: 430px;
+
+        .card,
+        .card--recommended {
+            width: 100%;
+            text-align: center;
+            padding-right: 40px;
+            padding-left: 40px;
+
+            img {
+                object-position: center;
+                width: 100%;
+                height: 163px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .card,
+    .card--recommended {
         margin-right: 13px;
+        scroll-snap-align: start;
     }
 }
 
@@ -235,6 +396,6 @@
     &.active {
         font-weight: bold;
         color: $colorBrownDarken;
-        border-bottom: 2px solid $colorBrownDarken;
+        border-bottom: 2px solid $colorBrownDarken !important;
     }
 }

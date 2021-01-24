@@ -1,7 +1,6 @@
 class Slider {
-  constructor(rootElement, sliders=[]) {
+  constructor(rootElement) {
     this.rootElement = document.querySelector(rootElement);
-    this.sliders = sliders;
   }
 
   initSlider(root, additionalSettings) {
@@ -15,7 +14,6 @@ class Slider {
     };
 
     const sliderOptions = Object.assign(defaultSettings, additionalSettings)
-
     const slider = new Flickity(container, sliderOptions);
   }
   

@@ -14,6 +14,7 @@
 </head>
 
 <body class="shop shop-home">
+    <div id="overlay"></div>
 
     <header class="header animate-this">
         <div class="flex-container ai-center jc-between mx-auto">
@@ -48,11 +49,36 @@
                     </defs>
                 </svg>               
              </div>
+
+             <div class="header__search-input">
+                 <div class="input-wrapper">
+                     <input type="text" class="form-input icon-search">
+                     <button class="btn-close btn-reset" id="btn-search-close"><span class="line--md"></span><span class="line--md"></span></button>
+                    </div>
+
+                 <ul class="search-results">
+                    <li class="item">
+                        <a href="#" class="item-link">Spirit of home</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Soul of home</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Destiny of home</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Awareness of home</a>
+                    </li>
+                 </ul>
+             </div>
  
              <div class="btn-group">
-                 <button class="btn-icon icon-search" type="button">
+                 <!-- <button class="btn-icon icon-search" type="button">
                      
-                 </button>
+                 </button> -->
                  <button class="btn-icon" type="button">
                      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M21.0216 3.31694C20.5004 2.79376 19.8815 2.37873 19.2003 2.09557C18.5191 1.81241 17.7889 1.66667 17.0516 1.66667C16.3142 1.66667 15.5841 1.81241 14.9029 2.09557C14.2217 2.37873 13.6028 2.79376 13.0815 3.31694L11.9997 4.40222L10.9179 3.31694C9.86496 2.26064 8.43689 1.66722 6.94783 1.66722C5.45877 1.66722 4.03069 2.26064 2.97777 3.31694C1.92484 4.37324 1.33331 5.80589 1.33331 7.29972C1.33331 8.79355 1.92484 10.2262 2.97777 11.2825L4.05958 12.3678L11.9997 20.3333L19.9398 12.3678L21.0216 11.2825C21.5432 10.7596 21.9569 10.1387 22.2391 9.45529C22.5214 8.77191 22.6666 8.03944 22.6666 7.29972C22.6666 6.56 22.5214 5.82753 22.2391 5.14415C21.9569 4.46077 21.5432 3.83988 21.0216 3.31694V3.31694Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -211,6 +237,7 @@
                 <div class="founder__secondary text-secondary">
                     Для этого мы создаем их мини-версии. Такой формат покупки дает возможность познакомиться с ароматом, протестировать его и только после этого сделать выбор в пользу большего объема. Так вы 100% выберете своего фаворита."
                 </div>
+                <button class="btn--show-more show-mobile">Читать полностью</button>
             </div>
         </div>
     </section>
@@ -665,6 +692,10 @@
                     Получите аромат, который будет отражать энергетику вашей компании, шоу-рума, гостиницы или студии красоты. Аромат, который выберете вы, станет визитной карточкой вашего сервиса. 
                 </p>
 
+                <div class="section__bg show-mobile">
+                    <img src="src/images/shop/home-page/aside-bg.jpg" alt="">
+                </div>
+
                 <div class="icon-list--vertical">
                     <div class="item">
                         <div class="item__icon">
@@ -702,14 +733,14 @@
                 </a> 
             </div>
 
-            <div class="section__bg">
+            <div class="section__bg show-desktop-block">
                 <img src="src/images/shop/home-page/aside-bg.jpg" alt="">
             </div>
         </div>
     </section>
 
     
-    <section class="section section-gifts">
+    <section class="section section-bestsellers">
         <div class="container">
             <h3 class="section__title heading-increment">
                 Бестселлеры и новинки наших брендов
@@ -717,7 +748,7 @@
 
             <div class="gifts">
                 <div class="gift__tabs">
-                    <button class="btn-underline" type="button">Популярные</button>
+                    <button class="btn-underline active" type="button">Популярные</button>
                     <button class="btn-underline" type="button">Новинки сезона</button>
                     <button class="btn-underline" type="button">Бестселлеры</button>
                 </div>
@@ -740,6 +771,7 @@
                             </svg> 
                         </div>
                     </div>
+
                     <div class="card--recommended">
                         <div class="card__preview">
                             <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -757,6 +789,7 @@
                             </svg> 
                         </div>
                     </div>
+
                     <div class="card--recommended">
                         <div class="card__preview">
                             <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -774,6 +807,7 @@
                             </svg> 
                         </div>
                     </div>
+
                     <div class="card--recommended">
                         <div class="card__preview">
                             <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -791,6 +825,7 @@
                             </svg> 
                         </div>
                     </div>
+                    
                     <div class="card--recommended">
                         <div class="card__preview">
                             <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -1144,9 +1179,79 @@
     </section>
 
 
-    <footer class="footer--shop">
+    <footer class="shop-footer">
         <div class="container">
+            <div class="footer-grid">
+                <ul class="grid-item site-map">
+                    <li class="item">
+                        <a href="#" class="item-link">Собрать библиотеку ароматов</a>
+                    </li>
 
+                    <li class="item">
+                        <a href="#" class="item-link">Интернет-магазин</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Акции</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">О компании</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Новости</a>
+                    </li>
+                </ul>
+
+                <div class="grid-item social-and-translations">
+                    <div class="socials">
+                        <a href="#" class="social-link">instagram</a>
+                        <a href="#" class="social-link">facebook</a>
+                    </div>
+
+                    <div class="translations">
+                        <ul class="translations-list">
+                            <li class="item">
+                                <a href="" class="item-link current">Ru</a>
+                            </li>
+        
+                            <li class="item">
+                                <a href="" class="item-link">Uk</a>
+                            </li>
+        
+                            <li class="item">
+                                <a href="" class="item-link">En</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="grid-item policy-map">
+                    <li class="item">
+                        <a href="#" class="item-link">Доставка и оплата</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Политика конфиденциальности</a>
+                    </li>
+                    
+                    <li class="item">
+                        <a href="#" class="item-link">Пользовательское соглашение</a>
+                    </li>
+                </ul>
+
+                
+
+                <div class="grid-item contacts">
+                    <a href="email:info@votre.com.ua" class="email contacts-link">info@votre.com.ua</a>
+                    <a href="tel:+38 (066) 992 14 44" class="contacts-link phone">+38 (066) 992 14 44</a>
+                    <p class="hours">Ежедневно с 9:00 до 20:00</p>
+                    <button class="btn-reset link-underline">Обратный звонок</button>
+                </div>
+            </div>
+            
+            <p class="rights">©Votre Parfum 2021</p>
         </div>
     </footer>
 

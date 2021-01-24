@@ -468,14 +468,16 @@
     }
 }
 
-.card--recommended {
+.card--recommended,
+.card--product {
     .custom-select--card,
     .card__btn-buy {
         opacity: 0;
     }
 }
 
-.card--recommended:hover {
+.card--recommended:hover,
+.card--product:hover {
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
 
     .custom-select--card,

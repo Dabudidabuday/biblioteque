@@ -40,4 +40,18 @@
         border: 1px solid #000;
         border-radius: 50%;
     }
+
+    @media screen and(max-width: 768px) {
+
+        .dot {
+            margin: 7px;
+            width: 4px;
+            height: 4px;
+        }
+
+        .is-selected::before {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }

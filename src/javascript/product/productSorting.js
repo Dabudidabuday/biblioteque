@@ -81,32 +81,25 @@ class ProductSorting {
     }
 
 /* Duplicate function for testing new section module methodology */
-    _valueHandler() {
-        const tabs = this.tabs;
-        console.log(tabs);
+    // _valueHandler() {
+    //     const tabs = this.tabs;
 
-        tabs.addEventListener('click', (event) => {
-            if ( !matchesSelector( event.target, 'button' ) ) {
-                return;
-            }
+    //     tabs.addEventListener('click', (event) => {
+    //         if ( !matchesSelector( event.target, 'button' ) ) {
+    //             return;
+    //         }
     
-            var filterValue = event.target.getAttribute('data-filter');
+    //         var filterValue = event.target.getAttribute('data-filter');
     
-            isotope.arrange({ filter: filterValue });
-        })
-    }
+    //         isotope.arrange({ filter: filterValue });
+    //     })
+    // }
 
 /* Duplicate function for testing new section module methodology */
     filterAnimation(tabs, cards) {
-
         const isotope = new Isotope( cards , {
             itemSelector: '.card',
             layoutMode: 'horiz',
-            // masonry: {
-            //     columnWidth: '.grid-sizer',
-            //     columnHeight: '.grid-sizer',
-            //     gutter: '.gutter-sizer'
-            // },
             hiddenStyle: {
                 opacity: 0
             },
@@ -139,7 +132,6 @@ class ProductSorting {
     run() {
         if(!this.rootElement) return;
         
-
         this._filterTabsUI();
         this._productSortAnimation();
     }

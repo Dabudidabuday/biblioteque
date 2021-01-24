@@ -2,7 +2,7 @@ import Hero from './sections/Hero';
 import SectionReview from './sections/SectionReview';
 import Filters from 'components/catalog/Filters';
 import SectionCatalog from './sections/SectionCatalog.js';
-
+import MobileControls from './components/MobileControls';
 class CatalogPage {
     constructor(rootElement) {
         this.root = rootElement;
@@ -11,6 +11,7 @@ class CatalogPage {
         this.hero = new Hero(this.root);
         this.sectionReview = new SectionReview('.section-review');
         this.catalog = new SectionCatalog('.catalog');
+        this.mobileControls = new MobileControls('.mobile__catalog-bar');
     }
 
     run() {
@@ -18,6 +19,7 @@ class CatalogPage {
         this.filters.run();
         this.sectionReview.run();
         this.catalog.run();
+        this.mobileControls.run();
     }
 }
 

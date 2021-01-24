@@ -12,7 +12,6 @@ import './product/productPreview.js';
 
 
 /* Class Based App */
-// import Cursor from './components/cursor.js';
 import Overlay from './components/overlays.js';
 import FormFilter from './components/forms.js';
 import ProductPreview from './product/productPreview.js';
@@ -24,16 +23,12 @@ import ProductSorting from './product/productSorting';
 import CartUI from './sections/cartUI';
 import Slider from './components/Slider';
 
-/* SECTIONS */
-import SectionGifts from './sections/Gifts';
-
 /* PAGES */
 import HomePage from './pages/shop/homePage/HomePage';
 import CatalogPage from './pages/shop/catalogPage/CatalogPage';
 import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
 class App {
     constructor() {
-        // this.cursor = new Cursor();
         this.overlay = new Overlay(
             '#overlay', 
             [
@@ -41,7 +36,9 @@ class App {
                 '.modal--contacts', 
                 '#modalPerfume', 
                 '.navigation-menu', 
-                '.product__show-more'
+                '.product__show-more',
+                '.mobile__catalog-bar',
+                '.header__search-input'
             ], 
             'active'
             );
@@ -54,10 +51,7 @@ class App {
         this.formFilter = new FormFilter('.form-grid');
         this.cartUI = new CartUI('.product__show-more');
         this.slider = new Slider('.slider');
-        
-        /* Sections instances*/
-        this.gifts = new SectionGifts('.section-gifts');
-
+    
         /* SHOP pages  */
         this.home = new HomePage('.shop-home');
         this.catalog = new CatalogPage('.shop-catalog');
@@ -66,7 +60,6 @@ class App {
 
     run() {
         this.homeUi.run();
-        // this.cursor.run();
         this.overlay.run();
         this.productPreview.run();
         this.colorPalette.run();
@@ -76,8 +69,6 @@ class App {
         this.formFilter.run();
         this.cartUI.run();
         this.slider.run();
-
-        this.gifts.run();
 
         /* Shop pages */
         this.home.run();
@@ -251,28 +242,6 @@ inputList.forEach(item => {
 })
 
 
-/* show hide delivery form fields */
-
-// const pickupFields = document.querySelector('.fields__pickup');
-// const pickupRadio = document.querySelector('#pickup')
-
-// const puckupTrue = pickupRadio.checked;
-
-// const shippingRadios = Array.from(document.querySelectorAll('input[name="shipping-radios"]'))
-
-// shippingRadios.forEach(item => {
-//     item.addEventListener('click', function(e) {
-//          if(e.target.id === 'pickup') {
-//             //  console.log(e.target);
-//             pickupFields.classList.add('active');
-//          } else if (e.target.id === 'shipping') {
-//             // shippingFields.classList.add('active');
-//          } else if (e.target.id === 'another-address') {
-//             //  anotherFields.classList.add('active')
-//          }
-//     })
-// })
-
 
 /* show-hide modal-contacts */
 const btnModalContacts = document.querySelector('#btnModalContacts');
@@ -291,68 +260,4 @@ if(btnModalContacts) {
         overlay.classList.remove('active');
         modalContacts.classList.remove('active');
     })
-}
-
-/* Page transition*/
-function delay(n) {
-    n = n || 2000;
-    return new Promise((done) => {
-        setTimeout(() => {
-            done();
-        }, n);
-    });
-}
-
-function pageTransition() {
-    var tl = gsap.timeline();
-    tl.to(".loading-screen", {
-        duration: 1.2,
-        height: "100%",
-        left: "0%",
-        ease: "Expo.easeInOut",
-    });
-
-    tl.to(".loading-screen", {
-        duration: 1,
-        width: "100%",
-        left: "100%",
-        ease: "Expo.easeInOut",
-        delay: 0.3,
-    });
-    tl.set(".loading-screen", { left: "-100%" });
-}
-
-function contentAnimation() {
-    var tl = gsap.timeline();
-    tl.fromTo(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.2, delay: 0.1 });
-}
-
-const desktop = window.matchMedia("(min-width: 768px)");
-
-if(desktop.matches) {
-    (function () {
-        barba.init({
-            sync: true,
-            debug: true,
-            transitions: [
-                {
-                    async leave(data) {
-                        const done = this.async();
-                        pageTransition();
-                        await delay(1000);
-                        done();
-                    },
-    
-                    async enter(data) {
-                        contentAnimation();
-                    },
-    
-                    async once(data) {
-                        contentAnimation();
-                    },
-                },
-            ],
-        });
-    }());
-    
 }

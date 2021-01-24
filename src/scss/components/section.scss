@@ -84,7 +84,7 @@
     margin-bottom: 40px;
 
     @media screen and(max-width: 768px) {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
         text-align: left;
         font-size: 14px;
     }
@@ -100,6 +100,21 @@
 
         img {
             width: 100%;
+        }
+    }
+}
+
+.section__bg.show-mobile {
+    @media screen and(max-width: 768px) {
+        padding-top: 0;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        max-width: 1000%;
+        width: auto;
+        
+        img {
+            height: 220px;
+            object-fit: cover;
         }
     }
 }

@@ -1,5 +1,5 @@
-import Slider from '../components/Slider';
-import ProductSorting from '../product/productSorting';
+import Slider from 'components/Slider';
+import ProductSorting from '../../../../product/productSorting';
 
 class SectionGifts {
     constructor(rootElement) {
@@ -19,7 +19,7 @@ class SectionGifts {
         if(!this.rootElement) return;
 
         this.productSorting.initFilterProducts(this.tabs, this.slider);
-        this.carousel.initSlider(this.slider);
+        // this.carousel.initSlider(this.slider);
     }
 }
 

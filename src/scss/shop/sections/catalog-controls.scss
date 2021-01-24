@@ -1,0 +1,120 @@
+.mobile__catalog-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 39px 16px 20px;
+    width: 85%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: all ease-out .3s;
+
+
+    .btn-close  {
+        margin-right: 0;
+        margin-left: auto;
+        display: block;
+    }
+
+    &.active {
+        right: 0;
+        opacity: 1;
+        z-index: 10;
+        transition:  ease-in-out .4s;
+    }
+}
+
+.control-group {
+    padding-top: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $colorBrownLighten;
+
+    .control__head {
+        padding-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+
+        &.active {
+            padding-bottom: 8px;
+        }
+    }
+
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .btn-control {
+        position: relative;
+        margin-bottom: 8px;
+        padding-top: 6px;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 48.6%;
+        width: 140px;
+        height: 34px;
+        font-size: 12px;
+        line-height: 16px;
+        overflow: hidden;
+
+        img {
+            width: inherit;
+            height: 100%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -22px;
+            left: -22px;
+            border: 21px solid transparent;
+            transform: rotate(-45deg);
+            
+        }
+
+        &.active {
+            color: #000;
+            background-color: #fff;
+            border: 1px solid $colorBrownDarken;
+
+            &::before {
+                border-color: $colorBrownDarken;
+            }
+        }
+    }
+
+    &.active {
+        height: auto;
+        opacity: 1;
+        transition: ease-in .3s;
+        visibility: visible;
+    }
+}
+
+.catalog-bar__footer {
+    display: flex;
+    justify-content: stretch;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+    button {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        flex-basis: 50%;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
