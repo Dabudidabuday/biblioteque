@@ -6,10 +6,13 @@
         margin-left: 32px;
     }
 
-    @media screen and(max-width: 768px) {
+    @media screen and (max-width: 768px) {
 
         .btn-icon {
             margin-left: 12px;
+            padding: 6px;
+            width: 32px;
+            height: 32px;
 
             svg {
                 width: 28px;

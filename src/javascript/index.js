@@ -5,6 +5,7 @@ import "regenerator-runtime/runtime.js";
 /* App Components */
 import './components/colorPalette.js';
 import './components/forms.js';
+import './pages/shop/catalogPage/components/RangeSlider.js';
 
 /* Shop Components */
 import './product/productsCards.js';

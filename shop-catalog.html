@@ -308,7 +308,7 @@
                             </div>
                         </div>
 
-                        <div class="filter filter--brand">
+                        <div class="filter filter--collection">
                             <div class="filter__head">
                                 <p class="filter__title">Коллекция</p>
                                 <span class="filter-count btn-round btn-round--sm">3</span>
@@ -323,7 +323,7 @@
                                     <input 
                                         type="checkbox" 
                                         class="form-radio" 
-                                        id="filter-1"
+                                        id="filter-4"
                                         value="register-me"
                                         >
                                     <span class="custom-checkbox"></span>
@@ -334,7 +334,7 @@
                                     <input 
                                         type="checkbox" 
                                         class="form-radio" 
-                                        id="filter-2"
+                                        id="filter-5"
                                         value="register-me"
                                         >
                                     <span class="custom-checkbox"></span>
@@ -345,11 +345,31 @@
                                     <input 
                                         type="checkbox" 
                                         class="form-radio" 
-                                        id="filter-3"
-                                        value="register-me"
+                                        id="filter-7"
+                                        value="register"
                                         >
                                     <span class="custom-checkbox"></span>
                                     <label for="filter-3" class="custom-label">Votre parfum</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter--collection">
+                            <div class="filter__head">
+                                <p class="filter__title">Цена</p>
+                                <div class="select-arrow">
+                                    <div class="line--dark"></div>
+                                    <div class="line--dark"></div>
+                                </div>
+                            </div>
+
+                            <div class="filter__body">
+
+                                <span id="from"></span>
+                                <span id="to"></span>
+                                <div class="multi-range">
+                                    <input id="min" type='range' min='0' max='100' value='0' step='0.0001'>
+                                    <input id="max" type='range' min='0' max='100' value='100' step='0.0001'>
                                 </div>
                             </div>
                         </div>
@@ -406,409 +426,431 @@
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
                         <div class="card--product">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card--recommended">
-                            <div class="card__preview">
-                                <img src="src/images/flavors/flavor-big.jpg" alt="">
-                            </div>
-                            <div class="card__description">
-                                <p class="h4 card__title">Autograph</p>
-                                <p class="card__subtitle">Eau de parfume</p>
-        
-                                <p class="price__quantity">1200 грн</p>
-                            </div>
-        
-                            <div class="custom-select custom-select--card">
-                                <div class="select-arrow">
-                                    <div class="line--dark"></div>
-                                    <div class="line--dark"></div>
+                        <div class="card--product">
+                            <div class="card__body">
+                                <div class="card__preview">
+                                    <img src="src/images/flavors/flavor-big.jpg" alt="">
                                 </div>
-        
-                                <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
-                                <div class="custom-select__options">
-                                    <ul class="option__items">
-                                        <li class="item">16 мл</li>
-                                        <li class="item">50 мл</li>
-                                        <li class="item">100 мл</li>
-                                        <li class="item">250 мл</li>
-                                    </ul>
+                                <div class="card__description">
+                                    <p class="h4 card__title">Autograph</p>
+                                    <p class="card__subtitle">Eau de parfume</p>
+            
+                                    <p class="price__quantity">1200 грн</p>
                                 </div>
-                            </div>
-        
-                            <button class="btn-dark w-100 card__btn-buy">Купить</button>
-        
-                            <div class="card__like">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+            
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+            
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+                                <button class="btn-dark w-100 card__btn-buy">Купить</button>
+            
+                                <div class="card__like">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -872,6 +914,43 @@
                 </div>
 
                 <div class="card--recommended">
+                    <div class="card__preview">
+                        <img src="src/images/flavors/flavor-big.jpg" alt="">
+                    </div>
+                    <div class="card__description">
+                        <p class="h4 card__title">Autograph</p>
+                        <p class="card__subtitle">Eau de parfume</p>
+
+                        <p class="price__quantity">1200 грн</p>
+                    </div>
+
+                    <div class="custom-select custom-select--card">
+                        <div class="select-arrow">
+                            <div class="line--dark"></div>
+                            <div class="line--dark"></div>
+                        </div>
+
+                        <input type="text" class="custom-celect__input" placeholder="16 мл" readonly>
+                        <div class="custom-select__options">
+                            <ul class="option__items">
+                                <li class="item">16 мл</li>
+                                <li class="item">50 мл</li>
+                                <li class="item">100 мл</li>
+                                <li class="item">250 мл</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="btn-dark w-100 card__btn-buy">Купить</button>
+
+                    <div class="card__like">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                    </div>
+                </div>
+
+                <div class="card--recommended hot">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>

@@ -1,71 +1,9 @@
-.header__search-input {
-    margin-left: auto;
-    position: relative;
-    max-width: 320px;
-    width: 100%;
-    cursor: pointer;
-
-    .input-wrapper {
-        margin-bottom: 0;
-        width: 100%;
-
-        input {
-            padding-top: 16px;
-            padding-bottom: 16px;
-            padding-left: 43px;
-            font-size: 16px;
-            line-height: 19px;
-            border-radius: 0;
-        }
-
-        .icon-search {
-            background-position: 6px center;
-        }
-    }
-
-    .search-results {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        visibility: hidden;
-
-        .item {
-            padding: 12px;
-            border-bottom: 1px solid $colorBrownLighten;
-        }
-
-        .item-link {
-            font-size: 14px;
-            line-height: 19px;
-            color: #000;
-        }
-    }
-
-    .btn-close {
-        position: absolute;
-        opacity: 0;
-        top: 20px;
-        right: 16px;
-        visibility: hidden;
-    }
-
-    &.active {
-        z-index: 1001;    
-        
-        .search-results {
-            z-index: 1001;
-            visibility: visible;
-        }
-
-        .btn-close {
-            opacity: 1;
-            visibility: visible;
-        }
-
+.shop-home {
+    .header {
+        position: relative;
     }
 }
+
 
 .home__hero {
     .container {
@@ -148,6 +86,12 @@
         &.is-selected {
             opacity: 1;
             transition: opacity .8s;
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        .flickity-page-dots {
+            bottom: 10px;
         }
     }
 }
@@ -294,20 +238,36 @@
                 line-height: 19px;
             }
 
-           
+           .btn-filter {
+               margin-bottom: 0 !important;
+               flex-basis: unset;
+           }
         }
     }
 
     @media screen and(max-width: 768px) {
         .gift-slider {
             display: flex;
+            height: 320px;
+            transition: none;
         }
 
         .card--recommended {
             flex-direction: column;
+            height: 277px;
+            border-bottom: none;
+
+            &:hover {
+                transition: none;
+            }
 
             .card__preview {
                 width: 100%;
+                height: 162px;
+            }
+
+            .card__description {
+                text-align: center;
             }
         }
     }
@@ -349,7 +309,8 @@
 
 .gift-slider {
     margin-bottom: 40px;
-    height: 324px;
+    padding-top: 10px;
+    height: 420px;
     width: 100% !important;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
@@ -397,5 +358,12 @@
         font-weight: bold;
         color: $colorBrownDarken;
         border-bottom: 2px solid $colorBrownDarken !important;
+    }
+}
+
+.card:hover:hover,
+.card--recommended:hover {
+    .card__body {
+        position: absolute;
     }
 }

@@ -1,6 +1,9 @@
+import ProductSorting from 'productComponents/ProductSorting';
+
 class SectionBestsellers {
     constructor(root) {
         this.root = document.querySelector(root);
+        this.productSorting = new ProductSorting(root);
     }
 
     _tabsUI() {
@@ -18,6 +21,11 @@ class SectionBestsellers {
     run() {
         if(!this.root) return;
         this._tabsUI();
+
+        const tabs = this.root.querySelector('.gift__tabs');
+        const slider = this.root.querySelector('.gift-slider');
+        this.productSorting.initFilterProducts(tabs, slider);
+        
     }
 }
 

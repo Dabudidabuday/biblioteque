@@ -1,6 +1,6 @@
 .card--simple {
     position: relative;
-    padding: 12px 12px 20px;
+    // padding: 12px 12px 20px;
     text-align: left;
     
     .card__preview {
@@ -25,12 +25,61 @@
     }
 
     &:hover {
-        background-color: #fff;
-        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+        box-shadow: none;
 
         .btn-buy {
             opacity: 1;
             transition: ease-in .3s;
         }
+
+        .card__body {
+            // height: calc(100% + 128px);
+            height: auto !important;
+            background-color: #fff;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+            z-index: 2;
+        }
+
+        @media screen and(max-width: 768px) {
+            .card__body {
+                height: calc(100% + 114px);
+            }
+    
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        margin-bottom: 20px;
     }
 }
+
+
+
+
+.card,
+.card---recommended,
+.card--product {
+
+    .card__body {
+        padding: 12px;
+    }
+
+    &:hover {
+        box-shadow: none;
+
+        .card__body {
+            height: calc(100% + 128px);
+            background-color: #fff;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+            z-index: 2;
+        }
+
+        @media screen and(max-width: 768px) {
+            .card__body {
+                height: calc(100% + 114px);
+            }
+    
+        }
+    }
+}
+

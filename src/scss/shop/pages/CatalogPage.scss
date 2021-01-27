@@ -253,6 +253,10 @@
 
     .card--product {
         width: 220px;
+
+        .card__body {
+            position: absolute;
+        }
     }
 
     @media screen and(max-width: 768px) {
@@ -285,10 +289,12 @@
 
 .card--product {
     position: relative;
+    margin-bottom: 40px;
     padding: 12px;
     width: 244px;
-    height: 450px;
+    height: 324px;
     transition: all ease-in-out .25s;
+
 
     .card__preview {
         margin: 0 auto;
@@ -324,16 +330,39 @@
         font-size: 14px;
         line-height: 19px;
     }
+
+    &:hover {
+        box-shadow: none;
+
+        .card__body {
+            height: calc(100% + 128px);
+            background-color: #fff;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.16);
+            z-index: 2;
+        }
+
+        @media screen and(max-width: 768px) {
+            .card__body {
+                height: calc(100% + 114px);
+            }
+    
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 
 .pagination {
-    margin: 0 auto;
+    margin: 110px auto 0;
     width: fit-content;
 
     .pagination__list {
         margin-bottom: 40px;
         display: flex;
         justify-content: center;
+        cursor: pointer;
 
         .page-number:not(:last-of-type) {
             margin-right: 24px;
@@ -366,7 +395,7 @@
     }
 
     .review__list {
-        .card--review:not(:last-of-type) {
+        .card--review {
             margin-right: 25px;
             width: 220px;
         }
@@ -555,3 +584,5 @@
         }
     }
 }
+
+

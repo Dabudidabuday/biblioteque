@@ -76,9 +76,11 @@
              </div>
  
              <div class="btn-group">
-                 <!-- <button class="btn-icon icon-search" type="button">
-                     
-                 </button> -->
+                 <button class="btn-icon show-mobile" id="buttonMobileSearchBar" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 15L11.6167 11.6167M13.4444 7.22222C13.4444 10.6587 10.6587 13.4444 7.22222 13.4444C3.78578 13.4444 1 10.6587 1 7.22222C1 3.78578 3.78578 1 7.22222 1C10.6587 1 13.4444 3.78578 13.4444 7.22222Z" stroke="#5F6E80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
                  <button class="btn-icon" type="button">
                      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M21.0216 3.31694C20.5004 2.79376 19.8815 2.37873 19.2003 2.09557C18.5191 1.81241 17.7889 1.66667 17.0516 1.66667C16.3142 1.66667 15.5841 1.81241 14.9029 2.09557C14.2217 2.37873 13.6028 2.79376 13.0815 3.31694L11.9997 4.40222L10.9179 3.31694C9.86496 2.26064 8.43689 1.66722 6.94783 1.66722C5.45877 1.66722 4.03069 2.26064 2.97777 3.31694C1.92484 4.37324 1.33331 5.80589 1.33331 7.29972C1.33331 8.79355 1.92484 10.2262 2.97777 11.2825L4.05958 12.3678L11.9997 20.3333L19.9398 12.3678L21.0216 11.2825C21.5432 10.7596 21.9569 10.1387 22.2391 9.45529C22.5214 8.77191 22.6666 8.03944 22.6666 7.29972C22.6666 6.56 22.5214 5.82753 22.2391 5.14415C21.9569 4.46077 21.5432 3.83988 21.0216 3.31694V3.31694Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -484,194 +486,214 @@
                     <!-- <div class="grid-sizer"></div>
                     <div class="gutter-sizer"></div> -->
                     <div class="card card--simple perfume">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Изумруд</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Изумруд</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple diffuzor">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Бриллиант</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Бриллиант</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple candles">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple gift-packs">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple perfume">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
 
                     <div class="card card--simple perfume">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Изумруд</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Изумруд</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple diffuzor">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Бриллиант</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Бриллиант</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple candles">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple gift-packs">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     <div class="card card--simple perfume">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
     
-                            <p class="price__quantity">1200 грн</p>
-
-                            <button class="btn-md btn-dark btn-buy">Купить</button>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                                <button class="btn-md btn-dark btn-buy">Купить</button>
+                            </div>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -748,13 +770,38 @@
 
             <div class="gifts">
                 <div class="gift__tabs">
-                    <button class="btn-underline active" type="button">Популярные</button>
-                    <button class="btn-underline" type="button">Новинки сезона</button>
-                    <button class="btn-underline" type="button">Бестселлеры</button>
+                    <button class="btn-underline btn-filter active" type="button" data-filter=".popular">Популярные</button>
+                    <button class="btn-underline btn-filter" type="button" data-filter=".new">Новинки сезона</button>
+                    <button class="btn-underline btn-filter" type="button" data-filter=".bestsellers">Бестселлеры</button>
                 </div>
 
                 <div class="gift-slider">
-                    <div class="card--recommended">
+                    <div class="card card--simple card--recommended new">
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
+                            </div>
+    
+                            <button class="btn-md btn-dark btn-buy">Купить</button>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card--simple card--recommended popul
+                    ar">
+                    <div class="card__body">
                         <div class="card__preview">
                             <img src="src/images/shop/home-page/gift.jpg" alt="">
                         </div>
@@ -764,6 +811,8 @@
     
                             <p class="price__quantity">1200 грн</p>
                         </div>
+
+                        <button class="btn-md btn-dark btn-buy">Купить</button>
 
                         <div class="card__like">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -771,76 +820,74 @@
                             </svg> 
                         </div>
                     </div>
-
-                    <div class="card--recommended">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
-    
-                            <p class="price__quantity">1200 грн</p>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
-                        </div>
+                        
                     </div>
 
-                    <div class="card--recommended">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                    <div class="card card--simple card--recommended new">
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
+                            </div>
     
-                            <p class="price__quantity">1200 грн</p>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
-                        </div>
+                            <button class="btn-md btn-dark btn-buy">Купить</button>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
+                        </div> 
                     </div>
 
-                    <div class="card--recommended">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
-    
-                            <p class="price__quantity">1200 грн</p>
-                        </div>
+                    <div class="card card--simple card--recommended bests
+                    ellers">
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
+                            </div>
 
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                            <button class="btn-md btn-dark btn-buy">Купить</button>
+
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="card--recommended">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
+                    <div class="card card--simple card--recommended bests
+                    ellers">
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
+                            </div>
     
-                            <p class="price__quantity">1200 грн</p>
-                        </div>
-
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                            <button class="btn-md btn-dark btn-buy">Купить</button>
+    
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
                     </div>
                 </div>

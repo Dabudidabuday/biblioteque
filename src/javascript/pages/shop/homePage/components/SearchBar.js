@@ -36,11 +36,40 @@ class SearchBar {
         })
     }
 
+    _mobileSearch() {
+        const mobileViewPort = window.matchMedia("(max-width: 768px)");
+        const buttonMobileSearchBar = document.querySelector('#buttonMobileSearchBar');
+        const btnSearchClose = this.root.querySelector('#btn-search-close');
+        const input = this.root.querySelector('.form-input');
+
+        if(mobileViewPort.matches) {
+            buttonMobileSearchBar.addEventListener('click', () => {
+                this.root.classList.add('mobile-active');
+                buttonMobileSearchBar.classList.add('active');
+                this.overlay.classList.add('active');
+                btnSearchClose.classList.add('active');
+
+                input.placeholder="Поиск товара";
+            })
+
+            this.overlay.addEventListener('click', () => {
+                this.root.classList.remove('mobile-active');
+                buttonMobileSearchBar.classList.remove('active');
+                this.overlay.classList.remove('active');
+            })
+
+            btnSearchClose.addEventListener('click', () => {
+                this.root.classList.remove('mobile-active');
+            })
+        }
+    }
+
     run() {
         if(!this.root) return;
 
         this._searchInputUI();
         this._searchResultsHandler();
+        this._mobileSearch();
     }
 }
 

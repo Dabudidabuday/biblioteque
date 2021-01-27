@@ -81,21 +81,6 @@ class ProductSorting {
     }
 
 /* Duplicate function for testing new section module methodology */
-    // _valueHandler() {
-    //     const tabs = this.tabs;
-
-    //     tabs.addEventListener('click', (event) => {
-    //         if ( !matchesSelector( event.target, 'button' ) ) {
-    //             return;
-    //         }
-    
-    //         var filterValue = event.target.getAttribute('data-filter');
-    
-    //         isotope.arrange({ filter: filterValue });
-    //     })
-    // }
-
-/* Duplicate function for testing new section module methodology */
     filterAnimation(tabs, cards) {
         const isotope = new Isotope( cards , {
             itemSelector: '.card',

@@ -73,7 +73,8 @@ module.exports = {
     resolve: {
         alias: {
           'images': path.resolve(__dirname, 'src/images'),
-          'components': path.resolve(__dirname, 'src/javascript/components')
+          'components': path.resolve(__dirname, 'src/javascript/components'),
+          'productComponents': path.resolve(__dirname, 'src/javascript/product')
         },
         // fallback: {
         //     util: require.resolve("util/"),
