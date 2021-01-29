@@ -243,3 +243,86 @@
 
     }
 }
+
+.modal--cart,
+.modal--comment {
+    padding: 20px 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 780px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    transition: ease-out .25s;
+    visibility: hidden;
+    opacity: 0;
+
+    .modal__head {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn-close {
+            margin-right: 0;
+        }
+    }
+
+    .cart--total {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .total__title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .total__price {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .modal__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-cart {
+        padding: 20px 40px;
+        width: fit-content;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: ease-in .25s;
+    }
+}
+
+.modal--comment {
+    max-width: 524px;
+    width: 100%;
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    textarea {
+        margin-bottom: 32px;
+        padding-left: 0;
+    }
+
+    input[type=submit] {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

@@ -57,7 +57,7 @@
     top: 0;
     left: 0;
     counter-increment: section;
-    content: counter(section);
+    content: counter(section, decimal-leading-zero);
     font-family: "Playfair Display", serif;
     font-size: 130px;
     color: $colorBrownLighten;

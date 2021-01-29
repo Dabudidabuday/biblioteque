@@ -9,7 +9,6 @@ class SectionNew {
     run() {
         if (!this.root) return;
         this.slider.initSlider('.slider--new-products');
-        console.log('section new works');
     }
 }
 

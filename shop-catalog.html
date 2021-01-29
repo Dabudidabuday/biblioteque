@@ -15,80 +15,175 @@
 <body class="shop shop-catalog">
 
     <div id="overlay"></div>
+
+    <div class="mobile__catalog-bar filter-controls">
+        <div class="bar__body">
+            <button class="btn-close btn-close-filter btn-reset"><span class="line--md"></span><span class="line--md"></span></button>
+    
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Парфюмерия</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">
+                        Для неё
+                    </button>
+    
+                    <button class="btn-primary btn-control">
+                        Для него
+                    </button>
+    
+                    <button class="btn-primary btn-control">
+                        Унисекс
+                    </button>
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Парфюмерие гардеробы</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">По знаку Зодиака</button>
+                    <button class="btn-primary btn-control">По категориям</button>
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Парфюмер</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">12 мл</button>
+                    <button class="btn-primary btn-control">50 мл</button>
+                    <button class="btn-primary btn-control">100 мл</button>
+                    <button class="btn-primary btn-control">500 мл</button>
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Цена</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <div class="range-slider">
+                        <div class="range__values">
+                            <input class="form-input" type="text" id="from" value="500"></input>
+                            <input class="form-input" type="text" id="to" value="15 000"></input>
+                        </div>
+                        
+                        <div class="multi-range">
+                            <input id="min" type='range' min='0' max='100' value='0' step='0.0001'>
+                            <input id="max" type='range' min='0' max='100' value='100' step='0.0001'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Коллекции</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group">
+                    <button class="btn-primary btn-control">Древесные</button>
+                    <button class="btn-primary btn-control">Фужерные</button>
+                    <button class="btn-primary btn-control">Мускусные</button>
+                    <button class="btn-primary btn-control">Цветочные</button>
+                </div>
+            </div>
+    
+            <div class="catalog-bar__footer">
+                <button class="btn-reset btn-lg btnResetChoosed" type="button">Сбросить</button>
+                <button class="btn-reset btn-dark btn-lg btnApplyFilter" type="button">Показать</button>
+            </div>
+        </div>
+    </div>
     
     <div class="mobile__catalog-bar category-controls">
-        <button class="btn-close btn-reset"><span class="line--md"></span><span class="line--md"></span></button>
-    
-        <div class="control-group">
-            <div class="control__head">
-                <p class="control__title">Бренд</p>
-                <span class="icon-arrow"></span>
-            </div>
-        
-            <div class="button-group active">
-                <button class="btn-primary btn-control">
-                    <img src="src/images/logo/votre.svg" alt="">
-                </button>
+        <div class="bar__body">
+            <button class="btn-close btn-reset" id="btn-close-category"><span class="line--md"></span><span class="line--md"></span></button>
 
-                <button class="btn-primary btn-control">
-                    <img src="src/images/logo/header-logo.svg" alt="">
-                </button>
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Бренд</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">
+                        <img src="src/images/logo/votre.svg" alt="">
+                    </button>
 
-                <button class="btn-primary btn-control">
-                    <img src="src/images/logo/votre.svg" alt="">
-                </button>
+                    <button class="btn-primary btn-control">
+                        <img src="src/images/logo/header-logo.svg" alt="">
+                    </button>
 
-                <button class="btn-primary btn-control">
-                    <img src="src/images/logo/votre.svg" alt="">
-                </button>
-            </div>
-        </div>
+                    <button class="btn-primary btn-control">
+                        <img src="src/images/logo/votre.svg" alt="">
+                    </button>
 
-        <div class="control-group">
-            <div class="control__head">
-                <p class="control__title">Группа товара</p>
-                <span class="icon-arrow"></span>
+                    <button class="btn-primary btn-control">
+                        <img src="src/images/logo/votre.svg" alt="">
+                    </button>
+                </div>
             </div>
-        
-            <div class="button-group active">
-                <button class="btn-primary btn-control">Парфюмерия</button>
-                <button class="btn-primary btn-control">Ароматы для дома</button>
-                <button class="btn-primary btn-control">Каминные свечи</button>
-                <button class="btn-primary btn-control">Уходовая косметика</button>
-            </div>
-        </div>
 
-        <div class="control-group">
-            <div class="control__head">
-                <p class="control__title">Парфюмер</p>
-                <span class="icon-arrow"></span>
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Группа товара</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">Парфюмерия</button>
+                    <button class="btn-primary btn-control">Ароматы для дома</button>
+                    <button class="btn-primary btn-control">Каминные свечи</button>
+                    <button class="btn-primary btn-control">Уходовая косметика</button>
+                </div>
             </div>
-        
-            <div class="button-group active">
-                <button class="btn-primary btn-control">Парфюмерия</button>
-                <button class="btn-primary btn-control">Ароматы для дома</button>
-                <button class="btn-primary btn-control">Каминные свечи</button>
-                <button class="btn-primary btn-control">Уходовая косметика</button>
-            </div>
-        </div>
 
-        <div class="control-group">
-            <div class="control__head">
-                <p class="control__title">Коллекции</p>
-                <span class="icon-arrow"></span>
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Парфюмер</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">Парфюмерия</button>
+                    <button class="btn-primary btn-control">Ароматы для дома</button>
+                    <button class="btn-primary btn-control">Каминные свечи</button>
+                    <button class="btn-primary btn-control">Уходовая косметика</button>
+                </div>
             </div>
-        
-            <div class="button-group active">
-                <button class="btn-primary btn-control">Парфюмерия</button>
-                <button class="btn-primary btn-control">Ароматы для дома</button>
-                <button class="btn-primary btn-control">Каминные свечи</button>
-                <button class="btn-primary btn-control">Уходовая косметика</button>
-            </div>
-        </div>
 
-        <div class="catalog-bar__footer">
-            <button class="btn-reset btn-lg btnResetChoosed" type="button">Сбросить</button>
-            <button class="btn-reset btn-dark btn-lg btnApplyFilter" type="button">Показать</button>
+            <div class="control-group">
+                <div class="control__head">
+                    <p class="control__title">Коллекции</p>
+                    <span class="icon-arrow"></span>
+                </div>
+            
+                <div class="button-group active">
+                    <button class="btn-primary btn-control">Парфюмерия</button>
+                    <button class="btn-primary btn-control">Ароматы для дома</button>
+                    <button class="btn-primary btn-control">Каминные свечи</button>
+                    <button class="btn-primary btn-control">Уходовая косметика</button>
+                </div>
+            </div>
+
+            <div class="catalog-bar__footer">
+                <button class="btn-reset btn-lg btnResetChoosed" type="button">Сбросить</button>
+                <button class="btn-reset btn-dark btn-lg btnApplyFilter" type="button">Показать</button>
+            </div>
         </div>
     </div>
     
@@ -125,11 +220,42 @@
                     </defs>
                 </svg>               
              </div>
+
+             <div class="header__search-input">
+                <div class="input-wrapper">
+                    <input type="text" class="form-input icon-search">
+                    <button class="btn-close btn-reset" id="btn-search-close"><span class="line--md"></span><span class="line--md"></span></button>
+                   </div>
+
+                <ul class="search-results">
+                   <li class="item">
+                       <a href="#" class="item-link">Spirit of home</a>
+                   </li>
+
+                   <li class="item">
+                       <a href="#" class="item-link">Soul of home</a>
+                   </li>
+
+                   <li class="item">
+                       <a href="#" class="item-link">Destiny of home</a>
+                   </li>
+
+                   <li class="item">
+                       <a href="#" class="item-link">Awareness of home</a>
+                   </li>
+                </ul>
+            </div>
  
              <div class="btn-group">
-                 <button class="btn-icon icon-search" type="button">
+                 <!-- <button class="btn-icon icon-search" type="button">
                      
-                 </button>
+                 </button> -->
+
+                 <button class="btn-icon show-mobile" id="buttonMobileSearchBar" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 15L11.6167 11.6167M13.4444 7.22222C13.4444 10.6587 10.6587 13.4444 7.22222 13.4444C3.78578 13.4444 1 10.6587 1 7.22222C1 3.78578 3.78578 1 7.22222 1C10.6587 1 13.4444 3.78578 13.4444 7.22222Z" stroke="#5F6E80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
                  <button class="btn-icon" type="button">
                      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M21.0216 3.31694C20.5004 2.79376 19.8815 2.37873 19.2003 2.09557C18.5191 1.81241 17.7889 1.66667 17.0516 1.66667C16.3142 1.66667 15.5841 1.81241 14.9029 2.09557C14.2217 2.37873 13.6028 2.79376 13.0815 3.31694L11.9997 4.40222L10.9179 3.31694C9.86496 2.26064 8.43689 1.66722 6.94783 1.66722C5.45877 1.66722 4.03069 2.26064 2.97777 3.31694C1.92484 4.37324 1.33331 5.80589 1.33331 7.29972C1.33331 8.79355 1.92484 10.2262 2.97777 11.2825L4.05958 12.3678L11.9997 20.3333L19.9398 12.3678L21.0216 11.2825C21.5432 10.7596 21.9569 10.1387 22.2391 9.45529C22.5214 8.77191 22.6666 8.03944 22.6666 7.29972C22.6666 6.56 22.5214 5.82753 22.2391 5.14415C21.9569 4.46077 21.5432 3.83988 21.0216 3.31694V3.31694Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -171,7 +297,7 @@
                 <span class="icon-arrow"></span>
             </div>
             <div class="btn-wrapper">
-                <button class="btn-reset bar__btn" type="button">Фильтр</button>
+                <button class="btn-reset bar__btn" id="btn-filters" type="button">Фильтр</button>
                 <span class="icon-filter"></span>
             </div>
 
@@ -363,13 +489,18 @@
                                 </div>
                             </div>
 
-                            <div class="filter__body">
-
-                                <span id="from"></span>
-                                <span id="to"></span>
-                                <div class="multi-range">
-                                    <input id="min" type='range' min='0' max='100' value='0' step='0.0001'>
-                                    <input id="max" type='range' min='0' max='100' value='100' step='0.0001'>
+                            <div class="filter__body active">
+                                <div class="range-slider">
+                                    <div class="range__values">
+                                        <input class="form-input" type="text" id="from" value="500"></input>
+                                        <span class="tire"> - </span>
+                                        <input class="form-input" type="text" id="to" value="15 000"></input>
+                                    </div>
+                                    
+                                    <div class="multi-range">
+                                        <input id="min" type='range' min='0' max='100' value='0' step='0.0001'>
+                                        <input id="max" type='range' min='0' max='100' value='100' step='0.0001'>
+                                    </div>
                                 </div>
                             </div>
                         </div>

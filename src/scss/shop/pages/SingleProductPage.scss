@@ -19,6 +19,10 @@
         justify-content: space-between;
     }
 
+    .review-link {
+        font-size: 12px;
+    }
+
     .hero__title {
         margin-bottom: 12px;
         font-size: 32px;    
@@ -60,6 +64,34 @@
     }
 
 
+    /* SLIDERS */
+
+    .hero__nav-slider {
+        margin-top: 12px;
+
+        .item {
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
+            border: 1px solid $colorBrownLighten;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &.is-nav-selected {
+                border: 1px solid $colorBrownDarken;
+            }
+        }
+
+        @media screen and(max-width: 768px) {
+            display: none;
+        }
+    }
+
+
     /* HERO ACTIONS */
     .buy__title-price {
         margin-bottom: 20px;
@@ -81,7 +113,13 @@
             font-size: 14px;
             line-height: 19px;
             background: transparent;
-            border: 1px solid $colorBrownDarken;
+            border: 1px solid $colorBrownLighten;
+            transition: ease-out .25s;
+
+            &.active {
+                border: 1px solid $colorBrownDarken;
+                transition: ease-in .25s;
+            }
         }
     }
 
@@ -118,18 +156,65 @@
         padding-bottom: 15px; 
         width: 100%;
     }
+
+    @media screen and(max-width: 768px) {
+        .hero__grid {
+            flex-direction: column;
+        }
+
+        .custom-select {
+            display: block;
+            width: 100%;
+
+            .custom-celect__input {
+                max-width: unset;
+            }
+        }
+
+        .hero__preview {
+            order: 1;
+            margin-right: 0;
+            margin-left: 0;
+            padding: 0;
+            padding-top: 45px;
+
+            .item {
+                margin-left: calc(50% - 50vw);
+                margin-right: calc(50% - 50vw);
+                max-width: 1000%;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 211px;
+                    // object-fit: contain;
+                }
+            }
+
+            .hero__main-slider {
+                margin-bottom: 20px;
+            }
+        }
+
+        .hero__description {
+            order: 2;
+        }
+
+        .hero__buy {
+            order: 3;
+        }
+    }
 }
 
 /* BULLETS */
 
 .buy__bullets {
-
     .item {
+        position: relative;
         margin-bottom: 20px;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
-        
+        align-items: center;        
 
         .item__image {
             margin-right: 16px;
@@ -146,6 +231,25 @@
             font-size: 14px;
             line-height: 150%;
             color: #3B4857;
+        }
+    }
+
+    .item__body {
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+            margin-left: 12px;
+
+            &.active {
+                svg {
+                    stroke: $colorBrownDarken;
+                }
+            }
+
+            & > svg {
+                pointer-events: none;
+            }
         }
     }
 }
@@ -213,12 +317,27 @@
 .probe {
     margin-top: 140px;
     transition: all .2s;
+
+    @media screen and(max-width: 768px) {
+        margin-bottom: 60px;
+    }
 }
 
 .probe-grid {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and(max-width: 768px) {
+        flex-direction: column;
+
+        .probe__description {
+            margin-left: 16px;
+            margin-right: 16px;
+            max-width: 1000%;
+            width: calc(100% + 32px);
+        }
+    }
 }
 
 .probe__description {
@@ -253,6 +372,42 @@
         border-bottom: 1px solid $colorBrownLighten;
     }
 
+    @media screen and(max-width: 768px) {
+        margin-left: 0;
+
+        .card--small {
+
+            .card__body {
+                width: 100%;
+            }
+
+            .card__preview {
+                padding: 44px 9px;
+                display: flex;
+                align-items: center;
+            }
+
+            .card__actions {
+                flex-direction: column;
+            }
+
+            .card__subtitle {
+                max-width: 70%;
+            }
+
+            .card__actions {
+                .quantity-group {
+                    margin-bottom: 16px;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .btn-dark {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .card--small {
@@ -328,111 +483,4 @@
     margin-bottom: 140px;
 }
 
-/* SECTION FEEDBACK */
 
-.feedback {
-    .feedback__tabs {
-        justify-content: start;
-    }
-
-    .pagination {
-        margin-top: 90px;
-        margin-bottom: 140px;
-    }
-}
-
-
-
-/*  Comments  */
-
-.comments-list {
-    max-width: 648px;
-    width: 100%;
-
-    .item {
-        padding: 12px 0;
-        border-bottom: 1px solid $colorBrownLighten;
-    }
-
-    .comment__head {
-        margin-bottom: 12px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .icon-rating {
-        width: 20px;
-        height: 20px;
-        
-        &::before {
-            background-repeat: no-repeat;
-        }
-    }
-
-    .author {
-        margin-bottom: 6px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        color: $colorPrimary;
-    }
-
-    .text {
-        margin-bottom: 12px;
-        font-size: 14px;
-        line-height: 150%;
-        color: $colorSecondary;
-    }
-
-    .btn-reply {
-        padding-left: 0;
-        font-size: 14px;
-        line-height: 19px;
-        color: $colorBrownDarken;
-        background-color: transparent;
-        border: none;
-    }
-
-    .reply-item {
-        padding-left: 25px;
-    }
-}
-
-.comments-form {
-    margin-left: 100px;
-    max-width: 452px;
-    width: 100%;
-
-    .input-wrapper,
-    .form-textarea {
-        margin-bottom: 24px;
-        width: 100%;
-    }
-
-    .form-textarea {
-        padding-left: 0;
-    }
-
-    .form__title {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 150%;
-    }
-
-    .rating__title {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-    }
-
-    .btn-submit {
-        margin-bottom: 12px;
-        padding: 15px;
-    }
-
-    .note {
-        font-size: 12px;
-        line-height: 150%;
-        color: $colorPrimary;
-    }
-}

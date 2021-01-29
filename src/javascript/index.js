@@ -23,6 +23,7 @@ import Accordion from './components/accordion.js';
 import ProductSorting from './product/productSorting';
 import CartUI from './sections/cartUI';
 import Slider from './components/Slider';
+import Modal from './components/Modal';
 
 /* PAGES */
 import HomePage from './pages/shop/homePage/HomePage';
@@ -38,8 +39,11 @@ class App {
                 '#modalPerfume', 
                 '.navigation-menu', 
                 '.product__show-more',
-                '.mobile__catalog-bar',
-                '.header__search-input'
+                '.category-controls',
+                '.filter-controls',
+                '.header__search-input',
+                '.modal--cart',
+                '.modal--comment'
             ], 
             'active'
             );
@@ -52,6 +56,7 @@ class App {
         this.formFilter = new FormFilter('.form-grid');
         this.cartUI = new CartUI('.product__show-more');
         this.slider = new Slider('.slider');
+        this.modal = new Modal('.modal--cart');
     
         /* SHOP pages  */
         this.home = new HomePage('.shop-home');
@@ -70,7 +75,7 @@ class App {
         this.formFilter.run();
         this.cartUI.run();
         this.slider.run();
-
+        this.modal.run();
         /* Shop pages */
         this.home.run();
         this.catalog.run(); 

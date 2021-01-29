@@ -13,3 +13,17 @@
     background-color: #DB2629;
 }
 
+.new::before {
+    position: absolute;
+    content: 'new';
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: #32C45B;
+}

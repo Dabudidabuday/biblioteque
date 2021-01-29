@@ -16,6 +16,94 @@
 <body class="shop shop-home">
     <div id="overlay"></div>
 
+    <div class="modal modal--cart">
+        <div class="container--modal">
+            <div class="modal__head">
+                <h3 class="modal__title h3">
+                    Корзина
+                </h3>
+
+                <button class="btn-close btn-reset" id="btn-cart-close"><span class="line--md"></span><span class="line--md"></span></button>
+            </div>
+
+            <div class="modal__body">
+                <div class="card--order">
+                    <div class="card__preview">
+                        <img src="src/images/products/product.jpg" alt="">
+                    </div>
+
+                    <div class="card__description">
+                        <h4 class="h4 card__title">Morning’s not soon</h4>
+                        <p class="card__subtitle">Eau de parfume</p>
+
+                        <div class="card__details">
+                            <div class="capacity">
+                                <p class="h6 details__title">Объем</p>
+                                <p class="capacity__quantity">100 мл</p>
+                            </div>
+
+                            <div class="quantity">
+                                <p class="h6 details__title">Количество</p>
+
+                                <div class="quantity-group">
+                                    <button class="btn-square btn-minus"><span class="minus"></span></button>
+                                    <input type="text" class="btn-square quantity-input" value="1" disabled>
+                                    <button class="btn-square btn-plus"><span class="line--dark"></span><span class="line-vertical--dark"></span></button>
+                                </div>
+                            </div>
+
+                            <div class="price">
+                                <p class="h6 details__title">Сумма</p>
+                                <p class="price__quantity">190 грн</p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-reset card__more">
+                            <img src="src/images/icons/more.svg" alt="">                                   
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card--order card--perfume">
+                    <div class="card__preview">
+                        <img src="src/images/products/product-2.jpg" alt="">
+                    </div>
+
+                    <div class="card__description">
+                            
+                        <h4 class="h4 card__title">Ваш созданный аромат</h4>
+                        <span class="read-more order__perfume-details">Подробнее</span>
+
+                        <div class="price">
+                            <p class="h6 price__title">Сумма</p>
+                            <p class="price__quantity">1250 грн</p>
+                        </div>
+
+                        <button type="button" class="btn-reset card__more">
+                            <img src="src/images/icons/more.svg" alt="">                                   
+                        </button>
+
+                        <button type="button" class="btn-reset card__more">
+                            <img src="src/images/icons/more.svg" alt="">                                   
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart--total">
+                <p class="total__title">К оплате</p>
+                <span class="total__price">
+                    1440 грн
+                </span>
+            </div>
+
+            <div class="modal__footer">
+                <button class="btn-reset btn-link btn-fill btn-cart animate-this">Подобрать еще</button>
+                <button class=" btn-dark btn-md btn-cart" >Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
     <header class="header animate-this">
         <div class="flex-container ai-center jc-between mx-auto">
  
@@ -259,7 +347,7 @@
             <ul class="icon-list">
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-1.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-2.svg" alt="">
                     </div>
 
                     <div class="item__title">5 ароматов по 2 мл</div>
@@ -267,7 +355,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-2.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-3.svg" alt="">
                     </div>
 
                     <div class="item__title">стойкость парфюма
@@ -276,7 +364,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-3.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-4.svg" alt="">
                     </div>
 
                     <div class="item__title">одного гардероба хватает
@@ -285,7 +373,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-1.svg" alt="">
                     </div>
 
                     <div class="item__title">25-40% эфирных масел в каждом аромате</div>
@@ -316,7 +404,7 @@
             <ul class="icon-list">
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-1.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-6.svg" alt="">
                     </div>
 
                     <div class="item__title">100% натуральный соево-кокосовый воск</div>
@@ -324,7 +412,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-2.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-7.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -335,7 +423,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-3.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-5.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -345,7 +433,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-8.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -376,7 +464,7 @@
             <ul class="icon-list icon-list-vertical--mobile">
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-1.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-9.svg" alt="">
                     </div>
 
                     <div class="item__title">Ароматы для разных комнат и помещений</div>
@@ -384,7 +472,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-2.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-10.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -394,7 +482,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-3.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-11.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -404,7 +492,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-12.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -414,7 +502,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/features/icon-13.svg" alt="">
                     </div>
 
                     <div class="item__title">
@@ -707,7 +795,7 @@
         <div class="container flex ai-center">
             <div class="section__description">
                 <h3 class="section__title heading-increment">
-                    Корпоративные подарки﻿
+                    Корпоративные подарки
                 </h3>
 
                 <p class="section__subtitle">
@@ -721,7 +809,7 @@
                 <div class="icon-list--vertical">
                     <div class="item">
                         <div class="item__icon">
-                            <img src="src/images/icons/features/feature-1.svg" alt="">
+                            <img src="src/images/icons/shop/gifts/icon-1.svg" alt="">
                         </div>
 
                         <p class="item-title">
@@ -731,7 +819,7 @@
                     
                     <div class="item">
                         <div class="item__icon">
-                            <img src="src/images/icons/features/feature-2.svg" alt="">
+                            <img src="src/images/icons/shop/gifts/icon-2.svg" alt="">
                         </div>
 
                         <p class="item-title">
@@ -741,7 +829,7 @@
 
                     <div class="item">
                         <div class="item__icon">
-                            <img src="src/images/icons/features/feature-2.svg" alt="">
+                            <img src="src/images/icons/shop/gifts/icon-3.svg" alt="">
                         </div>
 
                         <p class="item-title">
@@ -799,28 +887,26 @@
                         
                     </div>
 
-                    <div class="card card--simple card--recommended popul
-                    ar">
-                    <div class="card__body">
-                        <div class="card__preview">
-                            <img src="src/images/shop/home-page/gift.jpg" alt="">
-                        </div>
-                        <div class="card__description">
-                            <p class="h4 card__title">Сапфир</p>
-                            <p class="card__subtitle">Подарочный набор</p>
-    
-                            <p class="price__quantity">1200 грн</p>
-                        </div>
+                    <div class="card card--simple card--recommended popular">
+                        <div class="card__body">
+                            <div class="card__preview">
+                                <img src="src/images/shop/home-page/gift.jpg" alt="">
+                            </div>
+                            <div class="card__description">
+                                <p class="h4 card__title">Сапфир</p>
+                                <p class="card__subtitle">Подарочный набор</p>
+        
+                                <p class="price__quantity">1200 грн</p>
+                            </div>
 
-                        <button class="btn-md btn-dark btn-buy">Купить</button>
+                            <button class="btn-md btn-dark btn-buy">Купить</button>
 
-                        <div class="card__like">
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
+                            <div class="card__like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6387 2.19817C13.3129 1.87118 12.9261 1.61179 12.5003 1.43481C12.0746 1.25784 11.6183 1.16675 11.1574 1.16675C10.6966 1.16675 10.2402 1.25784 9.81449 1.43481C9.38874 1.61179 9.00192 1.87118 8.67613 2.19817L7.99999 2.87647L7.32386 2.19817C6.66578 1.53798 5.77323 1.16709 4.84257 1.16709C3.9119 1.16709 3.01936 1.53798 2.36128 2.19817C1.7032 2.85835 1.3335 3.75376 1.3335 4.6874C1.3335 5.62105 1.7032 6.51645 2.36128 7.17664L3.03741 7.85494L7.99999 12.8334L12.9626 7.85494L13.6387 7.17664C13.9646 6.8498 14.2232 6.46175 14.3996 6.03463C14.576 5.60752 14.6668 5.14973 14.6668 4.6874C14.6668 4.22508 14.576 3.76728 14.3996 3.34017C14.2232 2.91306 13.9646 2.525 13.6387 2.19817V2.19817Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            </div>
                         </div>
-                    </div>
-                        
                     </div>
 
                     <div class="card card--simple card--recommended new">
@@ -845,8 +931,7 @@
                         </div> 
                     </div>
 
-                    <div class="card card--simple card--recommended bests
-                    ellers">
+                    <div class="card card--simple card--recommended bestsellers">
                         <div class="card__body">
                             <div class="card__preview">
                                 <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -868,8 +953,7 @@
                         </div>
                     </div>
                     
-                    <div class="card card--simple card--recommended bests
-                    ellers">
+                    <div class="card card--simple card--recommended bestsellers">
                         <div class="card__body">
                             <div class="card__preview">
                                 <img src="src/images/shop/home-page/gift.jpg" alt="">
@@ -992,7 +1076,7 @@
             <ul class="icon-list">
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-1.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-1.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1002,7 +1086,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-2.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-2.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1012,7 +1096,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-3.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-3.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1022,7 +1106,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-4.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1032,7 +1116,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-5.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1042,7 +1126,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-6.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1052,7 +1136,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-7.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1062,7 +1146,7 @@
 
                 <li class="item">
                     <div class="item__icon">
-                        <img src="src/images/icons/features/feature-4.svg" alt="">
+                        <img src="src/images/icons/shop/partners/icon-8.svg" alt="">
                     </div>
 
                     <p class="item__title">
@@ -1309,5 +1393,5 @@
 <script src="https://npmcdn.com/isotope-horizontal@2/horizontal.js"></script>
     <script src="dist/bundle.js"></script>
 </div>
-</body>
+<!-- </body> -->
 </html>

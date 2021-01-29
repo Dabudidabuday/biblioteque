@@ -6,8 +6,9 @@ class MobileControls {
 
     _sortingUI() {
         const btnOpen = document.querySelector('#btn-category');
-        const btnClose = document.querySelector('.btn-close');
+        const btnClose = document.querySelector('#btn-close-category');
         const categoryBar = document.querySelector('.category-controls');
+
 
         btnOpen.addEventListener('click', () => {
             categoryBar.classList.add('active');
@@ -87,10 +88,27 @@ class MobileControls {
         })
     }
 
+    _filterControlsUI () {
+        const btnOpen = document.querySelector('#btn-filters');
+        const btnClose = document.querySelector('.btn-close-filter');
+        const categoryBar = document.querySelector('.filter-controls');
+
+        btnOpen.addEventListener('click', () => {
+            categoryBar.classList.add('active');
+            this.overlay.classList.add('active');
+        });
+
+        btnClose.addEventListener('click', () => {
+            categoryBar.classList.remove('active');
+            this.overlay.classList.remove('active');
+        })
+    }
+
     run() {
         if(!this.root) return;
 
         this._sortingUI();
+        this._filterControlsUI();
         this._buttonsUI();
         this._applyChoosed();
         this._resetChoosed();

@@ -477,6 +477,10 @@
 
         @media screen and(max-width: 768px) {
             flex-wrap: wrap;
+
+            .grid-item {
+                width: 48.5%;
+            }
         }
     }
 

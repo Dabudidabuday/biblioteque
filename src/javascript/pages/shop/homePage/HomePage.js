@@ -10,7 +10,6 @@ class HomePage {
         this.root = rootElement;
 
         this.hero = new Hero(this.root);
-
         this.sectionFounder = new SectionFounder('.section-founder');
         this.sectionGifts = new SectionGifts('.section-gifts');
         this.sectionBestsellers = new SectionBestsellers('.section-bestsellers');

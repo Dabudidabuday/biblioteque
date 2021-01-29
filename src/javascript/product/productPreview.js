@@ -60,7 +60,6 @@ class ProductPreview {
         const chooseBase = document.querySelector('.choose');
 
         btnZoom.addEventListener('click', () => {
-
             previewImage.classList.add('zoomed');
             footerButtons.classList.add('hide');
             btnZoomOffContainer.classList.remove('hide');

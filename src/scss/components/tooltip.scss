@@ -1,0 +1,59 @@
+
+.tooltip {
+    position: absolute;
+    top: 95%;
+    padding: 16px;
+    max-width: 343px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    filter: drop-shadow(0px 2px 9px rgba(0, 0, 0, 0.16));
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+    transition: ease-out .25s;
+
+    .tooltip__container {
+        position: relative;
+    }
+
+    .tooltip__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }   
+
+    .tooltip__body {
+        position: relative;
+        z-index: 4;
+    }
+
+    .tooltip-icon {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+
+    .tooltip__title {
+        margin-left: 12px;
+    }
+
+    .tooltip__text {
+        font-size: 14px;
+        line-height: 150%;
+        color: $colorSecondary;
+    }
+
+    .tooltip__bg {
+        position: absolute;
+        top: -16px;
+        right: -16px;
+        height: 100%;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: ease-in .25s;
+    }
+}

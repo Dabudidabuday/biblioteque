@@ -248,14 +248,24 @@
     @media screen and(max-width: 768px) {
         .gift-slider {
             display: flex;
-            height: 320px;
+            height: 372px;
             transition: none;
         }
 
         .card--recommended {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
             flex-direction: column;
             height: 277px;
             border-bottom: none;
+
+            .card__body {
+                position: absolute;
+                padding-right: 40px;
+                padding-left: 40px;
+                width: 96%;
+                left: 8px;
+            }
 
             &:hover {
                 transition: none;
@@ -314,6 +324,17 @@
     width: 100% !important;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
+    
+    .card,
+    .card--recommended {
+        padding: 0;
+        margin-right: 13px;
+        scroll-snap-align: start;
+    }
+
+    .card--recommended:hover {
+        box-shadow: none;
+    }
 
     @media screen and(max-width: 768px) {
          height: 430px;
@@ -334,11 +355,6 @@
         }
     }
 
-    .card,
-    .card--recommended {
-        margin-right: 13px;
-        scroll-snap-align: start;
-    }
 }
 
 .btn-underline {
@@ -363,6 +379,7 @@
 
 .card:hover:hover,
 .card--recommended:hover {
+
     .card__body {
         position: absolute;
     }
