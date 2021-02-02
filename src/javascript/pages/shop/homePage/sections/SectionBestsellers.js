@@ -1,4 +1,4 @@
-import ProductSorting from 'productComponents/ProductSorting';
+import ProductSorting from '../../../../product/ProductSorting';
 
 class SectionBestsellers {
     constructor(root) {

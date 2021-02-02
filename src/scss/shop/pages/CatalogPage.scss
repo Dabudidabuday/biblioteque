@@ -376,14 +376,14 @@
 }
 
 .section-recommended {
-    margin-bottom: 140px;
+    margin-bottom: 20px;
 
     .recommended__title {
         margin-bottom: 32px;
     }
 
     .flickity-viewport {
-        height: 460px !important;
+        height: 580px !important;
     }
 }
 
@@ -441,6 +441,29 @@
 
     .icon-rating:not(:last-of-type) {
         margin-right: 6px;
+    }
+
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .radio-wrapper {
+        margin-right: 20px;
+        position: relative;
+
+        &.active {
+            svg path {
+                stroke: $colorBrownDarken;
+                fill: $colorBrownDarken;
+            }
+        }
+    }
+
+    .input-rating {
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
     }
 }
 
@@ -505,9 +528,11 @@
 /* Mobile elements */
 
 .catalog-bar {
+    position: relative;
     margin-bottom: 20px;
     padding-right: 16px;
     padding-left:16px;
+    background-color: #fff;
     z-index: 5;
 
     .btn-wrapper:last-of-type {

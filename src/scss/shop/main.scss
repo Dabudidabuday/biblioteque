@@ -10,7 +10,7 @@
 .shop {
 
     .header {
-        position: unset;
+        position: relative;
         padding-top: 14px;
         padding-bottom: 14px;
 
@@ -20,6 +20,8 @@
         
 
         @media screen and(max-width: 768px){
+            background-color: #fff;
+
             .logo-desktop {
                 margin-left: 0;
     

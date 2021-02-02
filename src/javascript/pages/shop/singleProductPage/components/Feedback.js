@@ -54,6 +54,36 @@ class Feedback {
         })
     }
 
+    _modalThanksForCommentUI() {
+        const modal = document.querySelector('.modal--thank-you');
+        const btnSubmit = document.querySelector('.comments-form .btn-submit');
+
+        btnSubmit.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.overlay.classList.add('active');
+            modal.classList.add('active');
+
+            setTimeout(() => {
+                this.overlay.classList.remove('active');
+                modal.classList.remove('active');
+            }, 3000);
+        })
+
+    }
+
+    _requiredAuthUI() {
+        const btnLeaveComment = this.root.querySelector('.btn-leave-comment');
+
+        const isLogin = false;
+
+        btnLeaveComment.addEventListener('click', () => {
+
+            if(!isLogin) {
+
+            }
+        })
+    }
+
 
     /* Не появляются лейблы после стирания значений в инпутах */
     // _resetInputValue() {
@@ -72,6 +102,7 @@ class Feedback {
         if(!this.root) return;
         this._commentsUI();
         this._modalCommentUI();
+        this._modalThanksForCommentUI();
     }
 }
 

@@ -13,6 +13,11 @@ import './product/productPreview.js';
 
 
 /* Class Based App */
+
+/* MODULES */
+import Shop from 'pages/shop/Shop';
+
+
 import Overlay from './components/overlays.js';
 import FormFilter from './components/forms.js';
 import ProductPreview from './product/productPreview.js';
@@ -20,7 +25,7 @@ import ColorPalette from './components/colorPalette';
 import HomeUi from './components/homeUi';
 import ProductDetails from './product/productDetails';
 import Accordion from './components/accordion.js';
-import ProductSorting from './product/productSorting';
+import ProductSorting from 'productComponents/ProductSorting';
 import CartUI from './sections/cartUI';
 import Slider from './components/Slider';
 import Modal from './components/Modal';
@@ -43,7 +48,9 @@ class App {
                 '.filter-controls',
                 '.header__search-input',
                 '.modal--cart',
-                '.modal--comment'
+                '.modal--comment',
+                '.modal--thank-you',
+                '.parameters'
             ], 
             'active'
             );
@@ -57,6 +64,9 @@ class App {
         this.cartUI = new CartUI('.product__show-more');
         this.slider = new Slider('.slider');
         this.modal = new Modal('.modal--cart');
+
+        /*Nodules */
+        this.shop = new Shop('.shop');
     
         /* SHOP pages  */
         this.home = new HomePage('.shop-home');
@@ -76,10 +86,16 @@ class App {
         this.cartUI.run();
         this.slider.run();
         this.modal.run();
+
+        /* Modules */
+        this.shop.run();
+
         /* Shop pages */
         this.home.run();
         this.catalog.run(); 
         this.singleProduct.run();
+
+
     }
 }
 

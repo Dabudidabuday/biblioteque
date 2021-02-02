@@ -104,6 +104,113 @@
         </div>
     </div>
 
+    <div class="navigation-menu">
+        <div class="menu__header">
+            <button class="btn-close btn-reset" id="btn-navigation-close"><span class="line--md"></span><span class="line--md"></span></button>
+
+            <ul class="menu__socials">
+                <li class="item">
+                    <a href="" class="item-link">Instagram</a>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Facebook</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu__content">
+            <ul class="accordion animate-this">
+                <li class="item">
+                    <div class="outer-accordion-item flex jc-between ai-center">
+                        <a href="" class="item-link">Ароматы</a>
+                        <button class="btn btn-reset btn-accordion">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </button>
+                    </div>
+
+                    <ul class="inner-accordion-items">
+                        <li class="item">
+                            <a class="item-link" href="">Женские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Мужские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Унисекс</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="outer-accordion-item flex jc-between ai-center">
+                        <a href="" class="item-link">Афродизиаки</a>
+                        <button class="btn btn-reset btn-accordion">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </button>
+                    </div>
+
+                    <ul class="inner-accordion-items">
+                        <li class="item">
+                            <a class="item-link" href="">Женские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Мужские</a>
+                        </li>
+
+                        <li class="item">
+                            <a class="item-link" href="">Унисекс</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Home-ароматы</a>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Каминные свечи</a>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Подарки</a>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Сотрудничество</a>
+                </li>
+
+                <li class="item">
+                    <a href="" class="item-link">Блог</a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu__footer">
+            <div class="translations">
+                <ul class="translations-list">
+                    <li class="item">
+                        <a href="" class="item-link current">Ru</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="" class="item-link">Uk</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="" class="item-link">En</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn-dark btn-lg w-100 show-mobile nav-btn">Смотреть коллекцию</button>
+        </div>
+    </div>
+
     <header class="header animate-this">
         <div class="flex-container ai-center jc-between mx-auto">
  
@@ -169,6 +276,11 @@
                         <path d="M15 15L11.6167 11.6167M13.4444 7.22222C13.4444 10.6587 10.6587 13.4444 7.22222 13.4444C3.78578 13.4444 1 10.6587 1 7.22222C1 3.78578 3.78578 1 7.22222 1C10.6587 1 13.4444 3.78578 13.4444 7.22222Z" stroke="#5F6E80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg> 
                 </button>
+
+                 <button class="btn-icon show-desktop" type="button">
+                     <img src="src/images/icons/icon-account.svg" alt="">
+                 </button>
+
                  <button class="btn-icon" type="button">
                      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M21.0216 3.31694C20.5004 2.79376 19.8815 2.37873 19.2003 2.09557C18.5191 1.81241 17.7889 1.66667 17.0516 1.66667C16.3142 1.66667 15.5841 1.81241 14.9029 2.09557C14.2217 2.37873 13.6028 2.79376 13.0815 3.31694L11.9997 4.40222L10.9179 3.31694C9.86496 2.26064 8.43689 1.66722 6.94783 1.66722C5.45877 1.66722 4.03069 2.26064 2.97777 3.31694C1.92484 4.37324 1.33331 5.80589 1.33331 7.29972C1.33331 8.79355 1.92484 10.2262 2.97777 11.2825L4.05958 12.3678L11.9997 20.3333L19.9398 12.3678L21.0216 11.2825C21.5432 10.7596 21.9569 10.1387 22.2391 9.45529C22.5214 8.77191 22.6666 8.03944 22.6666 7.29972C22.6666 6.56 22.5214 5.82753 22.2391 5.14415C21.9569 4.46077 21.5432 3.83988 21.0216 3.31694V3.31694Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -583,6 +695,23 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
     
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
@@ -594,6 +723,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card card--simple diffuzor">
                         <div class="card__body">
                             <div class="card__preview">
@@ -604,7 +734,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -625,7 +772,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -646,7 +810,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -667,7 +848,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -689,7 +887,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -710,7 +925,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -731,7 +963,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -752,7 +1001,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     
@@ -773,7 +1039,24 @@
                                 <p class="card__subtitle">Подарочный набор</p>
         
                                 <p class="price__quantity">1200 грн</p>
-    
+
+                                <div class="custom-select custom-select--card">
+                                    <div class="select-arrow">
+                                        <div class="line--dark"></div>
+                                        <div class="line--dark"></div>
+                                    </div>
+
+                                    <input type="text" class="custom-celect__input" placeholder="16 мл" readonly="">
+                                    <div class="custom-select__options">
+                                        <ul class="option__items">
+                                            <li class="item">16 мл</li>
+                                            <li class="item">50 мл</li>
+                                            <li class="item">100 мл</li>
+                                            <li class="item">250 мл</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <button class="btn-md btn-dark btn-buy">Купить</button>
                             </div>
     

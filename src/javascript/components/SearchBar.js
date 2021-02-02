@@ -36,6 +36,8 @@ class SearchBar {
         })
     }
 
+
+
     _mobileSearch() {
         const mobileViewPort = window.matchMedia("(max-width: 768px)");
         const buttonMobileSearchBar = document.querySelector('#buttonMobileSearchBar');
@@ -61,6 +63,20 @@ class SearchBar {
             btnSearchClose.addEventListener('click', () => {
                 this.root.classList.remove('mobile-active');
             })
+
+            const searchItems = Array.from(this.root.querySelectorAll('.search-results .item'));
+
+            searchItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    this.root.classList.remove('active');
+                    this.overlay.classList.remove('active');
+
+                    setTimeout(() => {
+                        this.root.classList.remove('mobile-active');
+                    }, 600)
+                }, 250)
+            })
+
         }
     }
 

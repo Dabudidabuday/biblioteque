@@ -9,7 +9,7 @@ class Slider {
       contain: true,
       pageDots: false,
       // freeScroll: false
-      cellAlign: 'left',
+      cellAlign: 'center',
       wrapAround: true
     };
 
@@ -27,7 +27,7 @@ class Slider {
       var flkty = new Flickity( sliderContainer, {
         // cellAlign: 'left',
         contain: true,
-        // wrapAround: true,
+        wrapAround: true,
         pageDots: false,
         freeScroll: false
       });

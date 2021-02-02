@@ -1,5 +1,5 @@
 import Slider from 'components/Slider';
-import ProductSorting from '../../../../product/productSorting';
+import ProductSorting from 'productComponents/ProductSorting';
 
 class SectionGifts {
     constructor(rootElement) {

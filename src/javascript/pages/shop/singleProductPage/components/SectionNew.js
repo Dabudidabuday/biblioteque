@@ -8,7 +8,12 @@ class SectionNew {
 
     run() {
         if (!this.root) return;
-        this.slider.initSlider('.slider--new-products');
+        const desktop = window.matchMedia('(min-width: 769px)');
+
+        if(desktop.matches) {
+            this.slider.initSlider('.slider--new-products');
+        }
+
     }
 }
 

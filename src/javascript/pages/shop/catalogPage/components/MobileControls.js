@@ -78,6 +78,13 @@ class MobileControls {
                 sortItems.forEach(item => item.classList.remove('active'));
 
                 e.target.classList.toggle('active');
+
+                setTimeout(() => {
+                    const parametersList = sortList.querySelector('.parameters');
+
+                    this.overlay.classList.remove('active');
+                    parametersList.classList.toggle('active');
+                }, 600)
             })
         })
 
@@ -86,6 +93,8 @@ class MobileControls {
             this.overlay.classList.toggle('active');
             parametersList.classList.toggle('active');
         })
+
+
     }
 
     _filterControlsUI () {

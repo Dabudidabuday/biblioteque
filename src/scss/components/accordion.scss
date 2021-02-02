@@ -34,6 +34,14 @@
             max-height: 0;
             transition: all ease-out .5s;
             transition-delay: opacity .5s;
+
+            .item__text {
+                padding-top: 12px;
+                padding-bottom: 16px;
+                font-size: 14px;
+                line-height: 150%;
+                color: $colorSecondary;
+            }
         }
         
         .inner-accordion-items.active {

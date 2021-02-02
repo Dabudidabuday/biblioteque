@@ -32,6 +32,11 @@
             transition: ease-in .3s;
         }
 
+        .custom-select {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
         .card__body {
             // height: calc(100% + 128px);
             height: auto !important;

@@ -337,7 +337,14 @@
     }
 
     @media screen and(max-width: 768px) {
-         height: 430px;
+        margin-bottom: 0;
+         height: 540px;
+
+        .custom-select.custom-select--card {
+            opacity: 0;
+            visibility: hidden;
+            display: block !important;
+        }
 
         .card,
         .card--recommended {
@@ -382,5 +389,7 @@
 
     .card__body {
         position: absolute;
+        width: 100%;
+        left: 0;
     }
 }

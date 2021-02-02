@@ -15,6 +15,12 @@ if(!devMode) {
 module.exports = {
   entry: './src/javascript/index.js',
 
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000
+  },
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
@@ -74,7 +80,8 @@ module.exports = {
         alias: {
           'images': path.resolve(__dirname, 'src/images'),
           'components': path.resolve(__dirname, 'src/javascript/components'),
-          'productComponents': path.resolve(__dirname, 'src/javascript/product')
+          'productComponents': path.resolve(__dirname, 'src/javascript/product'),
+            'pages': path.resolve(__dirname, 'src/javascript/pages')
         },
         // fallback: {
         //     util: require.resolve("util/"),

@@ -4,6 +4,7 @@ import ProductGallery from "./components/ProductGallery";
 import SectionNew from "./components/SectionNew";
 import TextTabs from "./components/TextTabs";
 import Tooltip from "./components/Tooltip";
+import RatingStars from 'components/RatingStars';
 
 class SingleProduct {
     constructor(rootElement) {
@@ -14,6 +15,7 @@ class SingleProduct {
         this.capacityTabs = new CapacityTabs('.capacity-modifications');
         this.feedback = new Feedback('.feedback');
         this.tooltip = new Tooltip('.tooltip');
+        this.ratingStars = new RatingStars('.comments-form .rating');
     } 
 
     run() {
@@ -24,6 +26,7 @@ class SingleProduct {
         this.capacityTabs.run();
         this.feedback.run();
         this.tooltip.run();
+        this.ratingStars.run();
     }
 }
 
