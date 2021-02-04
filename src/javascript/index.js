@@ -35,7 +35,7 @@ import HomePage from './pages/shop/homePage/HomePage';
 import CatalogPage from './pages/shop/catalogPage/CatalogPage';
 import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
 import CooperationPage from './pages/CooperationPage';
-
+import InfoPage from './pages/infoPage';
 
 class App {
     constructor() {
@@ -79,7 +79,8 @@ class App {
         this.catalog = new CatalogPage('.shop-catalog');
         this.singleProduct = new SingleProduct('.shop-single-product');
         this.cooperationPage = new CooperationPage('.cooperation-page');
-        this.admin.run();
+        this.infoPage = new InfoPage('.info-page');
+
     }
 
     run() {
@@ -102,7 +103,13 @@ class App {
         this.home.run();
         this.catalog.run(); 
         this.singleProduct.run();
+
+        /* ADMIN */
+        this.admin.run();
+
+        /* Info Pages */
         this.cooperationPage.run();
+        this.infoPage.run();
 
     }
 }
