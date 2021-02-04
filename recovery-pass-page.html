@@ -15,19 +15,6 @@
 <body class="admin registration-page">
 <div id="overlay"></div>
 
-<div class="modal modal--thank-you">
-    <div class="modal__container">
-        <button class="btn-close btn-reset" id="btn-thanks-close"><span class="line--md"></span><span class="line--md"></span></button>
-
-        <div class="modal__background-icon">
-            <img src="src/images/admin/registration-thanks.svg" alt="">
-        </div>
-
-        <p class="modal__title">На ваш почту отправлен пароль</p>
-        <p class="modal__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-</div>
-
 <div class="navigation-menu">
     <div class="menu__header">
         <button class="btn-close btn-reset" id="btn-navigation-close"><span class="line--md"></span><span class="line--md"></span></button>
@@ -241,36 +228,26 @@
 <section class="login">
     <div class="login-container">
 
-        <h1 class="h2 login__title">Регистрация</h1>
+        <h1 class="h2 login__title">Восстановление пароля</h1>
+
+        <p class="login__subtitle">
+            Не получается войти? Забыли пароль к аккаунту <b>votre.com.ua </b> ? С помощью функции восстановления пароля вы можете заменить забытый пароль на новый.
+            <br>
+            <br>
+            Укажите номер телефона, который вы использовали при оформлении заказов в интернет - магазине <b>Votre</b>.
+            <br>
+            <br>
+            Мы вышлем вам инструкцию по восстановлению пароля.
+        </p>
         <form class="login__form">
-
-            <div class="input-wrapper">
-                <input type="text" name="surname" class="form-input" id="input-surname">
-                <label for="input-surname" class="label">Фамилия <sup class="red-star">*</sup></label>
-            </div>
-
             <div class="input-wrapper">
                 <input type="text" name="name" class="form-input" id="input-name">
-                <label for="input-name" class="label">Имя</label>
+                <label for="input-name" class="label">Email или телефон</label>
             </div>
 
-            <div class="input-wrapper">
-                <input type="text" name="phone" class="form-input" id="input-phone">
-                <label for="input-phone" class="label">Телефон <sup class="red-star">*</sup></label>
-            </div>
-
-            <div class="input-wrapper">
-                <input type="text" name="email" class="form-input" id="input-email">
-                <label for="input-email" class="label">E-mail <sup class="red-star">*</sup></label>
-            </div>
-
-
-
-            <button class="btn-submit btn-fill btn-xl w-100 btn-outline-primary" type="submit">Зарегистрироваться</button>
+            <button class="btn-submit btn-fill btn-xl w-100 btn-outline-primary" type="submit">Восстановить</button>
         </form>
-
-        <p class="reminder"><sup class="red-star">*</sup> – поля обязательные для заполнения</p>
-
+        <a class="btn-register w-100" href="">Отменить</a>
     </div>
 </section>
 
