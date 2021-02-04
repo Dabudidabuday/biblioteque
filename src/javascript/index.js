@@ -16,7 +16,7 @@ import './product/productPreview.js';
 
 /* MODULES */
 import Shop from 'pages/shop/Shop';
-
+import Admin from 'pages/admin/Admin';
 
 import Overlay from './components/overlays.js';
 import FormFilter from './components/forms.js';
@@ -34,6 +34,9 @@ import Modal from './components/Modal';
 import HomePage from './pages/shop/homePage/HomePage';
 import CatalogPage from './pages/shop/catalogPage/CatalogPage';
 import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
+import CooperationPage from './pages/CooperationPage';
+
+
 class App {
     constructor() {
         this.overlay = new Overlay(
@@ -50,6 +53,8 @@ class App {
                 '.modal--cart',
                 '.modal--comment',
                 '.modal--thank-you',
+                '.modal--auth',
+                '.modal--partners',
                 '.parameters'
             ], 
             'active'
@@ -64,6 +69,7 @@ class App {
         this.cartUI = new CartUI('.product__show-more');
         this.slider = new Slider('.slider');
         this.modal = new Modal('.modal--cart');
+        this.admin = new Admin('.admin');
 
         /*Nodules */
         this.shop = new Shop('.shop');
@@ -72,6 +78,8 @@ class App {
         this.home = new HomePage('.shop-home');
         this.catalog = new CatalogPage('.shop-catalog');
         this.singleProduct = new SingleProduct('.shop-single-product');
+        this.cooperationPage = new CooperationPage('.cooperation-page');
+        this.admin.run();
     }
 
     run() {
@@ -94,7 +102,7 @@ class App {
         this.home.run();
         this.catalog.run(); 
         this.singleProduct.run();
-
+        this.cooperationPage.run();
 
     }
 }

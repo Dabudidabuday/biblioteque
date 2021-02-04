@@ -1,7 +1,10 @@
+import Account from "components/Account/Account";
+
 class Feedback {
     constructor(root) {
         this.root = document.querySelector(root);
         this.overlay = document.querySelector('#overlay');
+        this.account = new Account();
     }
 
     _checkClassComments(item, className) {
@@ -50,7 +53,7 @@ class Feedback {
             this.overlay.classList.remove('active');
             modal.classList.remove('active');
 
-            this._resetInputValue();
+            // this._resetInputValue();
         })
     }
 
@@ -84,6 +87,18 @@ class Feedback {
         })
     }
 
+    _checkBeforeComment() {
+        const btnOpen = this.root.querySelector('.btn-leave-comment');
+        const btnClose = document.querySelector('#btnCloseModalAuth');
+
+        this.account.chooseMethodAuth(btnOpen, btnClose);
+        // replyButtons.forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         this.account.replyButtons
+        //     })
+        // })
+
+    }
 
     /* Не появляются лейблы после стирания значений в инпутах */
     // _resetInputValue() {
@@ -103,6 +118,7 @@ class Feedback {
         this._commentsUI();
         this._modalCommentUI();
         this._modalThanksForCommentUI();
+        this._checkBeforeComment();
     }
 }
 

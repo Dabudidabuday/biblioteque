@@ -1,0 +1,99 @@
+@import './pages/blogPage.scss';
+@import './pages/postPage.scss';
+
+.blog {
+
+  .header {
+    @media screen and(max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  .blog__title {
+    margin-bottom: 40px;
+  }
+
+  .blog-grid {
+    display: flex;
+  }
+
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      margin-bottom: 40px;
+
+    }
+
+    @media screen and (max-width: 768px){
+      margin-bottom: 50px;
+    }
+  }
+
+  .blog-sidebar {
+    margin-left: 60px;
+    max-width: 343px;
+    width: 100%;
+
+    .sidebar__title {
+      margin-bottom: 20px;
+    }
+
+    @media screen and(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .pagination {
+    text-align: center;
+
+    @media screen and(max-width: 768px) {
+      margin: 20px auto 0;
+    }
+  }
+
+  .btn-more-posts {
+    margin: 0 auto 140px;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: $colorSecondary;
+
+    @media screen and(max-width: 768px) {
+      margin: 0 auto 70px;
+    }
+  }
+}
+
+/* in accordion, but needed to cooperation partners list */
+.item--partner {
+
+  .item__title {
+    margin-bottom: 12px;
+    padding-top: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 135%
+  }
+
+  .item__addresses {
+    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .address__text {
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $colorSecondary;
+  }
+}

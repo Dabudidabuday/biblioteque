@@ -14,18 +14,22 @@ class Accordion {
                 const parent = e.target.closest('.item');
                 const currentOuterLink = parent.querySelector('.outer-accordion-item');
                 const currentInnerLinks = parent.querySelector('.inner-accordion-items');
-                btnAccordionOuter.forEach(item => {
-                    item.classList.remove('active');
-                })
 
-                accordionInnerLists.forEach(item => {
-                    if(item.classList.contains('active')) {
-                        item.classList.remove('active');
-                    }
-                });
+                // btnAccordionOuter.forEach(item => {
+                //     item.classList.remove('active');
+                // })
+                //
+                // accordionInnerLists.forEach(item => {
+                //     item.classList.remove('active');
+                // });
+
+                if(currentOuterLink.classList.contains('active')) {
+                    currentOuterLink.classList.remove('active');
+                    currentInnerLinks.classList.remove('active');
+                }
 
                 currentOuterLink.classList.add('active');
-                currentInnerLinks.classList.toggle('active');
+                currentInnerLinks.classList.add('active');
             })
         })
     }

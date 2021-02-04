@@ -1,0 +1,61 @@
+.login-container {
+  margin: 70px auto 200px;
+  max-width: 400px;
+  width: 100%;
+
+  @media screen and(max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.login__title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.login__form {
+  .input-wrapper {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .pass-helpers {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and(max-width: 768px) {
+      label {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .link--helper {
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: $colorBrownDarken
+  }
+
+  .btn-submit {
+    margin-bottom: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    position: relative;
+  }
+
+
+}
+
+.btn-register {
+  margin-top: 12px;
+  display: block;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000 !important;
+}
