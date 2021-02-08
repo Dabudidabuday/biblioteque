@@ -2,16 +2,12 @@
 /* blog cards */
 
 .blog-slider {
-    display: flex;
     margin-bottom: 40px;
 
-    .card--post:not(:last-of-type) {
+    .card--post {
         margin-right: 30px;
     }
 }
-
-
-
 
 .card--post {
     max-width: 380px;

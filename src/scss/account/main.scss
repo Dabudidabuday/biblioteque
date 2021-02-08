@@ -1,9 +1,11 @@
 @import './pages/loginPage.scss';
 @import './pages/registrationPage.scss';
 
-.shop-footer {
+.admin {
+  .shop-footer {
 
-  @media screen and(max-width: 768px) {
+    @media screen and(max-width: 768px) {
       display: none;
+    }
   }
 }

@@ -44,11 +44,12 @@
 .founder__subtitle {
     margin-bottom: 32px;
     max-width: 80%;
+    font-size: 18px;
+    line-height: 150%;
 
     @media screen and(max-width: 768px) {
         max-width: unset;
         font-size: 14px;
-        line-height: 150%;
     }
 }
 

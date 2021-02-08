@@ -29,10 +29,33 @@ class ProductGallery {
         this.slider.initSlider(sliderContainer, this.navSliderSettings);
     }
 
+    _productPreview() {
+        const products = Array.from(this.root.querySelectorAll('.hero__main-slider .item'));
+        const flickityViewPort = this.root.querySelector('.flickity-viewport');
+        const previewControls = document.querySelector('.product-preview__controls');
+
+        products.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('active');
+                flickityViewPort.style.overflow="visible";
+                previewControls.classList.remove('hide');
+            })
+        });
+
+        const btnZoomOff = document.querySelector('#btnZoomOff');
+
+        btnZoomOff.addEventListener('click', () => {
+            products.forEach(item => item.classList.remove('active'));
+            flickityViewPort.style.overflow="hidden";
+            previewControls.classList.add('hide');
+        })
+    }
+
     run() {
         if(!this.root) return; 
         this._initMainSlider();
         this._initNavSlider();
+        this._productPreview();
     }
 }
 

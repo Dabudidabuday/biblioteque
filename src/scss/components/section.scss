@@ -1,6 +1,6 @@
 .section {
-    padding-top: 128px;
-    padding-bottom: 128px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 
     @media screen and(max-width: 768px) {
         padding-top: 50px;
@@ -10,8 +10,8 @@
 
 .section--small {
     margin: 0 auto;
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 90px;
+    padding-bottom: 60px;
     // max-width: 600px;
     text-align: center;
 
@@ -23,6 +23,15 @@
 }
 
 .section--img-aside {
+    .section__title {
+        text-align: left;
+    }
+
+    .heading-increment::before {
+        left: 0;
+        transform: translate(15%, -70%);
+    }
+
     @media screen and(max-width: 768px) {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -30,19 +39,42 @@
 }
 
 
+.section__head {
+    margin-bottom: 43px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    .section__title {
+        margin-left: 0;
+        text-align: left;
+        max-width: 730px;
+
+        &.heading-increment::before {
+            left: 0;
+            transform: translate(15%, -70%);
+        }
+    }
+
+    .custom-celect__input {
+        max-width: unset;
+    }
+
+    @media screen and(max-width: 768px) {
+        flex-direction: column;
+    }
+}
 
 .section__link {
     display: block;
     text-align: center;
 }
 
-
-
-
 .section__title {
     position: relative;
     margin: 0 auto 20px;
-    width: fit-content;
+    max-width: 500px;
+    width: 100%;
     font-family: "Playfair Display", serif;
     font-size: 28px;
     line-height: 150%;
@@ -78,10 +110,11 @@
 
 
 .section__text {
+    margin: 0 auto 40px;
+    max-width: 630px;
     font-size: 16px;
     line-height: 150%;
     color: $colorSecondary;
-    margin-bottom: 40px;
 
     @media screen and(max-width: 768px) {
         margin-bottom: 20px;

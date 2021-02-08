@@ -11,6 +11,7 @@ class Shop {
         btnOpen.addEventListener('click', () => {
             btnOpen.classList.toggle('active');
             navMenu.classList.toggle('active');
+            this.overlay.classList.add('active');
 
             const controlBar = document.querySelector('.catalog-bar');
             if(controlBar) {
@@ -31,7 +32,6 @@ class Shop {
 
     run() {
         if(!this.root) return;
-        console.log('hello!')
         this._navMenuUI();
     }
 }

@@ -58,8 +58,70 @@
     }
 }
 
+.card--small {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
+    .card__preview {
+        margin-right: 20px;
+        padding: 44px 13px;
+    }
 
+    .card__body {
+        width: 278px;
+    }
+
+    .card__title {
+        margin-bottom: 6px;
+        font-size: 20px;
+        line-height: 27px;
+        color: #231D18;
+    }
+
+    .card__subtitle {
+        margin-bottom: 14px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #3B4857;
+    }
+
+    .card__price {
+        margin-bottom: 40px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+
+        .previous {
+            padding-left: 12px;
+            font-size: 14px;
+            line-height: 19px;
+            color: #5F6E80;
+            text-decoration: line-through;
+        }
+    }
+
+    .card__actions {
+        display: flex;
+
+        .quantity-group {
+            margin-top: 0;
+            margin-right: 22px;
+            width: 122px;
+        }
+
+        button, input {
+            height: 46px;
+        }
+
+        .btn-dark {
+            width: 140px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 22px;
+        }
+    }
+}
 
 .card,
 .card---recommended,

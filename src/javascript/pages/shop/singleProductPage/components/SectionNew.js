@@ -4,15 +4,14 @@ class SectionNew {
     constructor(root) {
         this.root = document.querySelector(root);
         this.slider = new Slider();
+        this.additionalSliderSettings = {
+            cellAlign: 'left'
+        }
     }
 
     run() {
         if (!this.root) return;
-        const desktop = window.matchMedia('(min-width: 769px)');
-
-        if(desktop.matches) {
-            this.slider.initSlider('.slider--new-products');
-        }
+            this.slider.initSlider('.slider--new-products',this.additionalSliderSettings);
 
     }
 }

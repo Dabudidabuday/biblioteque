@@ -5,6 +5,7 @@ import SectionNew from "./components/SectionNew";
 import TextTabs from "./components/TextTabs";
 import Tooltip from "./components/Tooltip";
 import RatingStars from 'components/RatingStars';
+import SectionRecommended from "pages/shop/singleProductPage/components/SectionRecommended";
 
 class SingleProduct {
     constructor(rootElement) {
@@ -16,6 +17,7 @@ class SingleProduct {
         this.feedback = new Feedback('.feedback');
         this.tooltip = new Tooltip('.tooltip');
         this.ratingStars = new RatingStars('.comments-form .rating');
+        this.sectionRecommended = new SectionRecommended('.section-recommended');
     } 
 
     run() {
@@ -27,6 +29,7 @@ class SingleProduct {
         this.feedback.run();
         this.tooltip.run();
         this.ratingStars.run();
+        this.sectionRecommended.run();
     }
 }
 

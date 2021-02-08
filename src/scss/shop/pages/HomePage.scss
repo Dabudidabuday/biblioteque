@@ -222,6 +222,18 @@
 .section-gifts,
 .section-bestsellers {
     text-align: center;
+
+    .flickity-button {
+        background: transparent;
+    }
+
+    .flickity-button.previous {
+        left: -45px;
+    }
+
+    .flickity-button.next {
+        right: -45px;
+    }
 }
 
 .section-bestsellers {
@@ -247,9 +259,7 @@
 
     @media screen and(max-width: 768px) {
         .gift-slider {
-            display: flex;
             height: 372px;
-            transition: none;
         }
 
         .card--recommended {
@@ -320,16 +330,23 @@
 .gift-slider {
     margin-bottom: 40px;
     padding-top: 10px;
-    height: 420px;
-    width: 100% !important;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
+    height: 480px;
+
+    .flickity-viewport {
+        height: 100% !important;
+    }
     
     .card,
     .card--recommended {
         padding: 0;
         margin-right: 13px;
-        scroll-snap-align: start;
+        width: 220px;
+
+        .card__body {
+            //top: -12px;
+            right: -12px;
+            //left: -12px;
+        }
     }
 
     .card--recommended:hover {
@@ -338,7 +355,11 @@
 
     @media screen and(max-width: 768px) {
         margin-bottom: 0;
-         height: 540px;
+        height: 540px;
+
+        .flickity-button {
+            display: none;
+        }
 
         .custom-select.custom-select--card {
             opacity: 0;
@@ -361,7 +382,20 @@
             }
         }
     }
+}
 
+.section-posts {
+    .flickity-button {
+        background: transparent;
+    }
+
+    .flickity-button.previous {
+        left: -45px;
+    }
+
+    .flickity-button.next {
+        right: -45px;
+    }
 }
 
 .btn-underline {

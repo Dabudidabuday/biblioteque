@@ -70,8 +70,31 @@
 }
 
 .store-slider {
-    display: flex;
-    gap: 30px;
+    .flickity-button {
+        background: transparent;
+    }
+
+    .flickity-button.previous {
+        left: -45px;
+    }
+
+    .flickity-button.next {
+        right: -45px;
+    }
+
+    .item {
+        margin-right: 30px;
+    }
+
+    @media screen and(max-width: 768px) {
+        .flickity-viewport {
+            overflow: visible;
+        }
+
+        .flickity-button {
+            display: none;
+        }
+    }
 }
 
 .store__slide {
@@ -111,47 +134,44 @@
 
 /* section-stores */
 
-.section-stores {
-    .section__head {
-        margin-bottom: 43px;
-        display: flex;
-        justify-content: space-between;
 
-        @media screen and(max-width: 768px) {
-            flex-direction: column;
-        }
-    }
-
-    .custom-select {
-        max-width: 400px;
-        width: 100%;
-    }
+.custom-select {
+    max-width: 400px;
+    width: 100%;
 }
 
-.slider--snap {
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-
-    @media screen and(max-width: 768px) {
-        .item {
-            min-width: 100%;
-            scroll-snap-align: start;
-            margin-right: 30px;
-        }
-    }
-}
+//.slider--snap {
+//    overflow: auto;
+//    scroll-snap-type: x mandatory;
+//
+//    @media screen and(max-width: 768px) {
+//        .item {
+//            min-width: 100%;
+//            scroll-snap-align: start;
+//            margin-right: 30px;
+//        }
+//    }
+//}
 
 .slider-addresses {
-    display: flex;
+
+    .flickity-prev-next-button {
+        background-color: transparent;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -45px;
+    }
+
+    .flickity-prev-next-button.previous {
+        left: -45px;
+    }
 
     .item {
         padding: 16px;
-        width: 100%;
+        width: 30%;
         background-color: $colorBrownLighten;
-
-        &:not(:last-of-type) {
-            margin-right: 30px;
-        }
+        margin-right: 30px;
     }
 
     .item__shop {
@@ -168,5 +188,15 @@
     .item__address,
     .item__phone {
         color: $colorSecondary;
+    }
+
+    @media screen and(max-width: 768px) {
+
+        .flickity-prev-next-button {
+            display: none;
+        }
+        .item {
+            width: 100%;
+        }
     }
 }

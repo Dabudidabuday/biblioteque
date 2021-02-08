@@ -55,13 +55,13 @@
 .heading-increment::before {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     counter-increment: section;
     content: counter(section, decimal-leading-zero);
     font-family: "Playfair Display", serif;
     font-size: 130px;
     color: $colorBrownLighten;
-    transform: translate( 15%, -70%);
+    transform: translate(-50%, -70%);
     opacity: 0.5;
     z-index: -1;
 }
