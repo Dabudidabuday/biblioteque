@@ -1,5 +1,4 @@
 /* CARDS LIST  */
-
 .found-title {
     margin-top: 40px;
     color: $colorSecondary;
@@ -19,20 +18,11 @@
     margin-top: 12px;
     flex-wrap: wrap;
     width: 715px;
-    height: 526px !important;
-    overflow: hidden;
-    overflow-y: visible;
+    height: auto;
 
     @media screen and(max-width: 768px) {
         width: 100%;
-        min-height: 216px;
-        max-height: 298px;
-        overflow: hidden;
-        overflow-y: visible;
-    }
-
-    @media screen and(max-height: 800px) {
-        max-height: 224px;
+        height: max-content;
     }
 
     .card {
@@ -42,7 +32,7 @@
         width: 100%;
         margin-bottom: 32px;
         overflow: hidden;
-        // cursor: pointer;
+        cursor: pointer;
 
         &:hover {
             .card__img img {

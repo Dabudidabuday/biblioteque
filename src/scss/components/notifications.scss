@@ -1,0 +1,28 @@
+.notification {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 8px 116px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1000;
+  transition: ease-in .25s;
+
+  @media screen and(max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.notification--success {
+  background-color: #20B75C;
+}
+
+.notification--error {
+  background-color: #FC4B4E;
+}

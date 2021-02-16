@@ -52,17 +52,19 @@ class FormFilter {
         const addressDeliveryCheckbox = document.querySelector('#address-delivery');
 
         addressDeliveryCheckbox.addEventListener('input', (event) => {
-            var filterValue = event.target.getAttribute('data-filter');
-            const addressDeliveryInputs = document.querySelectorAll(filterValue)
+            let filterValue = event.target.getAttribute('data-filter');
+
             if(!event.target.checked) {
-                iso.hideItemElements(addressDeliveryInputs);
-                
-                
-                iso.getFilteredItemElements()
-                iso.arrange({ filter: filterValue });
+                const hideAddressDeliveryInputs = document.querySelectorAll('.hide-address-delivery')
+                // iso.hideItemElements(hideAddressDeliveryInputs);
+                // iso.getFilteredItemElements();
+                iso.arrange({
+                    filter: '.shipping'
+                });
+                // iso.layout();
             }
 
-            iso.arrange({ filter: filterValue });
+            // iso.arrange({ filter: filterValue });
 
             
         })

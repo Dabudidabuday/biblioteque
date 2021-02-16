@@ -143,7 +143,7 @@
     display: inline-block;
     font-weight: 600;
     text-align: center;
-    // cursor: pointer;
+     cursor: pointer;
 }
 
 .btn-primary {
@@ -232,6 +232,12 @@
     }
 }
 
+@media screen and(max-width: 767px) {
+    .btn-next:hover::before {
+        width: 0 !important;
+    }
+}
+
 
 .btn-accordion {
     position: relative;
@@ -300,8 +306,9 @@ active button for steps
     .btn-square {
         position: relative;
         padding: 0;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 44px;
         height: 32px;
         font-size: 16px;

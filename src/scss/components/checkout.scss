@@ -18,6 +18,10 @@
         }
     }
 
+    .form-grid {
+        min-height: 40px;
+    }
+
     .legend {
         display: inline-block;
         padding-left: 16px;
@@ -263,6 +267,15 @@
         transition: .3s;
         text-shadow: 1px 0 0 #000;
     }
+}
+
+.addAddress {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: underline;
+    color: $colorBrownDarken;
 }
 
 .form-textarea {

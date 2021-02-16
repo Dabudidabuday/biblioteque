@@ -21,7 +21,7 @@
         // padding-top: 16px;
         padding-left: 16px;
         padding-right: 16px;
-        overflow: visible;
+        //overflow: visible;
     }
 }
 
@@ -34,8 +34,8 @@
     @media screen and(max-width: 768px) {
         margin-top: 8px;
         flex-wrap: nowrap;
-        overflow: visible;
         overflow-x: scroll;
+
         
         .btn-filter:not(:last-of-type) {
             margin-right: 10px;
@@ -79,9 +79,10 @@
 }
 
 .read-more {
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     line-height: 11px;
     text-decoration-line: underline;
     color: #3B4857;
-    // cursor: pointer;
+     cursor: pointer;
 }

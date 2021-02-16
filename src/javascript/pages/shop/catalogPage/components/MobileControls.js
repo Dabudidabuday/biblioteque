@@ -11,18 +11,22 @@ class MobileControls {
 
 
         btnOpen.addEventListener('click', () => {
+            document.querySelector('.header').style.zIndex="0";
+            document.querySelector('.catalog-bar').style.zIndex="0";
             categoryBar.classList.add('active');
             this.overlay.classList.add('active');
         });
 
         btnClose.addEventListener('click', () => {
+            document.querySelector('.header').style.zIndex="10";
+            document.querySelector('.catalog-bar').style.zIndex="10";
             categoryBar.classList.remove('active');
             this.overlay.classList.remove('active');
         })
     }
 
     _buttonsUI() {
-        const controlButtons = Array.from(this.root.querySelectorAll('.btn-control'));
+        const controlButtons = Array.from(document.querySelectorAll('.btn-control'));
         
         controlButtons.forEach(item => {
             item.addEventListener('click', () => {
@@ -34,11 +38,14 @@ class MobileControls {
 
     _applyChoosed() {
         const buttonsApply = Array.from(document.querySelectorAll('.btnApplyFilter')); 
-        const categoryBar = document.querySelector('.category-controls');
+        const filterControls = document.querySelector('.category-controls');
+        const categoryControls = document.querySelector('.filter-controls');
 
         buttonsApply.forEach(item => {
             item.addEventListener('click', () => {
-                categoryBar.classList.remove('active');
+                filterControls.classList.remove('active');
+                categoryControls.classList.remove('active');
+
                 this.overlay.classList.remove('active');
             })
         })
@@ -55,13 +62,15 @@ class MobileControls {
     }
 
     _openCloseControlGroup() {
-        const controlHeads = Array.from(this.root.querySelectorAll('.control__head'));
+        const controlHeads = Array.from(document.querySelectorAll('.control__head'));
 
         controlHeads.forEach(item => {
             item.addEventListener('click', () => {
                 const closestParent = item.closest('.control-group');
                 const buttonGroup = closestParent.querySelector('.button-group');
+                const arrow = closestParent.querySelector('.icon-arrow');
 
+                arrow.classList.toggle('active');
                 item.classList.toggle('active');
                 buttonGroup.classList.toggle('active');
             })
@@ -103,11 +112,15 @@ class MobileControls {
         const categoryBar = document.querySelector('.filter-controls');
 
         btnOpen.addEventListener('click', () => {
+            document.querySelector('.header').style.zIndex="0";
+            document.querySelector('.catalog-bar').style.zIndex="0";
             categoryBar.classList.add('active');
             this.overlay.classList.add('active');
         });
 
         btnClose.addEventListener('click', () => {
+            document.querySelector('.header').style.zIndex="10";
+            document.querySelector('.catalog-bar').style.zIndex="10";
             categoryBar.classList.remove('active');
             this.overlay.classList.remove('active');
         })

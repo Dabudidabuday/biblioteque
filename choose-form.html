@@ -11,16 +11,19 @@
     <title>Biblioteque</title>
 </head>
 <body class="step--form">
-    <div id="cursor"><span class="icon-help"></span><span class="icon-pointer"></span></div>
-    <div id="cursor--small"></div>
-
     <div id="overlay"></div>
 
     <div class="modal modal--product-details">
-        <button class="btn-close btn-reset" id="btn-modal-close"><span class="line--md"></span><span class="line--md"></span></button>
+        <button class="btn-close btn-reset" id="btn-modal-close">
+            <span class="line--md"></span><span class="line--md"></span>
+        </button>
 
         <h4 class="h4 modal__title">Черный инжир</h4>
-        <p class="modal__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cumque vero commodi iure voluptatum maiores praesentium, porro soluta optio repellat!</p>
+
+        <p class="modal__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cumque vero commodi iure voluptatum maiores praesentium, porro soluta optio repellat!
+        </p>
+
         <button class="btn-close btn-reset modal-close">
             <span class="line--md"></span>
             <span class="line--md"></span>
@@ -66,7 +69,7 @@
                 </div>
 
                 <div class="order-preview__summary">
-                    <p class="summary__title h4">Ваш заказ</p>
+                    <p class="summary__title h4">Ваш заказ <span class="read-more" id="showOrderPreview">Подробнее</span></p>
 
                     <ul class="order-list">
                         <li class="item">
@@ -94,8 +97,7 @@
             <div class="choose">
                 <div class="choose__base">
                     <h3 class=" h4 base__title">Выберите сосуд для вашего диффузора</h3>
-    
-                    
+
                     <div class="tabs">
                         <button data-filter=".base" class="btn-link btn-primary btn-filter active" type="button">Базовые</button>
                         <button data-filter=".design" class="btn-link btn-primary btn-filter btn-base__design" type="button">Дизайнерские</button>
@@ -266,7 +268,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 

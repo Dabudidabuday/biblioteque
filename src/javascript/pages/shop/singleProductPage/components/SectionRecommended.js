@@ -11,6 +11,10 @@ class SectionRecommended {
 
     _initSectionSlider() {
         const sliderContainer = this.root.querySelector('.recommended__product-list');
+        // const mobile = window.matchMedia('(max-width: 768px)');
+        // if(mobile.matches) {
+        //     // this.additionalSliderSettings.cellAlign="center";
+        // }
         this.slider.initSlider(sliderContainer, this.additionalSliderSettings);
     }
 

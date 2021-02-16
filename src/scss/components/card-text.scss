@@ -6,17 +6,11 @@
 
     @media screen and(max-width: 768px) {
         margin-top: 8px;
-        max-height: 350px;
-        overflow: hidden;
-        overflow-y: scroll;
+        overflow: visible;
 
         .card--text:not(:last-of-type){
             margin-bottom: 12px;
         }
-    }
-
-    @media screen and(max-height: 780px) {
-        max-height: 230px;
     }
 }
 
@@ -27,7 +21,7 @@
     flex-basis: 48.5%;
     border: 1px solid $colorGrey;
     transition: all ease-in-out .3s;
-    // cursor: pointer;
+     cursor: pointer;
 
     .label {
         color: #000;

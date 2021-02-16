@@ -6,14 +6,14 @@ class SectionInvite {
         this.slider = new Slider();
     }
 
-    _initSlider() {
+    _initSectionSlider() {
         const sliderContainer = this.root.querySelector('.store-slider');
         this.slider.initSlider(sliderContainer);
     }
 
     run() {
         if(!this.root) return;
-        this._initSlider();
+        this._initSectionSlider();
     }
 }
 

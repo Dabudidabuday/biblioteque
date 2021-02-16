@@ -1,14 +1,6 @@
 class ProductDetails {
     constructor(rootElement) {
         this.rootElement = document.querySelector(rootElement);
-        // this.cards = Array.from(this.rootElement.querySelectorAll('.card'))
-
-        // const data = {
-        //     title: 'Черный инжир',
-        //     notes: {
-        //         heart: 'кедр, бобы тонка'
-        //     }
-        // }
         this.currentproductDetails = '';
         this.currentProductShapeDetails = '';
         this.stepFlavor = document.querySelector('.step--flavor');
@@ -20,9 +12,6 @@ class ProductDetails {
     }
 
     _createProductDetails() {
-        // const stepForm = document.querySelector('.step--form');
-        // const stepFlavor = document.querySelector('.step--flavor');
-
         const cardDetails = document.createElement('div');
         cardDetails.classList.add('card--details');
 
@@ -53,36 +42,50 @@ class ProductDetails {
 
     insertProductDetails(cards, grid) {
         cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                this._createProductDetails();
 
-                cards.forEach(item => {
-                    const details = item.querySelector('.card--details');
+            const mobile = window.matchMedia('(max-width: 992px)');
+            if(mobile.matches) {
+                card.addEventListener('click', (e) => {
 
-                    if(details) {
-                        item.removeChild(details);
+                    const cardHeaders = Array.from(document.querySelectorAll('.card__head'));
+
+                    cardHeaders.forEach(head => {
+                        head.classList.remove('hide');
+                    });
+
+                    const parent = e.target.closest('.card');
+                    const cardHead = parent.querySelector('.card__head');
+                    cardHead.classList.add('hide');
+                    this._createProductDetails();
+
+                    cards.forEach(item => {
+                        const details = item.querySelector('.card--details');
+
+                        if(details) {
+                            item.removeChild(details);
+                        }
+                    });
+
+                    const closestParent = e.target.closest('.card');
+
+                    if(this.stepFlavor) {
+                        closestParent.appendChild(this.currentproductDetails);
                     }
-                });
-                
-                const closestParent = e.target.closest('.card');
 
-                if(this.stepFlavor) {
-                    closestParent.appendChild(this.currentproductDetails);
-                }
+                    if(this.stepForm) {
+                        closestParent.appendChild(this.currentProductShapeDetails);
+                    }
 
-                if(this.stepForm) {
-                    closestParent.appendChild(this.currentProductShapeDetails);
-                }
-                
-                grid.layout();
-            })
+                    grid.layout();
+                })
+            }
         })
     }
 
     _productBaseDescription() {
         /* Show-more - Show-less ===  Desktop description */
         const baseDescription = document.querySelector('.base-description');
-        const btnReadMore = document.querySelector('.read-more');
+        const btnReadMore = document.querySelector('.choose__base .read-more');
         const overlay = document.querySelector('#overlay');
         const modalDetails = document.querySelector('.modal--product-details');
 

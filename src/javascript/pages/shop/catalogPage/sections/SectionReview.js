@@ -14,7 +14,6 @@ class SectionReview {
 
     run() {
         if(!this.root) return;
-        console.log(this.reviews);
         this.slider.initSlider(this.reviews, this.sliderSettings);
     }
 }

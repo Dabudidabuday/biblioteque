@@ -200,7 +200,7 @@
                     <span class="icon-arrow"></span>
                 </div>
             
-                <div class="button-group">
+                <div class="button-group active">
                     <button class="btn-primary btn-control">Древесные</button>
                     <button class="btn-primary btn-control">Фужерные</button>
                     <button class="btn-primary btn-control">Мускусные</button>
@@ -481,11 +481,11 @@
                     <input type="text" class="custom-celect__input" id="input-sort" placeholder="Цена (по убыванию цены)">
                     <div class="custom-select__options">
                         <ul class="option__items">
-                            <li class="item">По популярности</li>
-                            <li class="item">По рейтингу</li>
-                            <li class="item">По новинке</li>
-                            <li class="item">Цена (по возрастанию)</li>
-                            <li class="item">Цена (по убыванию цены)</li>
+                            <li class="item" data-sort-value="popular">По популярности</li>
+                            <li class="item" data-sort-value="rating">По рейтингу</li>
+                            <li class="item" data-sort-value="new">По новинке</li>
+                            <li class="item" data-sort-value="price">Цена (по возрастанию)</li>
+                            <li class="item" data-sort-value="price">Цена (по убыванию цены)</li>
                         </ul>
                     </div>
                 </div>
@@ -495,6 +495,75 @@
 
             <div class="catalog__body">
                 <aside class="sidebar--filter show-desktop">
+                    <p class="sidebar__title show-desktop-block">Категории</p>
+
+                    <ul class="sidebar__categories show-desktop">
+                        <li class="item">
+                            <p class="category__title">Парфюмерия</p>
+
+                            <ul class="sidebar__sub-categories">
+                                <li class="item">
+                                    <button type="button" class="btn-filter active"  data-filter=".woman">Для женщин</button>
+                                </li>
+
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".man">Для мужчин</button>
+                                </li>
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".unisex">Унисекс</button>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="item">
+                            <p class="category__title">Парфюмерые гардеробы</p>
+
+                            <ul class="sidebar__sub-categories">
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".zodiac">По знаку Зодиака</button>
+                                </li>
+
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".categories">По категориям</button>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="item">
+                            <p class="category__title">Уходовая косметика</p>
+
+                            <ul class="sidebar__sub-categories">
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".hair">Для волос</button>
+                                </li>
+
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".face">Для лица</button>
+                                </li>
+
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".body">Для тела</button>
+                                </li>
+
+                                <li class="item">
+                                    <button type="button" class="btn-filter" data-filter=".man">Мужчинам</button>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="item">
+                            <p class="category__title">Подарочные наборы</p>
+                        </li>
+
+                        <li class="item">
+                            <button type="button" class="btn-filter" data-filter=".diffuzor">Диффузоры</button>
+                        </li>
+
+                        <li class="item">
+                            <button type="button" class="btn-filter" data-filter=".candles">Свечи</button>
+                        </li>
+                    </ul>
+
                     <p class="sidebar__title">Фильтр</p>
 
                     <div class="sidebar__filters">
@@ -619,14 +688,17 @@
 
                 <div class="products">
                     <div class="products__sort-tabs">
-                        <button class="btn-reset btn-sort active">Все</button>
-                        <button class="btn-reset btn-sort">Популярные</button>
-                        <button class="btn-reset btn-sort">Новинки</button>
-                        <button class="btn-reset btn-sort">Бестселлеры</button>
+                        <button class="btn-reset btn-sort active" data-filter="*">Все</button>
+                        <button class="btn-reset btn-sort" data-filter=".popular">Популярные</button>
+                        <button class="btn-reset btn-sort" data-filter=".new">Новинки</button>
+                        <button class="btn-reset btn-sort" data-filter=".bestsellers">Бестселлеры</button>
                     </div>
 
                     <div class="products__grid">
-                        <div class="card--product">
+<!--                        <div class="grid-sizer"></div>-->
+<!--                        <div class="gutter-sizer"></div>-->
+
+                        <div class="card--product bestsellers woman hair new">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -635,7 +707,7 @@
                                     <p class="h4 card__title">Autograph</p>
                                     <p class="card__subtitle">Eau de parfume</p>
             
-                                    <p class="price__quantity">1200 грн</p>
+                                    <p class="price__quantity">1201</p>
                                 </div>
             
                                 <div class="custom-select custom-select--card">
@@ -666,7 +738,7 @@
                             
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product man zodiac hair">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -705,7 +777,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product man popular new">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -744,7 +816,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product bestsellers unisex hair">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -783,7 +855,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product popular woman face women">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -822,7 +894,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product hair unisex new">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -861,7 +933,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product popular hair women face">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -900,7 +972,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product bestsellers hair man zodiac">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -939,7 +1011,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product popular hair">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -978,7 +1050,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product zodiac new">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -1017,7 +1089,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product zodiac">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -1056,7 +1128,7 @@
                             </div>
                         </div>
 
-                        <div class="card--product">
+                        <div class="card--product bestsellers zodiac">
                             <div class="card__body">
                                 <div class="card__preview">
                                     <img src="src/images/flavors/flavor-big.jpg" alt="">
@@ -1117,7 +1189,7 @@
         <div class="container">
             <h3 class="h3 recommended__title">Специальные предложения для Вас</h3>
             <div class="recommended__product-list slider">
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1154,7 +1226,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1191,7 +1263,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1228,7 +1300,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1265,7 +1337,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1302,7 +1374,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended hot">
+                <div class="card--product hot">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1339,7 +1411,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended">
+                <div class="card--product">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1376,7 +1448,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended hot">
+                <div class="card--product hot">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1413,7 +1485,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended hot">
+                <div class="card--product hot">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>
@@ -1450,7 +1522,7 @@
                     </div>
                 </div>
 
-                <div class="card--recommended hot">
+                <div class="card--product hot">
                     <div class="card__preview">
                         <img src="src/images/flavors/flavor-big.jpg" alt="">
                     </div>

@@ -31,8 +31,10 @@
         position: relative;
         color: #000;
         display: block;
-        pointer-events: none;
+        //pointer-events: none;
+
         z-index: 2;
+        cursor: not-allowed;
 
         &.active {
             color: #fff;
@@ -44,16 +46,21 @@
             width: 100%;
             transition: width .4s cubic-bezier(0.39, 0.575, 0.565, 1);
         }
+
+        &:hover {
+            color: #fff !important;
+        }
     }
 
     @media screen and(max-width: 768px) {
-        padding-top: 8px;
-        padding-right: 16px;
-        padding-left: 16px;
-        padding-bottom: 20px;
+        padding: 8px 16px 12px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .btn-next:hover {
+            color: #000 !important;
+        }
 
         .btn-prev,
         .btn-next {
@@ -74,6 +81,7 @@
 
 @media screen and(min-width: 1441px) {
     .footer {
+
         max-width: 1200px;
         width: 100%;
         display: block;
@@ -88,7 +96,6 @@
 
 @media screen and(max-width: 768px) {
     .footer {
-        position: fixed;
         bottom: 0;
         width: 100%;
         background-color: #fff;

@@ -5,6 +5,7 @@ import SectionCatalog from './sections/SectionCatalog.js';
 import MobileControls from './components/MobileControls';
 import RangeSlider from './components/RangeSlider';
 import SearchBar from 'components/SearchBar';
+import CatalogFilters from "pages/shop/catalogPage/components/CatalogFilters";
 
 class CatalogPage {
     constructor(rootElement) {
@@ -16,7 +17,8 @@ class CatalogPage {
         this.mobileControls = new MobileControls('.mobile__catalog-bar');
         this.rangeSlider = new RangeSlider('.sidebar__filters');
         this.rangeSliderMobile = new RangeSlider('.filter-controls');
-        this.searchBar = new SearchBar('.header__search-input')
+        this.searchBar = new SearchBar('.header__search-input');
+        this.catalogFilters = new CatalogFilters('.catalog');
     }
 
     run() {
@@ -28,6 +30,7 @@ class CatalogPage {
         this.rangeSlider.run();
         this.rangeSliderMobile.run();
         this.searchBar.run();
+        this.catalogFilters.run();
     }
 }
 

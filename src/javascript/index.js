@@ -13,6 +13,7 @@ import './product/productPreview.js';
 
 
 /* Class Based App */
+import OrderPreview from 'components/OrderPreview';
 
 /* MODULES */
 import Shop from 'pages/shop/Shop';
@@ -36,16 +37,26 @@ import CatalogPage from './pages/shop/catalogPage/CatalogPage';
 import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
 import CooperationPage from './pages/CooperationPage';
 import InfoPage from './pages/infoPage';
+import CheckoutPage from "./pages/CheckoutPage";
 
+window.onload = () => {
+    const app = new App();
+
+    app.run();
+}
+
+const minus = Array.from(document.querySelectorAll('.btn-minus'));
+
+const plus = Array.from(document.querySelectorAll('.btn-plus'));
 class App {
     constructor() {
         this.overlay = new Overlay(
-            '#overlay', 
+            '#overlay',
             [
-                '.modal--product-details', 
-                '.modal--contacts', 
-                '#modalPerfume', 
-                '.navigation-menu', 
+                '.modal--product-details',
+                '.modal--contacts',
+                '#modalPerfume',
+                '.navigation-menu',
                 '.product__show-more',
                 '.category-controls',
                 '.filter-controls',
@@ -55,10 +66,11 @@ class App {
                 '.modal--thank-you',
                 '.modal--auth',
                 '.modal--partners',
-                '.parameters'
-            ], 
+                '.parameters',
+                '.modal--add-address'
+            ],
             'active'
-            );
+        );
         this.homeUi = new HomeUi('.home');
         this.accordion = new Accordion('.accordion');
         this.productPreview = new ProductPreview('.order-preview__img img');
@@ -70,20 +82,22 @@ class App {
         this.slider = new Slider('.slider');
         this.modal = new Modal('.modal--cart');
         this.admin = new Admin('.admin');
+        this.orderPreview = new OrderPreview('.summary__title');
 
         /*Nodules */
         this.shop = new Shop('.shop');
-    
-        /* SHOP pages  */
+
+        /* PAGES  */
         this.home = new HomePage('.shop-home');
         this.catalog = new CatalogPage('.shop-catalog');
         this.singleProduct = new SingleProduct('.shop-single-product');
         this.cooperationPage = new CooperationPage('.cooperation-page');
         this.infoPage = new InfoPage('.info-page');
-
+        this.checkoutPage = new CheckoutPage('.checkout-page');
     }
 
     run() {
+        /* COMPONENTS */
         this.homeUi.run();
         this.overlay.run();
         this.productPreview.run();
@@ -95,33 +109,26 @@ class App {
         this.cartUI.run();
         this.slider.run();
         this.modal.run();
+        this.orderPreview.run();
 
-        /* Modules */
+        /* MODULES */
         this.shop.run();
 
-        /* Shop pages */
+        /* PAGES */
         this.home.run();
-        this.catalog.run(); 
         this.singleProduct.run();
+        this.cooperationPage.run();
+        this.infoPage.run();
+        this.checkoutPage.run();
 
         /* ADMIN */
         this.admin.run();
 
-        /* Info Pages */
-        this.cooperationPage.run();
-        this.infoPage.run();
-
+        if(this.catalog.root) {
+            this.catalog.run();
+        }
     }
 }
-
-window.onload = () => {
-    const app = new App();
-
-    app.run();
-}
-
-const minus = Array.from(document.querySelectorAll('.btn-minus'));
-const plus = Array.from(document.querySelectorAll('.btn-plus'));
 const input = document.querySelector('.quantity-input');
 
 minus.forEach(item => {

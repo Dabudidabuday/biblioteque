@@ -10,8 +10,137 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <title>Biblioteque</title>
 </head>
-<body class="checkout">
+<body class="checkout checkout-page">
     <div id="overlay"></div>
+
+    <div class="modal modal--add-address">
+        <div class="modal__head">
+            <h5 class="modal__title h3">Добавление нового адреса</h5>
+            <button class="btn-close btn-reset" id="btnCloseModalComments"><span class="line--md"></span><span class="line--md"></span></button>
+        </div>
+        <div class="modal__body">
+            <form action="">
+
+                <div class="city-list">
+                    <button class="btn-link--underline" type="button">Киев</button>
+                    <button class="btn-link--underline" type="button">Одесса</button>
+                    <button class="btn-link--underline" type="button">Харьков</button>
+                    <button class="btn-link--underline" type="button">Днепр</button>
+                    <button class="btn-link--underline" type="button">Львов</button>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper grid-item another-address">
+                        <input type="text" name="name" class="form-input" id="add-address--name">
+                        <label for="input-name" class="label">Контактное лица</label>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="text" name="phone" class="form-input" id="add-address--phone">
+                        <label for="input-phone" class="label">Телефон <sup class="red-star">*</sup></label>
+                    </div>
+
+                    <div class="custom-select custom-select--checkout">
+                        <div class="select-arrow">
+                            <div class="line--dark"></div>
+                            <div class="line--dark"></div>
+                        </div>
+
+                        <input type="text" class="custom-celect__input" placeholder="Страна">
+                        <div class="custom-select__options">
+                            <input type="text" class="form-input input-search" placeholder="Поиск">
+                            <ul class="option__items">
+                                <li class="item">Украина</li>
+                                <li class="item">Россия</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="custom-select custom-select--checkout grid-item pickup another-address address-delivery shipping">
+                        <div class="select-arrow">
+                            <div class="line--dark"></div>
+                            <div class="line--dark"></div>
+                        </div>
+
+                        <input type="text" class="custom-celect__input" id="input-city" placeholder="Город">
+                        <div class="custom-select__options">
+                            <input type="text" class="form-input input-search" placeholder="Поиск">
+                            <ul class="option__items">
+                                <li class="item">Киев</li>
+                                <li class="item">Шир</li>
+                                <li class="item">Готэм</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="custom-select custom-select--checkout grid-item another-address address-delivery shipping">
+                        <div class="select-arrow">
+                            <div class="line--dark"></div>
+                            <div class="line--dark"></div>
+                        </div>
+
+                        <input type="text" class="custom-celect__input" placeholder="Область">
+                        <div class="custom-select__options">
+                            <input type="text" class="form-input input-search" placeholder="Поиск">
+                            <ul class="option__items">
+                                <li class="item">Киевская</li>
+                                <li class="item">Львоская</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper grid-item another-address">
+                        <input type="text" name="postcode" class="form-input" id="input-postcode">
+                        <label for="input-postcode" class="label">Индекс</label>
+                    </div>
+
+                    <div class="custom-select custom-select--checkout grid-item another-address address-delivery hide-address-delivery">
+                        <div class="select-arrow">
+                            <div class="line--dark"></div>
+                            <div class="line--dark"></div>
+                        </div>
+
+                        <input type="text" class="custom-celect__input" placeholder="Улица">
+                        <div class="custom-select__options">
+                            <input type="text" class="form-input" placeholder="Введите название улицы">
+                            <ul class="option__items">
+                                <li class="item">ул. Акад. Павлова, 44-б</li>
+                                <li class="item">ул. Ярослава Мудрого, 10</li>
+                                <li class="item">ул. Героев труда, 9</li>
+                                <li class="item">ул. Клочковская, 134-б</li>
+                                <li class="item">ул. Культуры 12</li>
+                                <li class="item">ул. Клочковская, 134-б</li>
+                                <li class="item">ул. Фонтанская дорога, 4а</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper grid-item another-address address-delivery hide-address-delivery">
+                        <input type="text" name="house" class="form-input" id="input-house">
+                        <label for="input-house" class="label">Дом</label>
+                    </div>
+                </div>
+
+                <div class="input-wrapper grid-item another-address address-delivery hide-address-delivery">
+                    <input type="text" name="flat" class="form-input" id="input-flat">
+                    <label for="input-flat" class="label">Квартира</label>
+                </div>
+                
+                <div class="toggle-wrapper">
+                    <span class="label">Сохранить адрес по-умолчанию</span>
+                    <label class="label-wrapper" for="save-address">
+                        <input type="checkbox" id="save-address">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </form>
+
+            <div class="modal__footer">
+                <input type="submit" id="btnSaveAddress" class="btn-outline-primary btn-md w-100" value="Сохранить">
+                <button class="btn-link btn-reset" id="btnCancelAddress" type="button">Отменить</button>
+            </div>
+        </div>
+    </div>
 
     <div class="modal--contacts">
         <div class="modal__header flex jc-between">
@@ -287,10 +416,26 @@
                                     >
                                 <span class="custom-checkbox"></span>
                                 <label for="another-address" class="custom-label">Доставка по другому адресу</label>
-                            </div> 
+                            </div>
+
+                            <div class="checkbox-wrapper">
+                                <input
+                                        type="radio"
+                                        class="form-radio"
+                                        name="shipping-radios"
+                                        id="default-address"
+                                        value="default-address"
+                                        data-filter=".default-address"
+                                >
+                                <span class="custom-checkbox"></span>
+                                <label for="default-address" class="custom-label">Адрес доставки по умолчанию</label>
+                            </div>
                         </div>       
 
                         <div class="form-grid">
+
+                            <button class="btn-reset addAddress default-address" type="button">Добавить новый адрес</button>
+
                             <div class="input-wrapper grid-item another-address">
                                 <input type="text" name="surname" class="form-input" id="input-surname">
                                 <label for="input-surname" class="label">Фамилия</label>
@@ -365,7 +510,7 @@
                                 <label for="input-postcode" class="label">Индекс</label>
                             </div>
 
-                            <div class="custom-select custom-select--checkout grid-item another-address address-delivery">
+                            <div class="custom-select custom-select--checkout grid-item another-address address-delivery hide-address-delivery">
                                 <div class="select-arrow">
                                     <div class="line--dark"></div>
                                     <div class="line--dark"></div>
@@ -386,12 +531,12 @@
                                 </div>
                             </div>
 
-                            <div class="input-wrapper grid-item another-address address-delivery">
+                            <div class="input-wrapper grid-item another-address address-delivery hide-address-delivery">
                                 <input type="text" name="house" class="form-input" id="input-house">
                                 <label for="input-house" class="label">Дом</label>
                             </div>
 
-                            <div class="input-wrapper grid-item another-address address-delivery">
+                            <div class="input-wrapper grid-item another-address address-delivery hide-address-delivery">
                                 <input type="text" name="flat" class="form-input" id="input-flat">
                                 <label for="input-flat" class="label">Квартира</label>
                             </div>

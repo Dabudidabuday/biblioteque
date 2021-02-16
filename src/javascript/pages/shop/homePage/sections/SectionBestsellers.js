@@ -1,9 +1,10 @@
 import ProductSorting from '../../../../product/ProductSorting';
-
+import Slider from 'components/Slider';
 class SectionBestsellers {
     constructor(root) {
         this.root = document.querySelector(root);
         this.productSorting = new ProductSorting(root);
+        this.slider = new Slider();
     }
 
     _tabsUI() {
@@ -18,13 +19,19 @@ class SectionBestsellers {
         })
     }
 
+    _initSectionSlider() {
+        const sliderContainer = this.root.querySelector('.gift-slider');
+        this.slider.initSlider(sliderContainer)
+    }
+
     run() {
         if(!this.root) return;
         this._tabsUI();
 
+        this._initSectionSlider();
         const tabs = this.root.querySelector('.gift__tabs');
         const slider = this.root.querySelector('.gift-slider');
-        this.productSorting.initFilterProducts(tabs, slider);
+        // this.productSorting.initFilterProducts(tabs, slider);
         
     }
 }

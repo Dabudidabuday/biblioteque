@@ -1,6 +1,9 @@
+import Notifications from "components/Notifications";
+
 class ProductPreview {
     constructor(htmlElement) {
         this.htmlElement = htmlElement;
+        this.notifications = new Notifications();
     }
 
     _setImage(el, img) {
@@ -16,13 +19,28 @@ class ProductPreview {
         clickedCard.classList.add('active');
     }
 
+    _checkBtnNextOnWarning() {
+        const btnNextStep = document.querySelector('.btn-next');
+
+        btnNextStep.addEventListener('click', (event) => {
+            if(!btnNextStep.classList.contains('active')) {
+                event.preventDefault();
+                this.notifications.notificationError();
+            } else {
+
+            }
+        })
+    }
+
     _checkForNextStep(item) {
         const btnNextStep = document.querySelector('.btn-next');
 
         if(item.classList.contains('active')) {
             btnNextStep.classList.add('active');
+            this.notifications.notificationSuccess();
         } else {
             btnNextStep.classList.remove('active');
+            this.notifications.notificationError();
         }
     }
 
@@ -38,13 +56,11 @@ class ProductPreview {
         })
     }
 
-
-
     run() {
         const previewImage = document.querySelector(this.htmlElement);
         const previewImageContainer = document.querySelector('.order-preview__img');
         if(!previewImage) return;
-
+        this._checkBtnNextOnWarning();
         const productCards = Array.from(document.querySelectorAll('.card'));
         const textCards = Array.from(document.querySelectorAll('.cards-list .card--text'))
 
@@ -58,6 +74,7 @@ class ProductPreview {
         const btnZoomOffContainer = document.querySelector('.product-preview__controls');
         const btnZoomOff = document.querySelector('#btnZoomOff');
         const chooseBase = document.querySelector('.choose');
+        const footer = document.querySelector('.footer');
 
         btnZoom.addEventListener('click', () => {
             previewImage.classList.add('zoomed');
@@ -65,6 +82,7 @@ class ProductPreview {
             btnZoomOffContainer.classList.remove('hide');
             previewImageContainer.classList.add('active');
             chooseBase.style.opacity="0";
+            footer.style.position="fixed";
         })
 
         btnZoomOff.addEventListener('click', function() {
@@ -73,6 +91,7 @@ class ProductPreview {
             btnZoomOffContainer.classList.add('hide');
             previewImageContainer.classList.remove('active');
             chooseBase.style.opacity="1";
+            footer.style.position="static";
         })
 
         const previewAnimation = function() {

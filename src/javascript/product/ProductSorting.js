@@ -104,7 +104,6 @@ class ProductSorting {
     
             isotope.arrange({ filter: filterValue });
         })
-
     }
 
 /* Duplicate function for testing new section module methodology */

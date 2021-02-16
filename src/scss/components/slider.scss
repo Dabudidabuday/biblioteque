@@ -13,6 +13,12 @@
     }
 }
 
+@media screen and(max-width: 768px) {
+    .flickity-button {
+        display: none !important;
+    }
+}
+
 .flickity-page-dots {
     .dot {
         margin: 14px;
@@ -41,9 +47,9 @@
     @media screen and(max-width: 768px) {
 
         .dot {
-            margin: 7px;
-            width: 4px;
-            height: 4px;
+            margin: 7px !important;
+            width: 4px !important;
+            height: 4px !important;
         }
 
         .is-selected::before {

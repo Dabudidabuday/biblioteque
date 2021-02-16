@@ -213,18 +213,12 @@
             padding-right: 16px;
             padding-left: 16px;
 
-            .cart__order {
-                height: 239px;
-            }
 
             .order__product-list {
                 margin-top: 0;
                 display: flex;
                 flex-direction: column;
-                // max-height: 239px;
-                height: 239px;
-                overflow: hidden;
-                overflow-y: scroll;
+                height: auto;
             }
 
             .card--order {
@@ -342,9 +336,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 12px;
-        max-height: 200px;
-        overflow: hidden;
-        overflow-y: scroll;
+        height: auto;
     }
 }
 

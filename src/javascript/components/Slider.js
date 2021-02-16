@@ -19,18 +19,23 @@ class Slider {
   
   run() {
     if(!this.rootElement) return;
-    
-    const desktop = window.matchMedia("(min-width: 768px)");
+    const checkoutPage = document.querySelector('.checkout-page');
 
-    if(desktop.matches) {
-      var sliderContainer = document.querySelector('.recommended__product-list');
-      var flkty = new Flickity( sliderContainer, {
-        // cellAlign: 'left',
-        contain: true,
-        wrapAround: true,
-        pageDots: false,
-        freeScroll: false
-      });
+    if(checkoutPage) return;
+
+    const stepCart = document.querySelector('.step--cart');
+    const desktop = window.matchMedia("(min-width: 768px)");
+    var sliderContainer = document.querySelector('.recommended__product-list');
+    var flkty = new Flickity( sliderContainer, {
+      // cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      pageDots: false,
+      freeScroll: false
+    });
+
+    if(stepCart || !desktop.matches) {
+      flkty.destroy();
     }
   }
 }
