@@ -1,0 +1,312 @@
+@import './address-delivery';
+@import './orders';
+@import './timeline';
+@import './wish-list';
+
+.cabinet {
+
+  .section-recommended {
+    margin-top: 194px;
+    .container {
+      padding-top: 60px;
+      border-top: 1px solid $colorBrownLighten;
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    .section-recommended {
+      display: none;
+    }
+  }
+}
+
+.cabinet-main {
+  margin-top: 41px;
+
+  /* desktop account right side content */
+
+  .main {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    //transition:  ease-out .25s;
+    z-index: -1;
+
+    &.active {
+      position: relative;
+      top: 0;
+      opacity: 1;
+      transition: ease-in .25s;
+      z-index: 1;
+
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    height: 84vh;
+
+    .main {
+      top: 0;
+      left: -500px;
+
+      &.active {
+        left: 0;
+      }
+    }
+  }
+}
+
+.cabinet-grid {
+  position: relative;
+  display: flex;
+}
+
+/* Navigation part - left side */
+.cabinet__sidebar {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  max-width: 185px;
+  width: 100%;
+
+  .sidebar__button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    font-size: 16px; 
+    text-align: left;
+    transition: ease-out .25s;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $colorBrownLighten;
+    }
+
+    &.active {
+      color: $colorBrownDarken;
+      transition: ease-in .25s;
+    }
+  }
+
+  @media screen and(max-width: 1023px) {
+    display: none;
+    width: 100%;
+    max-width: unset;
+    margin-right: 0;
+  }
+}
+
+/* Content part - right side */
+.main {
+  width: 100%;
+}
+
+.cabinet__content {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  opacity: 0;
+  z-index: -1;
+
+  /*  Head */
+  .cabinet__head {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cabinet__title {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    .btn-edit {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      font-size: 14px;
+      line-height: 12px;
+      color: $colorBrownDarken;
+
+      .icon-edit {
+        margin-right: 8px;
+        display: block;
+
+        svg path {
+          stroke: $colorBrownDarken;
+        }
+      }
+    }
+  }
+
+  &.active {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: ease-in 0.35s;
+    z-index: 1;
+  }
+
+  @media screen and(max-width: 1024px) {
+    top: 0;
+    left: -999px;
+
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+/* Forms and inputs */
+
+
+.btn-change-pass{
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: $colorBrownDarken;
+}
+
+
+.form__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .input-wrapper {
+    max-width: 305px;
+    height: 59px;
+
+    &:last-of-type {
+      margin-right: auto;
+      margin-left: 20px;
+    }
+
+    .cabinet-input {
+      padding: 23px 0 9px;
+      font-size: 16px;
+      line-height: 22px;
+
+      &:focus ~ .label {
+        opacity: 1;
+        display: inline-block;
+      }
+    }
+
+    .label {
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      line-height: 19px;
+      color: #5F6E80;
+    }
+
+    &.active {
+      .cabinet-input {
+        border-bottom: 1px solid #000;
+        transition: ease-in .25s;
+      }
+
+      .btn-reset {
+        position: absolute;
+        right: 4px;
+        top: 23px;
+
+        .line--md {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    flex-direction: column;
+
+    .input-wrapper,
+    .custom-select {
+      margin-left: 0 !important;
+      max-width: unset !important;
+      width: 100%;
+    }
+  }
+}
+
+.reminder {
+  margin-right: 32px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5F6E80;
+}
+
+/* FORM FOOTER */
+
+.form__footer {
+  margin-top: 32px;
+  display: flex;
+
+  input,
+  button {
+    max-width: 155px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+  }
+
+  .btn-link {
+    padding: 8px 40px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media screen and(max-width: 1024px) {
+    position: fixed;
+    left: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    z-index: 6;
+
+    input,
+    button {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      max-width: unset;
+      font-size: 16px;
+      line-height: 22px;
+      height: 50px;
+    }
+  }
+}
+
+.btn-cabinet--mobile {
+  padding-left: 0 !important;
+}
+
+.mobile__footer-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+
+
+  .back-to-cabinet {
+    margin: 0 auto;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0;
+    z-index: -3;
+    &.active {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+}

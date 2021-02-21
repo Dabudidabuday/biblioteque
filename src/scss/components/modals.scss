@@ -251,7 +251,9 @@
 
 .modal--cart,
 .modal--comment,
-.modal--partners {
+.modal--partners,
+.modal--order-history,
+.modal--leave-comment {
     padding: 20px 40px;
     position: fixed;
     top: 50%;
@@ -491,76 +493,7 @@
     }
 
 
-    .toggle-wrapper {
-        display: flex;
-        margin-bottom: 32px;
 
-        .label {
-            margin-right: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .label-wrapper {
-            position: relative;
-            display: flex;
-            width: 60px;
-            height: 34px;
-        }
-
-         input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $colorBrownLighten;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked + .slider {
-            background-color: $colorBrownDarken;
-        }
-
-        input:focus + .slider {
-            box-shadow: 0 0 1px #2196F3;
-        }
-
-        input:checked + .slider:before {
-            -webkit-transform: translateX(24px);
-            -ms-transform: translateX(24px);
-            transform: translateX(24px);
-        }
-
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
-    }
 
     .modal__footer {
         input,
@@ -591,6 +524,134 @@
             button {
                 width: 100%;
                 min-width: 300px;
+            }
+        }
+    }
+}
+
+.modal--success {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    max-width: 428px;
+    width: 100%;
+
+    .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.toggle-wrapper {
+    display: flex;
+    margin-bottom: 32px;
+
+    .label {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .label-wrapper {
+        position: relative;
+        display: flex;
+        width: 60px;
+        height: 34px;
+    }
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $colorBrownLighten;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: $colorBrownDarken;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+.modal--order-history {
+    max-width: 560px;
+    width: 100%;
+}
+
+.modal--leave-comment {
+    .products-for-comment {
+        .item {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $colorBrownLighten;
+
+            .item__preview {
+                margin-right: 12px;
+                width: 70px;
+                height: 70px;
+
+                img {
+                    width: inherit;
+                    height: 70px;
+                    object-fit: contain;
+                }
+            }
+
+            .item__title {
+                margin-right: auto;
+            }
+
+            button {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                max-width: 139px;
+                width: 100%;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
             }
         }
     }

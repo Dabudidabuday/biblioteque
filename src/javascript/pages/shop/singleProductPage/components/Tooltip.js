@@ -1,6 +1,6 @@
 class Tooltip {
     constructor(root) {
-        this.root = document.querySelector(root)
+        this.root = document.querySelector(root);
     }
 
     _tooltipUI() {
@@ -9,7 +9,16 @@ class Tooltip {
         btnOpen.addEventListener('click', () => {
             btnOpen.classList.add('active');
             this.root.classList.add('active');
-            this._closeTooltipHandler();
+        })
+
+        document.addEventListener('click', (e) => {
+            const isClickInsideTooltip = this.root.contains(e.target);
+            console.log(isClickInsideTooltip)
+
+            if(!this.root.classList.contains('active')) return;
+            if(!isClickInsideTooltip) {
+                this.root.classList.remove('active');
+            }
         })
     }
 
@@ -28,7 +37,26 @@ class Tooltip {
         //     } else {
         //         this.root.classList.add('active');
         //     }
-        // }) 
+        // })
+
+
+        /* слушаем документ на то, был ли клик снаружи селекта
+        *  Если да, то находим ближайшего родителя открытого текущего элемента, и закрываем его
+        */
+        // document.addEventListener('click', function(e) {
+        //     customSelect.forEach(item => {
+        //         const closestParent = item.closest('.custom-select');
+        //         const selectBody = closestParent.querySelector('.custom-select__options');
+        //         const arrow = closestParent.querySelector('.select-arrow');
+        //         const isClickInsideSelect = item.contains(e.target);
+        //         const isClickInsideSelectList = selectBody.contains(e.target);
+        //
+        //         if(!isClickInsideSelect && !isClickInsideSelectList) {
+        //             selectBody.classList.remove('active');
+        //             arrow.classList.remove('active');
+        //         }
+        //     })
+        // });
     }
 
     run() {

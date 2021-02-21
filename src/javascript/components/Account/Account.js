@@ -1,8 +1,9 @@
+
 class Account {
     constructor(root) {
         this.root = document.querySelector(root);
         this.authModalClassName = '.modal--auth';
-        this.overlay = document.querySelector('#overlay');
+        this.overlay = document.querySelector('#overlay')
     }
 
     chooseMethodAuth(buttonOpen, buttonClose) {
@@ -11,7 +12,6 @@ class Account {
         buttonOpen.addEventListener('click', () => {
             this.overlay.classList.toggle('active');
             modal.classList.toggle('active');
-            console.log('hello from acc method')
         });
 
         buttonClose.addEventListener('click', () => {

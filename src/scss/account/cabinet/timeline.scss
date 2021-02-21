@@ -1,0 +1,22 @@
+.timeline {
+
+  .timeline__item {
+    margin-bottom: 21px;
+    display: flex;
+
+    .date,
+    .time {
+      margin-right: 12px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #5F6E80;
+    }
+
+    .status {
+      margin-left: 40px;
+      font-size: 14px;
+      line-height: 19px;
+      color: #231D18;
+    }
+  }
+}

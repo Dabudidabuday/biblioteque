@@ -1,0 +1,311 @@
+.my-orders__list {
+  margin-top: 20px;
+}
+
+.card--my-order {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 16px;
+  border: 1px solid #D5DFEB;
+  cursor: pointer;
+
+  .select-arrow {
+    top: 25px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    padding: 14px;
+  }
+}
+
+.card__meta {
+  .meta__number {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #5F6E80;
+  }
+
+  .meta__status {
+    font-size: 14px;
+    line-height: 19px;
+
+    &.complete {
+      color: #32C35B;
+    }
+
+    &.in-progress {
+      color: #FC4B4E;
+    }
+  }
+}
+
+
+.card__totals{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  //transition: ease-out .25s;
+
+  .price__title {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $colorGreyLighten;
+  }
+
+  .price__value {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &.active {
+    position: relative;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    transition: ease-in .10s;
+  }
+}
+
+.totals__order-previews-list {
+  display: flex;
+  margin-right: 46px;
+
+  .order-preview {
+
+    min-width: unset;
+    width: 52px;
+    height: 52px;
+
+    &:not(:last-of-type) {
+      margin-right: 12px;
+    }
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+
+/* card-body */
+
+
+.card--my-order {
+
+
+  .order-history,
+  .order-info {
+    margin-bottom: 16px;
+    display: block;
+    padding-left: 0;
+  }
+
+  .order-history {
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #3B4857;
+  }
+
+  .order-info {
+    font-size: 12px;
+    line-height: 16px;
+    color: #5F6E80;
+  }
+
+  .card-text {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #231D18;
+  }
+}
+
+
+/* card active condition */
+
+/* card active left side */
+
+.card--my-order {
+  .card__body {
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: ease-out .25s;
+  }
+
+  .card__body.active {
+    position: relative;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    transition: ease-in .25s;
+
+    .body__left {
+      margin-right: 52px;
+    }
+
+    .meta__status {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+
+.body__left {
+  max-width: 230px;
+  width: 100%;
+}
+
+
+/* CARD ACRIVE RIGHT SIDE */
+
+.card--my-order {
+  .body__right {
+    width: 100%;
+
+    .cards__title {
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      color: $colorGreyLighten;
+    }
+
+    .orders-list {
+
+    }
+
+    .card--order {
+      padding-right: 46px;
+      align-items: center;
+      border-bottom: 1px solid $colorBrownLighten;
+
+      .card--preview {
+        margin-right: 12px;
+        width: 70px;
+        height: 70px;
+
+        img {
+          height: 70px;
+          object-fit: contain;
+        }
+      }
+
+      .btn-perfume-details {
+        padding-left: 0;
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: $colorSecondary;
+      }
+
+      .card__name-capacity {
+        margin-right: auto;
+      }
+
+      .card__name {
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      .card__capacity {
+        font-size: 12px;
+        line-height: 16px;
+        color: $colorSecondary;
+      }
+
+      .card__price,
+      .card__quantity,
+      .card__sum {
+        margin-left: 40px;
+      }
+      .price__title,
+      .quantity__title,
+      .sum__title {
+        margin-bottom: 8px;
+        font-size: 12px;
+        line-height: 16px;
+        color: $colorGreyLighten;
+      }
+
+      .price,
+      .quantity {
+        font-size: 14px;
+        line-height: 19px;
+
+      }
+
+    }
+  }
+  /* PAYMENT INFO */
+
+  .payment-info {
+    margin-top: 12px;
+  }
+
+  .payment,
+  .delivery,
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .summary {
+      margin-top: 0;
+    }
+  }
+
+  /* CARD FOOTER */
+
+  .card__footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-width: 155px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 19px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

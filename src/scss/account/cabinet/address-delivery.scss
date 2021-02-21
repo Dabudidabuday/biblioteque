@@ -1,0 +1,168 @@
+.cabinet-page {
+
+  @media screen and(max-width: 768px) {
+    .shop-footer {
+      display: none;
+    }
+  }
+}
+
+.cabinet__content.delivery-empty,
+.cabinet__content.wish-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .delivery__bg {
+    margin-top: 110px;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+
+    img {
+      width: inherit;
+      height: auto;
+    }
+  }
+
+  .content__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .btn-add-address,
+  .btn-add-wish {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+.tabDelivery {
+  .address-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .input-wrapper {
+      .label {
+        top: 9px;
+      }
+
+      &:last-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .city-list {
+    margin-bottom: 20px;
+  }
+
+  .form__grid {
+    justify-content: flex-start;
+
+    .input-wrapper,
+    .custom-select {
+      margin-left: 0;
+      margin-right: 20px;
+      max-width: 298px;
+      width: 100%;
+    }
+
+    .custom-select {
+      .custom-celect__input {
+        height: 36px;
+      }
+
+      .select-arrow {
+        top: 20px;
+      }
+    }
+  }
+}
+
+/* DELIVERY CARDS WITH ADDRESSES */
+
+.addresses__grid {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and(max-width: 1024px) {
+    flex-direction: column;
+
+    .card--address {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.card--address {
+  position: relative;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 467px;
+  width: 100%;
+  border: 1px solid #D5DFEB;
+  cursor: pointer;
+
+  .custom-checkbox {
+    left: 16px;
+  }
+
+  .card__body {
+    width: 100%;
+    position: relative;
+    display: block;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    transition: ease-out 0.25s;
+  }
+
+  .card__name {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .card__footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .btn-edit {
+      padding-left: 0;
+      color: $colorBrownDarken;
+    }
+
+    .card__status {
+      color: #32C35B;
+    }
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 19px;
+    height: 19px;
+    z-index: 3;
+  }
+}
+
+.btnAddNewAddress {
+  padding: 10px 33px;
+  white-space: nowrap;
+  max-width: 230px !important;
+
+  @media screen and(max-width: 1024px) {
+    max-width: unset !important;
+  }
+}

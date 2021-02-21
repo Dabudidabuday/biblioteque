@@ -9,8 +9,6 @@ class Registration {
         const btnModalClose = this.root.querySelector('#btn-thanks-close');
         const modal = this.root.querySelector('.modal--thank-you');
 
-
-
         btnModalOpen.addEventListener('click', (e) => {
             e.preventDefault();
             this.overlay.classList.add('active');

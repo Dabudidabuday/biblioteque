@@ -38,6 +38,7 @@ import SingleProduct from './pages/shop/singleProductPage/SingleProduct';
 import CooperationPage from './pages/CooperationPage';
 import InfoPage from './pages/infoPage';
 import CheckoutPage from "./pages/CheckoutPage";
+import Cabinet from "pages/cabinet/Cabinet";
 
 window.onload = () => {
     const app = new App();
@@ -67,7 +68,10 @@ class App {
                 '.modal--auth',
                 '.modal--partners',
                 '.parameters',
-                '.modal--add-address'
+                '.modal--add-address',
+                '.modal--success',
+                '.modal--order-history',
+                '.modal--leave-comment'
             ],
             'active'
         );
@@ -84,8 +88,9 @@ class App {
         this.admin = new Admin('.admin');
         this.orderPreview = new OrderPreview('.summary__title');
 
-        /*Nodules */
+        /* Modules */
         this.shop = new Shop('.shop');
+        this.cabinet = new Cabinet('.cabinet-page');
 
         /* PAGES  */
         this.home = new HomePage('.shop-home');
@@ -113,6 +118,7 @@ class App {
 
         /* MODULES */
         this.shop.run();
+        this.cabinet.run();
 
         /* PAGES */
         this.home.run();
@@ -169,16 +175,19 @@ if(modalPerfume) {
     
     /* thank-you page  */
     const btnFinal = document.querySelector('#btnFinal');
-    
-    btnFinal.addEventListener('click', function() {
-        const order = document.querySelector('.order__product-list');
-        const cart = document.querySelector('.cart__final');
-        const newContent = document.querySelector('.cart__empty');
-        
-        order.style.display="none";
-        cart.style.display="none";
-        newContent.style.display="block";
-    })
+
+    if(btnFinal) {
+        btnFinal.addEventListener('click', function() {
+            const order = document.querySelector('.order__product-list');
+            const cart = document.querySelector('.cart__final');
+            const newContent = document.querySelector('.cart__empty');
+
+            order.style.display="none";
+            cart.style.display="none";
+            newContent.style.display="block";
+        })
+    }
+
 }
 
 /* Checkout city-list buttons */

@@ -1,5 +1,16 @@
 .registration-page {
 
+  .login__title {
+    font-size: 32px;
+    line-height: 150%;
+
+    @media screen and(max-width: 768px) {
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
   .modal--thank-you {
     padding: 20px;
 
@@ -14,6 +25,10 @@
       top: -25px;
       left: 46%;
       margin-bottom: 20px;
+    }
+
+    @media screen and(max-width: 767px) {
+      width: 330px;
     }
   }
 

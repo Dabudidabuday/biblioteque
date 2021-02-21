@@ -8,9 +8,24 @@
   }
 }
 
+.login__head {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn-close {
+    margin-right: 0;
+  }
+}
+
 .login__title {
   margin-bottom: 60px;
   text-align: center;
+
+  @media screen and(max-width: 768px) {
+    margin-bottom: 0 !important;
+  }
 }
 
 .login__subtitle {

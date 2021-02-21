@@ -148,6 +148,7 @@
 
 .sidebar--filter {
     margin-right: 25px;
+    margin-bottom: 80px;
     max-width: 220px;
     width: 100%;
 
@@ -290,9 +291,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    /* fix card_body:hover bug with isotope grid */
+    & > div:hover {
+        position: relative !important;
+
+        .card__body {
+            height: auto !important;
+        }
+    }
+
     .card--product {
         width: 220px;
         height: 324px;
+        transition: none;
 
         .card__body {
             position: absolute;
