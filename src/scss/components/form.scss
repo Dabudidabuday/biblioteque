@@ -18,13 +18,35 @@
     height: 40px;
     font-size: 14px;
     line-height: 19px;    
-    color: #5F6E80;  
+    color: #000;
     background-color: #fff;
     border: none;
     border-bottom: 1px solid #D5DFEB;
     outline: none;
     // overflow: hidden;
     cursor: pointer;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+
+        .card,
+        .card--product {
+            .custom-celect__input {
+                text-indent: 50%;
+            }
+        }
+
+        .card--recommended {
+            .custom-celect__input {
+                text-indent: 42%;
+            }
+
+            .item {
+                text-align: center;
+            }
+        }
+    }
 }
 
 .custom-select__options {

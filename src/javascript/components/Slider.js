@@ -24,8 +24,9 @@ class Slider {
     if(checkoutPage) return;
 
     const stepCart = document.querySelector('.step--cart');
-    const desktop = window.matchMedia("(min-width: 768px)");
+    const mobile = window.matchMedia("(max-width: 768px)");
     var sliderContainer = document.querySelector('.recommended__product-list');
+
     var flkty = new Flickity( sliderContainer, {
       // cellAlign: 'left',
       contain: true,
@@ -34,7 +35,7 @@ class Slider {
       freeScroll: false
     });
 
-    if(stepCart || !desktop.matches) {
+    if(stepCart || !mobile.matches) {
       flkty.destroy();
     }
   }

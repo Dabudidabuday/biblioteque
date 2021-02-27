@@ -50,6 +50,7 @@ class HomeUI {
             btnNavOpen.classList.toggle('active');
             navMenu.classList.toggle('active');
             this.overlay.classList.toggle('active');
+
             
             if(navMenu.classList.contains('active') && mobile.matches) {
                 setTimeout(() => {

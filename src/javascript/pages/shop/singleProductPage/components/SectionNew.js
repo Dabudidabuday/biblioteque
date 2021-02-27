@@ -5,7 +5,8 @@ class SectionNew {
         this.root = document.querySelector(root);
         this.slider = new Slider();
         this.additionalSliderSettings = {
-            cellAlign: 'left'
+            cellAlign: 'left',
+            wrapAround: false
         }
     }
 

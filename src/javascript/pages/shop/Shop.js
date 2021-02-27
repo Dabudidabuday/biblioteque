@@ -8,10 +8,18 @@ class Shop {
         const btnOpen = this.root.querySelector('#btn-navigation-open');
         const btnClose = this.root.querySelector('#btn-navigation-close');
         const navMenu = this.root.querySelector('.navigation-menu');
+        const header = this.root.querySelector('.header');
+
         btnOpen.addEventListener('click', () => {
             btnOpen.classList.toggle('active');
             navMenu.classList.toggle('active');
             this.overlay.classList.toggle('active');
+
+            const mobile = window.matchMedia('(max-width: 768px;)');
+
+            if(mobile.matches) {
+                header.style.zIndex="10";
+            }
 
             const controlBar = document.querySelector('.catalog-bar');
             if(controlBar) {

@@ -69,7 +69,9 @@
     }
 }
 
-.store-slider {
+.store-slider,
+.recommended__product-list,
+.review__list {
     .flickity-button {
         background: transparent;
     }

@@ -7,15 +7,13 @@ class Tooltip {
         const btnOpen = document.querySelector('#btnTooltipOpen');
 
         btnOpen.addEventListener('click', () => {
-            btnOpen.classList.add('active');
-            this.root.classList.add('active');
+            btnOpen.classList.toggle('active');
+            this.root.classList.toggle('active');
         })
 
-        document.addEventListener('click', (e) => {
+        window.addEventListener('click', (e) => {
             const isClickInsideTooltip = this.root.contains(e.target);
-            console.log(isClickInsideTooltip)
 
-            if(!this.root.classList.contains('active')) return;
             if(!isClickInsideTooltip) {
                 this.root.classList.remove('active');
             }

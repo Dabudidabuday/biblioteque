@@ -1,3 +1,12 @@
+.cooperation-page {
+  .shop-footer {
+    .container {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+}
+
 .cooperation__hero {
   position: relative;
   height: 100vh;
@@ -55,6 +64,25 @@
     background-color: transparent;
     border: 1px solid #fff;
   }
+  
+  @media screen and(max-width: 1024px) {
+    padding-right: 16px;
+    padding-left: 16px;
+
+    .cooperation__title {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    .bullet {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    .btn-transparent {
+      width: 100%;
+    }
+  }
 }
 
 
@@ -64,12 +92,12 @@
   padding-top: 40px;
 
   .accordion {
-
     @media screen and(min-width: 769px) {
-      display: grid;
-      grid-template-columns: repeat(3, 30%);
-      grid-gap: 40px;
+      columns: 3;
+      column-gap: 40px;
+
       .item {
+        display: inline-block;
         max-width: 374px;
         width: 100%;
       }

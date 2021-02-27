@@ -66,17 +66,33 @@ class Orders {
             const cardTotals = card.querySelector('.card__totals');
             const cardBody = card.querySelector('.card__body');
             const cardArrow = card.querySelector('.select-arrow');
+            const backToCabinet = document.querySelector('.mobile__footer-buttons');
 
             cardArrow.addEventListener('click', () => {
                 cardTotals.classList.toggle('active');
                 cardBody.classList.toggle('active');
                 cardArrow.classList.toggle('active');
+
+                /* прятать кнопку back-to-cabinet, если открыта карточка заказа */
+                if(cardBody.classList.contains('active')) {
+                    backToCabinet.classList.add('hide');
+                } else {
+                    backToCabinet.classList.remove('hide');
+                }
             });
 
             cardTotals.addEventListener('click', () => {
                 cardTotals.classList.toggle('active');
                 cardBody.classList.toggle('active');
                 cardArrow.classList.toggle('active');
+
+
+                /* прятать кнопку back-to-cabinet, если открыта карточка заказа */
+                if(cardBody.classList.contains('active')) {
+                    backToCabinet.classList.add('hide');
+                } else {
+                    backToCabinet.classList.remove('hide');
+                }
             });
         })
     }

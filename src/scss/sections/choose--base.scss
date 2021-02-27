@@ -7,6 +7,7 @@
     max-width: 700px;
     width: 100%;
     text-align: left;
+    overflow: hidden;
 
     .btn-filter {
         font-weight: normal;
@@ -27,9 +28,20 @@
 
 .tabs {
     margin-top: 12px;
+    margin-right: -20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: flex-start;
+
+    .btn-filter {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .btn-filter:last-of-type {
+        margin-right: auto;
+
+    }
 
     @media screen and(max-width: 768px) {
         margin-top: 8px;

@@ -52,10 +52,16 @@ class ProductGallery {
     }
 
     run() {
-        if(!this.root) return; 
+        if(!this.root) return;
+
+        const mobile = window.matchMedia('(max-width: 1024px)');
+
+        if(mobile.matches) {
+            this._productPreview();
+        }
+
         this._initMainSlider();
         this._initNavSlider();
-        this._productPreview();
     }
 }
 

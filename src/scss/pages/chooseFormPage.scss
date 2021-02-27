@@ -1,4 +1,10 @@
 .step--form {
+
+    .progress-line {
+        .line {
+            width: 50%;
+        }
+    }
     @media screen and(max-width: 768px) {
         .choose__details {
             .card {

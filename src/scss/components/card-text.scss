@@ -2,7 +2,11 @@
     margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 20px;
+    justify-content: space-between;
+
+    .card--text {
+        margin-bottom: 9px;
+    }
 
     @media screen and(max-width: 768px) {
         margin-top: 8px;

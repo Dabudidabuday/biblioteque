@@ -1,20 +1,22 @@
 import Slider from "components/Slider";
 
-class SectionPosts {
+class ThanksPage {
     constructor(root) {
         this.root = document.querySelector(root);
         this.slider = new Slider();
     }
 
-    _initSectionSlider() {
-        const sliderContainer = this.root.querySelector('.blog-slider');
+    _initRecommendedSlider() {
+        const sliderContainer = this.root.querySelector('.slider');
+
         this.slider.initSlider(sliderContainer);
     }
 
     run() {
         if(!this.root) return;
-        this._initSectionSlider();
+
+        this._initRecommendedSlider();
     }
 }
 
-export default SectionPosts
+export default ThanksPage

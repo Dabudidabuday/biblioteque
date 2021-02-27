@@ -188,7 +188,7 @@
         left: 0;
         font-size: 14px;
         line-height: 19px;
-        color: #000;
+        color: #5F6E80;
     }
 
     
@@ -198,6 +198,8 @@
 .cabinet-input{
     padding: 10px 0 10px;
     width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
     border: none;
     border-bottom: 1px solid $colorGrey;
 
@@ -266,7 +268,7 @@
     &:checked ~ .custom-label {
         // font-weight: bold;
         transition: .3s;
-        text-shadow: 1px 0 0 #000;
+        color: $colorBrownDarken;
     }
 }
 

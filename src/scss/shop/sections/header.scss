@@ -24,6 +24,16 @@
             line-height: 19px;
             background-color: transparent;
             border-radius: 0;
+
+            &::placeholder {
+                font-size: 14px;
+                line-height: 19px;
+                color: #5F6E80;
+            }
+
+            @media screen and(max-width: 1024px) {
+                background-color: #fff;
+            }
         }
 
         .icon-search {
@@ -65,6 +75,12 @@
         .search-results {
             z-index: 1001;
             visibility: visible;
+        }
+
+        .input-wrapper {
+            input {
+                background-color: #fff !important;
+            }
         }
 
         .btn-close {

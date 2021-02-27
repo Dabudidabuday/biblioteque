@@ -2,10 +2,20 @@
     .header {
         position: relative;
     }
+
+
+    @media screen and(max-width: 1024px) {
+        .header__search-input {
+            input {
+                background-color: #fff;
+            }
+        }
+    }
 }
 
 
 .home__hero {
+    overflow: hidden;
     .container {
         @media screen and(max-width: 768px) {
             overflow: hidden;
@@ -309,8 +319,6 @@
     @media screen and(max-width: 768px) {
         flex-wrap: wrap;
 
-        
-
         .btn-filter:nth-child(1), 
         .btn-filter:nth-child(2) {
             margin-bottom: 20px;
@@ -318,7 +326,7 @@
         }
 
         .btn-filter {
-            flex-basis: 50%;
+            flex-basis: 49%;
             font-size: 14px;
             line-height: 19px;
             text-align: left;

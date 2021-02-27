@@ -1,5 +1,15 @@
+#tabOrders {
+
+  @media screen and(max-width: 1024px) {
+    .mobile__footer-buttons {
+      display: none !important;
+    }
+  }
+}
+
 .my-orders__list {
   margin-top: 20px;
+
 }
 
 .card--my-order {
@@ -17,6 +27,16 @@
     z-index: 3;
     padding: 14px;
   }
+
+  @media screen and(max-width: 768px) {
+    border: none;
+    border-bottom: 1px solid $colorBrownLighten;
+
+
+    .select-arrow {
+      top: 8px;
+    }
+  }
 }
 
 .card__meta {
@@ -25,6 +45,11 @@
     font-size: 12px;
     line-height: 16px;
     color: #5F6E80;
+
+    @media screen and(max-width: 768px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   .meta__status {
@@ -56,12 +81,23 @@
     font-size: 12px;
     line-height: 16px;
     color: $colorGreyLighten;
+
+    @media screen and(max-width: 768px) {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   .price__value {
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
+    
+    @media screen and(max-width: 768px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
 
   &.active {
@@ -70,6 +106,18 @@
     z-index: 1;
     opacity: 1;
     transition: ease-in .10s;
+  }
+  
+  @media screen and(max-width: 768px) {
+    flex-wrap: wrap;
+
+    .totals__price {
+      order: 3;
+      margin-top: 18px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -92,14 +140,16 @@
       height: inherit;
     }
   }
+
+  @media screen and(max-width: 768px) {
+    margin-top: 16px;
+  }
 }
 
 /* card-body */
 
 
 .card--my-order {
-
-
   .order-history,
   .order-info {
     margin-bottom: 16px;
@@ -158,6 +208,12 @@
       margin-bottom: 16px;
     }
   }
+
+  @media screen and(max-width: 1024px) {
+    .card__body {
+      flex-direction: column;
+    }
+  }
 }
 
 
@@ -185,7 +241,7 @@
     }
 
     .card--order {
-      padding-right: 46px;
+      //padding-right: 46px;
       align-items: center;
       border-bottom: 1px solid $colorBrownLighten;
 
@@ -224,10 +280,18 @@
         color: $colorSecondary;
       }
 
+
       .card__price,
       .card__quantity,
       .card__sum {
         margin-left: 40px;
+        width: 13%;
+
+        @media screen and(max-width: 1024px) {
+          width: unset;
+          margin-top: auto;
+          margin-left: auto;
+        }
       }
       .price__title,
       .quantity__title,
@@ -242,9 +306,12 @@
       .quantity {
         font-size: 14px;
         line-height: 19px;
-
+        text-align: left;
       }
 
+      @media screen and(max-width: 1024px) {
+        padding-right: 0;
+      }
     }
   }
   /* PAYMENT INFO */
@@ -281,6 +348,20 @@
       font-size: 14px;
       font-weight: bold;
       line-height: 19px;
+    }
+
+    @media screen and(max-width: 768px) {
+      flex-direction: column;
+
+      button:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding-top: 14px;
+        padding-bottom: 15px;
+        max-width: unset;
+      }
     }
   }
 }

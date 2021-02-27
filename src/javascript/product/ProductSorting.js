@@ -21,6 +21,10 @@ class ProductSorting {
                     item.classList.remove('active');
                     
                 })
+
+                /* remove ALl created card details */
+                const cardDetails = Array.from(document.querySelectorAll('.card .card--details'));
+                cardDetails.forEach(item => item.remove());
     
                 const btnNextStep = document.querySelector('.btn-next');
                 btnNextStep.classList.remove('active');

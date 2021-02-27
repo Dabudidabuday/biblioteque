@@ -19,6 +19,24 @@
     }
 }
 
+.progress-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    .line {
+        height: 6px;
+        width: 25%;
+        background-color: $colorBrownDarken;
+    }
+
+    @media screen and(max-width: 1024px) {
+        display: none;
+    }
+}
+
 .modal.active {
     #overlay.active {
         transition-delay: .3s;

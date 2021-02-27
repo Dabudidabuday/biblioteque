@@ -1,0 +1,26 @@
+.section--seo {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #F9F9F9;
+}
+
+.seo__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.seo__text {
+  column-count: 2;
+  font-size: 14px;
+  line-height: 150%;
+  color: $colorSecondary;
+
+  span {
+    display: block;
+    margin-top: 9px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+}

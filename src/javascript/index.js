@@ -39,6 +39,8 @@ import CooperationPage from './pages/CooperationPage';
 import InfoPage from './pages/infoPage';
 import CheckoutPage from "./pages/CheckoutPage";
 import Cabinet from "pages/cabinet/Cabinet";
+import CartPage from "pages/CartPage";
+import ThanksPage from "pages/ThanksPage";
 
 window.onload = () => {
     const app = new App();
@@ -83,7 +85,7 @@ class App {
         this.colorPalette = new ColorPalette('.base__color-palette');
         this.formFilter = new FormFilter('.form-grid');
         this.cartUI = new CartUI('.product__show-more');
-        this.slider = new Slider('.slider');
+        // this.slider = new Slider('.slider');
         this.modal = new Modal('.modal--cart');
         this.admin = new Admin('.admin');
         this.orderPreview = new OrderPreview('.summary__title');
@@ -98,7 +100,9 @@ class App {
         this.singleProduct = new SingleProduct('.shop-single-product');
         this.cooperationPage = new CooperationPage('.cooperation-page');
         this.infoPage = new InfoPage('.info-page');
+        this.cartPage = new CartPage('.step--cart');
         this.checkoutPage = new CheckoutPage('.checkout-page');
+        this.thanksPage = new ThanksPage('.thanks-page');
     }
 
     run() {
@@ -112,7 +116,7 @@ class App {
         this.productSorting.run();
         this.formFilter.run();
         this.cartUI.run();
-        this.slider.run();
+        // this.slider.run();
         this.modal.run();
         this.orderPreview.run();
 
@@ -126,6 +130,8 @@ class App {
         this.cooperationPage.run();
         this.infoPage.run();
         this.checkoutPage.run();
+        this.cartPage.run()
+        this.thanksPage.run();
 
         /* ADMIN */
         this.admin.run();
@@ -135,6 +141,21 @@ class App {
         }
     }
 }
+
+
+/* btn-like to-wishlist conditions */
+
+const btnLikes = Array.from(document.querySelectorAll('.card__like'));
+
+btnLikes.forEach(item => {
+    item.addEventListener('click', () => {
+        console.log('hello')
+        item.classList.toggle('active');
+    })
+})
+
+
+
 const input = document.querySelector('.quantity-input');
 
 minus.forEach(item => {
@@ -294,6 +315,15 @@ inputList.forEach(item => {
     })
 })
 
+const inputLabels = Array.from(document.querySelectorAll('.input-wrapper .label'));
+
+inputLabels.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const closestParent = e.target.closest('.input-wrapper');
+        const targetInput = closestParent.querySelector('.form-input');
+        // targetInput.focus();
+    })
+})
 
 
 /* show-hide modal-contacts */
@@ -314,3 +344,4 @@ if(btnModalContacts) {
         modalContacts.classList.remove('active');
     })
 }
+

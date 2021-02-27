@@ -18,8 +18,15 @@
 
 .thanks {
     overflow: visible !important;
+
     .btn-final {
         margin-bottom: 12px !important;
+    }
+
+    .card--recommended  {
+        .custom-select {
+            margin-bottom: 0;
+        }
     }
 
     .recommended {

@@ -1,6 +1,11 @@
 /* SECTION FEEDBACK */
 
 .feedback {
+
+    .flex-container {
+        padding-left: 20px;
+    }
+
     .feedback__tabs {
         justify-content: start;
     }

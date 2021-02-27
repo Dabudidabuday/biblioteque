@@ -1,5 +1,11 @@
 .step--size {
 
+    .progress-line {
+        .line {
+            width: 75%;
+        }
+    }
+
     @media screen and(max-width: 768px) {
         .choose__header {
             display: flex;

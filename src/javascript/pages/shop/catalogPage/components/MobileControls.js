@@ -101,6 +101,8 @@ class MobileControls {
             const parametersList = sortList.querySelector('.parameters');
             this.overlay.classList.toggle('active');
             parametersList.classList.toggle('active');
+            document.querySelector('.header').style.zIndex="10";
+            document.querySelector('.catalog-bar').style.zIndex="10";
         })
 
 

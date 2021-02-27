@@ -5,6 +5,9 @@ class SectionBestsellers {
         this.root = document.querySelector(root);
         this.productSorting = new ProductSorting(root);
         this.slider = new Slider();
+        this.additionalSettings = {
+            wrapAround: false
+        }
     }
 
     _tabsUI() {
@@ -21,7 +24,7 @@ class SectionBestsellers {
 
     _initSectionSlider() {
         const sliderContainer = this.root.querySelector('.gift-slider');
-        this.slider.initSlider(sliderContainer)
+        this.slider.initSlider(sliderContainer, this.additionalSettings)
     }
 
     run() {

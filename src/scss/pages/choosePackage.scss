@@ -1,5 +1,11 @@
 .step--package {
 
+    .progress-line {
+        .line {
+            width: 90%;
+        }
+    }
+
     @media screen and(max-width: 768px) {
         .header__subtitle {
             font-weight: 500;

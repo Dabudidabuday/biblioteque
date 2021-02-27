@@ -24,6 +24,11 @@
         transition: ease-out .2s;
     }
 
+    .custom-select {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     &:hover {
         box-shadow: none;
 

@@ -8,7 +8,8 @@ class SectionReview {
         this.sliderSettings = {
             contain: true,
             pageDots: false,
-            freeScroll: false
+            freeScroll: false,
+            wrapAround: false
         }
     }
 

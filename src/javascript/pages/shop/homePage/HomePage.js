@@ -7,7 +7,7 @@ import SectionBestsellers from './sections/SectionBestsellers';
 import SectionStores from "pages/shop/homePage/sections/SectionStores";
 import SectionInvite from "pages/shop/homePage/sections/SectionInvite";
 import SectionPosts from "pages/shop/homePage/sections/SectionPosts";
-
+import CorporateGifts from "./sections/CorporateGifts";
 class HomePage {
     constructor(rootElement) {
         this.root = rootElement;
@@ -20,6 +20,7 @@ class HomePage {
         this.sectionStores = new SectionStores('.section-stores');
         this.sectionInvite = new SectionInvite('.section-invite');
         this.sectionPosts = new SectionPosts('.section-posts');
+        this.corporateGifts = new CorporateGifts('.corporate-gifts');
     }
 
     run() {
@@ -31,6 +32,7 @@ class HomePage {
         this.sectionStores.run();
         this.sectionInvite.run();
         this.sectionPosts.run();
+        this.corporateGifts.run();
     }
 }
 

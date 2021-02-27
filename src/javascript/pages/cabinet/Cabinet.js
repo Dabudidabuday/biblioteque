@@ -58,6 +58,7 @@ class Cabinet {
         })
     }
 
+
     _sidebarTabsUI() {
         const tabsButtons = Array.from(this.root.querySelectorAll('.sidebar__button'));
         const mainWrappers = Array.from(document.querySelectorAll('.main'));

@@ -100,6 +100,7 @@ class MyAccount {
 
     _editAccountFieldsHandler() {
         const btnEdit = document.querySelector('#btnEditAccount');
+        const backToCabinet = document.querySelector('.mobile__footer-buttons');
 
         btnEdit.addEventListener('click', () => {
             this.inputWrappers.forEach(item => {
@@ -116,8 +117,12 @@ class MyAccount {
                 input.removeAttribute('readonly');
             })
 
+            /* show-hide save-cencel buttons */
             const formFooter = document.querySelector('.form__footer');
             formFooter.classList.toggle('hide');
+
+            console.log(backToCabinet)
+            backToCabinet.classList.toggle('hide');
         })
     }
 
@@ -163,7 +168,7 @@ class MyAccount {
         btnSaveFields.addEventListener('click', (e) => {
             e.preventDefault();
 
-            this._initValidation();
+            // this._initValidation();
             this.inputWrappers.forEach(item => {
                 item.classList.toggle('active');
 
