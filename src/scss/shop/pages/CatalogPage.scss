@@ -37,6 +37,9 @@
 
 .breadcrumbs {
 
+    .breadcrumbs__body {
+        color: $colorGreyLighten;
+    }
     .active {
         color: $colorBrownDarken;
     }

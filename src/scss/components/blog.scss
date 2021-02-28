@@ -24,9 +24,14 @@
     .post__title {
         margin-bottom: 8px;
         font-family: "Playfair display", serif;
-        font-size: 20px;
-        line-height: 150%;
+        font-size: 32px;
+        line-height: 43px;
         color: #231D18;
+        
+        @media screen and(max-width: 1024px) {
+            font-size: 20px;
+            line-height: 150%;
+        }
     }
 
     .post__body {
@@ -36,12 +41,26 @@
         color: $colorSecondary;
     }
 
+    .post__meta {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .post__date {
         margin-bottom: 20px;
         font-size: 12px;
         line-height: 16px;
         color: #5F6E80;
     }
+
+    .post__comments-quantity {
+        font-size: 12px;
+        line-height: 16px;
+        color: $colorBrownDarken;
+        cursor: pointer;
+    }
+
+
 
     .btn-link {
         width: 100%;
