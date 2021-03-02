@@ -13,10 +13,19 @@
         .recommended__product-list {
             max-height: unset;
             height: auto;
+
+            .flickity-viewport {
+                height: 450px !important;
+            }
         }
 
         .flickity-button {
             display: none;
+        }
+
+        .card__like {
+            top: 24px;
+            right: 24px;
         }
     }
 }
@@ -31,6 +40,15 @@
         margin-bottom: 12px;
         display: flex;
         justify-content: space-between;
+
+        .rating {
+            flex-direction: row;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
 
     .review-link {
@@ -121,7 +139,7 @@
     }
 
     .capacity-modifications {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         display: flex;
         
         .capacity-button:not(:last-of-type) {
@@ -141,6 +159,13 @@
                 transition: ease-in .25s;
             }
         }
+    }
+
+    .buy__note {
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #3B4857;
     }
 
 
@@ -230,7 +255,9 @@
                     z-index: 100;
 
                     img {
-                        height: 100%;
+                        position: fixed;
+                        height: 80vh;
+                        user-drag: none;
                     }
                 }
             }
@@ -253,6 +280,62 @@
                 max-width: unset;
             }
         }
+    }
+}
+
+.buy__cta {
+    margin-bottom: 40px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+
+    background-color: $colorBrownLighten;
+
+    .cta__text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cta__icon {
+        margin-left: 10px;
+        cursor: pointer;
+
+        &.active {
+            svg path {
+                stroke: $colorBrownDarken;
+            }
+        }
+    }
+
+    .cta__tooltip {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 16px;
+        width: 100%;
+        background-color: #fff;
+        filter: drop-shadow(0px 2px 9px rgba(0, 0, 0, 0.16));
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+
+        .tooltip__text {
+            font-size: 14px;
+            line-height: 150%;
+            color: #231D18;
+        }
+
+        &.active {
+            top: 82%;
+            visibility: visible;
+            opacity: 1;
+            transition: ease-in .25s;
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        justify-content: space-between;
     }
 }
 
@@ -369,6 +452,7 @@
     transition: all .2s;
 
     @media screen and(max-width: 768px) {
+        margin-top: 32px;
         margin-bottom: 60px;
     }
 }
@@ -408,6 +492,10 @@
         font-size: 20px;
         line-height: 27px;
         color: #3B4857;
+    }
+
+    @media screen and(max-width: 768px) {
+        margin-bottom: 32px;
     }
 }
 

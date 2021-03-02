@@ -74,7 +74,8 @@ class HomeUI {
         const screenFeatures = document.querySelector('.features');
         const btnOpenFeachers = document.querySelector('#btn-features');
         const btnCloseFeatures = document.querySelector('#btn-features-close');
-    
+
+        if(!btnOpenFeachers) return;
         btnOpenFeachers.addEventListener('click', () => {
             screenFeatures.classList.add('active');
             this.header.classList.add('header-in-features');

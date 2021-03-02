@@ -7,12 +7,20 @@ class RatingStars {
         const inputWrappers = Array.from(this.root.querySelectorAll('.radio-wrapper'));
 
         inputWrappers.forEach((item, index) => {
-            item.addEventListener('mouseenter', (e) => {
-                e.target.classList.add('active');
-                const currentid = e.target.querySelector('.input-rating').id;
+            item.addEventListener('click', (e) => {
 
+                const closestParent = e.target.closest('.radio-wrapper');
+                const currentid = closestParent.querySelector('.input-rating').dataset.id;
 
+                closestParent.classList.add('active');
 
+                inputWrappers.forEach((item, index) => {
+                    if(currentid <= index) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                })
             });
         });
     }

@@ -41,6 +41,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import Cabinet from "pages/cabinet/Cabinet";
 import CartPage from "pages/CartPage";
 import ThanksPage from "pages/ThanksPage";
+import BlogPost from "pages/BlogPost";
 
 window.onload = () => {
     const app = new App();
@@ -103,6 +104,7 @@ class App {
         this.cartPage = new CartPage('.step--cart');
         this.checkoutPage = new CheckoutPage('.checkout-page');
         this.thanksPage = new ThanksPage('.thanks-page');
+        this.blogPost = new BlogPost('.blog-post');
     }
 
     run() {
@@ -132,6 +134,7 @@ class App {
         this.checkoutPage.run();
         this.cartPage.run()
         this.thanksPage.run();
+        this.blogPost.run();
 
         /* ADMIN */
         this.admin.run();

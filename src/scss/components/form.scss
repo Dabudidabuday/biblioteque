@@ -46,6 +46,30 @@
                 text-align: center;
             }
         }
+
+        .shop-catalog {
+            .card--product {
+                .custom-celect__input {
+                    text-indent: 42%;
+                }
+
+                .option__items {
+                    .item {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .shop-single-product {
+            .custom-celect__input {
+                text-indent: 50%;
+
+                .item {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 

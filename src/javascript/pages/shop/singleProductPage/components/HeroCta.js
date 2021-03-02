@@ -1,18 +1,20 @@
-class Tooltip {
+class HeroCta {
     constructor(root) {
         this.root = document.querySelector(root);
     }
 
-    _tooltipUI() {
-        const btnOpen = document.querySelector('#btnTooltipOpen');
+    _toggleTooltip() {
+        const btnOpen = this.root.querySelector('.cta__icon');
+        const tooltip = this.root.querySelector('.cta__tooltip');
 
         const toggle = event => {
             event.stopPropagation();
 
-            if (!event.target.closest('.tooltip')) {
-                this.root.classList.toggle('active');
+            if (!event.target.closest('.cta__tooltip')) {
+                tooltip.classList.toggle('active');
+                btnOpen.classList.toggle('active');
 
-                this.root.classList.contains('active')
+                tooltip.classList.contains('active')
                     ? document.addEventListener('click', toggle)
                     : document.removeEventListener('click', toggle);
             } else {
@@ -25,10 +27,8 @@ class Tooltip {
 
     run() {
         if(!this.root) return;
-        
-        this._tooltipUI();
-
+        this._toggleTooltip();
     }
 }
 
-export default Tooltip
+export default HeroCta

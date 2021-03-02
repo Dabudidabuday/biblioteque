@@ -515,6 +515,9 @@
 .rating {
     margin-bottom: 9px;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    cursor: pointer;
 
     .icon-rating:not(:last-of-type) {
         margin-right: 6px;
@@ -528,13 +531,34 @@
     .radio-wrapper {
         margin-right: 20px;
         position: relative;
+        cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         &.active {
             svg path {
                 stroke: $colorBrownDarken;
                 fill: $colorBrownDarken;
+                cursor: pointer;
             }
         }
+
+        svg {
+            pointer-events: none;
+        }
+
+        &:hover,
+        &:hover ~ div{
+            svg path {
+                stroke: $colorBrownDarken;
+                fill: $colorBrownDarken;
+                pointer-events: none;
+            }
+        }
+
+
     }
 
     .input-rating {
@@ -707,10 +731,7 @@
 
     .item {
         position: relative;
-        padding-top: 12px;
-        padding-right: 16px;
-        padding-left: 16px;
-        padding-bottom: 12px;
+        padding: 12px 16px;
 
         &.active {
             background-color: $colorBrownLighten;

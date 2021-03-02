@@ -18,3 +18,23 @@
     }
   }
 }
+
+.purposes {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  .purpose-item {
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: $colorBrownLighten;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}

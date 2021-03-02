@@ -12,8 +12,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>Votre</title>
 </head>
-<body class="shop blog">
+<body class="shop blog blog-post">
 <div id="overlay"></div>
+
+<div class="modal modal--comment">
+    <div class="modal__head">
+        <h5 class="modal__title h3">Оставить коментарий</h5>
+        <button class="btn-close btn-reset" id="btnCloseModalComments"><span class="line--md"></span><span class="line--md"></span></button>
+    </div>
+    <div class="modal__body">
+        <form action="">
+
+            <p class="rating__title show-mobile">Ваша оценка</p>
+
+            <div class="rating show-mobile">
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="0">
+                    <label for="rating-1" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="1">
+                    <label for="rating-2" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="2">
+                    <label for="rating-3" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="3">
+                    <label for="rating-4" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="4">
+                    <label for="rating-5" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="name" class="form-input" id="input-name">
+                <label for="input-name" class="label">Имя</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="email" class="form-input" id="input-email">
+                <label for="input-email" class="label">E-mail <sup class="red-star">*</sup></label>
+            </div>
+
+
+            <fieldset class="fieldset form-additional">
+                <textarea class="form-textarea" name="additional" placeholder="Комментарий к заказу"></textarea>
+            </fieldset>
+
+            <input type="submit" class="btn-outline-primary btn-md w-100" value="Отправить">
+        </form>
+
+        <p class="text-secondary show-mobile">
+            <sup class="red-star">*</sup> Оставьте свой email и мы отправим оповещение сразу после того, как специалист даст ответ на ваш вопрос.
+        </p>
+    </div>
+</div>
 
 <div class="navigation-menu">
     <div class="menu__header">
@@ -610,6 +691,290 @@
     </div>
 </main>
 
+<section class="feedback">
+    <div class="container">
+
+        <div class="feedback__title show-mobile">Комментарий</div>
+
+        <button class="btn-leave-comment show-mobile btn-outline-primary btn-md w-100" type="button">Оставить отзывы</button>
+
+        <ul class="feedback__tabs tabs-list">
+            <button type="button" class="btn-tab comments active">Комментарии</button>
+            <button type="button" class="btn-tab questions">Вопросы</button>
+        </ul>
+    </div>
+
+    <div class="flex-container">
+        <div class="comments-list comments active">
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item reply-item">
+                <div class="comment__body">
+                    <p class="author">Ирина, Днепр</p>
+
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error vero exercitationem ea ab asperiores illum! Doloribus impedit nihil cumque!
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="comments-list questions">
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item reply-item reply-from-brand">
+                <div class="comment__head">
+                    <div class="brand">
+                        <div class="reply-icon">
+                            <img src="src/images/icons/reply-icon.svg" alt="">
+                        </div>
+                        <p class="р4 reply__title">Ответ бренда</p>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+                <div class="comment__body">
+                    <p class="author">Votre</p>
+
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error vero exercitationem ea ab asperiores illum! Doloribus impedit nihil cumque!
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="comment__head">
+                    <div class="rating">
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                        <span class="icon-rating"></span>
+                    </div>
+
+                    <a class="text-secondary comment__date">12.05.2020</a>
+                </div>
+
+                <div class="comment__body">
+                    <p class="author">Eлена</p>
+
+                    <p class="text">
+                        Мой самый любимый аромат! Очень стойкий, не приторный. Пшикаюсь перед работой утром и хожу весь день, все в восторге от парфюма)))
+                    </p>
+
+                    <button class="btn-reply" type="button">Ответить</button>
+                </div>
+            </div>
+        </div>
+
+        <form class="comments-form show-desktop">
+            <h5 class="form__title">Комментарий</h5>
+
+            <p class="rating__title">Ваша оценка</p>
+
+            <div class="rating">
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="0">
+                    <label for="rating-1" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="1">
+                    <label for="rating-2" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="2">
+                    <label for="rating-3" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="3">
+                    <label for="rating-4" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <input type="radio" class="input-rating" data-id="4">
+                    <label for="rating-5" class="icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 1.66699L19.1213 10.4437L28.3346 11.8598L21.668 18.6877L23.2413 28.3337L15.0013 23.7771L6.7613 28.3337L8.33464 18.6877L1.66797 11.8598L10.8813 10.4437L15.0013 1.66699Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="name" class="form-input" id="input-name">
+                <label for="input-name" class="label">Имя</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="email" class="form-input" id="input-email">
+                <label for="input-email" class="label">E-mail <sup class="red-star">*</sup></label>
+            </div>
+
+            <textarea class="form-textarea" name="additional" placeholder="Комментарий к заказу"></textarea>
+
+            <button type="submit" class="btn-ouline-primary btn-submit w-100">Отправить</button>
+
+            <div class="note"><sup class="red-star">*</sup> Оставьте свой email и мы отправим оповещение сразу после того, как специалист даст ответ на ваш вопрос.</div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="pagination">
+            <div class="pagination__list">
+                <span class="page-number btn-round btn-round--md current">1</span>
+                <span class="page-number btn-round btn-round--md">2</span>
+                <span class="page-number btn-round btn-round--md">4</span>
+                <span class="page-number btn-round btn-round--md">...</span>
+                <span class="page-number btn-round btn-round--md">10</span>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="shop-footer">
     <div class="container">
         <div class="footer-grid">
@@ -688,6 +1053,6 @@
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://npmcdn.com/isotope-horizontal@2/horizontal.js"></script>
 <script src="dist/bundle.js"></script>
-</div>
+
 </body>
 </html>

@@ -57,7 +57,10 @@ class ProductGallery {
         const mobile = window.matchMedia('(max-width: 1024px)');
 
         if(mobile.matches) {
-            this._productPreview();
+            setTimeout(() => {
+                this._productPreview();
+            }, 300)
+
         }
 
         this._initMainSlider();

@@ -34,6 +34,7 @@
 
 /*  Comments  */
 
+
 .comments-list {
     max-width: 648px;
     width: 100%;
@@ -47,6 +48,15 @@
         margin-bottom: 12px;
         display: flex;
         justify-content: space-between;
+
+        .rating {
+            flex-direction: row;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
     
     .comment__date {

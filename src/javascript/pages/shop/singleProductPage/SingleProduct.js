@@ -6,7 +6,7 @@ import TextTabs from "./components/TextTabs";
 import Tooltip from "./components/Tooltip";
 import RatingStars from 'components/RatingStars';
 import SectionRecommended from "pages/shop/singleProductPage/components/SectionRecommended";
-
+import HeroCta from "pages/shop/singleProductPage/components/HeroCta";
 class SingleProduct {
     constructor(rootElement) {
         this.root = rootElement;
@@ -17,7 +17,9 @@ class SingleProduct {
         this.feedback = new Feedback('.feedback');
         this.tooltip = new Tooltip('.tooltip');
         this.ratingStars = new RatingStars('.comments-form .rating');
+        this.modalRatingStars = new RatingStars('.modal--comment .rating');
         this.sectionRecommended = new SectionRecommended('.section-recommended');
+        this.heroCta = new HeroCta('.buy__cta');
     } 
 
     run() {
@@ -29,7 +31,9 @@ class SingleProduct {
         this.feedback.run();
         this.tooltip.run();
         this.ratingStars.run();
+        this.modalRatingStars.run();
         this.sectionRecommended.run();
+        this.heroCta.run();
     }
 }
 

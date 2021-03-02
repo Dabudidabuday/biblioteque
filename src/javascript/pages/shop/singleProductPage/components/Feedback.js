@@ -91,7 +91,7 @@ class Feedback {
         const btnOpen = this.root.querySelector('.btn-leave-comment');
         const btnClose = document.querySelector('#btnCloseModalAuth');
 
-        this.account.chooseMethodAuth(btnOpen, btnClose);
+        // this.account.chooseMethodAuth(btnOpen, btnClose);
         // replyButtons.forEach(item => {
         //     item.addEventListener('click', () => {
         //         this.account.replyButtons
